@@ -204,7 +204,7 @@ function EventsWorkshopsPage() {
                     </div>
                   </div>
                   <a
-                    href={program.link}
+                    href={program.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#7c5cff] py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#6b4fd9]"
