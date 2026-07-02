@@ -40,7 +40,7 @@ function RevealSection({ children, delay = 0 }: { children: React.ReactNode; del
 }
 
 const mentors = [
-  { name: 'Arjun Kapoor', role: 'Founder & CEO', company: 'EdTech Startup', icon: 'AK', area: 'Entrepreneurship', color: '#7c3aed', quote: 'I mentor because I wish someone had shown me this path earlier.' },
+  { name: 'Meet Shah', role: 'Technical Delivery Manager', company: 'Startups & Scaleups', icon: 'MS', area: 'Product Delivery', color: '#3b82f6', quote: "Great products aren't built, they're delivered — end to end." },
   { name: 'Priya Menon', role: 'Product Manager', company: 'Top Tech Company', icon: 'PM', area: 'Product & Design', color: '#4f46e5', quote: 'The right question at the right age changes everything.' },
   { name: 'Rahul Singh', role: 'Creative Director', company: 'Design Agency', icon: 'RS', area: 'Design & Creativity', color: '#ec4899', quote: "Creativity is a skill, not a gift — and I'm here to prove it." },
   { name: 'Deepa Krishnan', role: 'Marketing Lead', company: 'D2C Brand', icon: 'DK', area: 'Marketing & Growth', color: '#f59e0b', quote: 'I love helping students find their unique voice and story.' },
