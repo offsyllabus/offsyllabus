@@ -236,9 +236,9 @@ function ApplyPage() {
                       onFocus={(e) => { (e.target as HTMLSelectElement).style.borderColor = 'rgba(124,58,237,0.5)' }}
                       onBlur={(e) => { (e.target as HTMLSelectElement).style.borderColor = 'rgba(255,255,255,0.1)' }}>
                       <option value="" style={{ background: '#0d0d1a' }}>Select a program...</option>
-                      <option value="discovery" style={{ background: '#0d0d1a' }}>Discovery Sprint (4 Weeks)</option>
-                      <option value="growth" style={{ background: '#0d0d1a' }}>Growth Cohort (12 Weeks) — Most Popular</option>
-                      <option value="founder" style={{ background: '#0d0d1a' }}>Founder Track (8 Weeks)</option>
+                      <option value="discovery" style={{ background: '#0d0d1a' }}>Discovery Sprint (4 Days)</option>
+                      <option value="growth" style={{ background: '#0d0d1a' }}>Growth Cohort (12 Months) — Most Popular</option>
+                      <option value="founder" style={{ background: '#0d0d1a' }}>Founder Track (4-8 Weeks)</option>
                       <option value="unsure" style={{ background: '#0d0d1a' }}>I'm not sure yet</option>
                     </select>
                   </div>
