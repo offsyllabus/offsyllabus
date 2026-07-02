@@ -108,7 +108,7 @@ function ProgramsPage() {
                   <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', marginBottom: '24px' }}>
                     <span style={{ color: '#64748b', fontSize: '0.8rem' }}>👤 {prog.forWho}</span>
                   </div>
-                  <Link to="/apply" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '14px 24px', background: prog.featured ? 'linear-gradient(135deg, #7c3aed, #4f46e5)' : 'transparent', border: prog.featured ? 'none' : '1px solid rgba(124,58,237,0.3)', borderRadius: '10px', color: 'white', fontWeight: '600', fontSize: '0.9375rem', textDecoration: 'none' }}>
+                  <Link to="/apply" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '14px 24px', background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', border: 'none', borderRadius: '10px', color: 'white', fontWeight: '600', fontSize: '0.9375rem', textDecoration: 'none' }}>
                     Apply for {prog.name} →
                   </Link>
                 </div>
