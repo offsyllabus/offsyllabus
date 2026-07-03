@@ -16,6 +16,7 @@ import { Route as CommunityRouteImport } from './routes/community'
 import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MentorsApplyRouteImport } from './routes/mentors/apply'
 
 const ProgramsRoute = ProgramsRouteImport.update({
   id: '/programs',
@@ -52,6 +53,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MentorsApplyRoute = MentorsApplyRouteImport.update({
+  id: '/apply',
+  path: '/apply',
+  getParentRoute: () => MentorsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,8 +65,9 @@ export interface FileRoutesByFullPath {
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
-  '/mentors': typeof MentorsRoute
+  '/mentors': typeof MentorsRouteWithChildren
   '/programs': typeof ProgramsRoute
+  '/mentors/apply': typeof MentorsApplyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +75,9 @@ export interface FileRoutesByTo {
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
-  '/mentors': typeof MentorsRoute
+  '/mentors': typeof MentorsRouteWithChildren
   '/programs': typeof ProgramsRoute
+  '/mentors/apply': typeof MentorsApplyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,8 +86,9 @@ export interface FileRoutesById {
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
-  '/mentors': typeof MentorsRoute
+  '/mentors': typeof MentorsRouteWithChildren
   '/programs': typeof ProgramsRoute
+  '/mentors/apply': typeof MentorsApplyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/mentors'
     | '/programs'
+    | '/mentors/apply'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/mentors'
     | '/programs'
+    | '/mentors/apply'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/mentors'
     | '/programs'
+    | '/mentors/apply'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -117,7 +129,7 @@ export interface RootRouteChildren {
   ApplyRoute: typeof ApplyRoute
   CommunityRoute: typeof CommunityRoute
   EventsWorkshopsRoute: typeof EventsWorkshopsRoute
-  MentorsRoute: typeof MentorsRoute
+  MentorsRoute: typeof MentorsRouteWithChildren
   ProgramsRoute: typeof ProgramsRoute
 }
 
@@ -172,8 +184,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mentors/apply': {
+      id: '/mentors/apply'
+      path: '/apply'
+      fullPath: '/mentors/apply'
+      preLoaderRoute: typeof MentorsApplyRouteImport
+      parentRoute: typeof MentorsRoute
+    }
   }
 }
+
+interface MentorsRouteChildren {
+  MentorsApplyRoute: typeof MentorsApplyRoute
+}
+
+const MentorsRouteChildren: MentorsRouteChildren = {
+  MentorsApplyRoute: MentorsApplyRoute,
+}
+
+const MentorsRouteWithChildren =
+  MentorsRoute._addFileChildren(MentorsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -181,7 +211,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApplyRoute: ApplyRoute,
   CommunityRoute: CommunityRoute,
   EventsWorkshopsRoute: EventsWorkshopsRoute,
-  MentorsRoute: MentorsRoute,
+  MentorsRoute: MentorsRouteWithChildren,
   ProgramsRoute: ProgramsRoute,
 }
 export const routeTree = rootRouteImport
