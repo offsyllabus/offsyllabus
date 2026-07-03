@@ -18,22 +18,15 @@ function MentorApplyPage() {
     fullName: '',
     email: '',
     phone: '',
-    expertise: [] as string[],
+    expertise: '',
+    linkedin: '',
+    social: '',
     portfolio: '',
     resume: null as File | null,
   })
 
   const update = (field: string, value: any) =>
     setForm((f) => ({ ...f, [field]: value }))
-
-  const toggleExpertise = (area: string) => {
-    setForm((f) => ({
-      ...f,
-      expertise: f.expertise.includes(area)
-        ? f.expertise.filter((e) => e !== area)
-        : [...f.expertise, area],
-    }))
-  }
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
@@ -68,7 +61,9 @@ function MentorApplyPage() {
     formData.append('fullName', form.fullName)
     formData.append('email', form.email)
     formData.append('phone', form.phone)
-    formData.append('expertise', form.expertise.join(', '))
+    formData.append('expertise', form.expertise)
+    formData.append('linkedin', form.linkedin)
+    formData.append('social', form.social)
     formData.append('portfolio', form.portfolio)
     if (form.resume) {
       formData.append('resume', form.resume)
@@ -133,21 +128,6 @@ function MentorApplyPage() {
       </div>
     )
   }
-
-  const expertiseAreas = [
-    'AI & Machine Learning',
-    'Product Management',
-    'Software Engineering',
-    'Design (UX/UI)',
-    'Marketing & Growth',
-    'Sales',
-    'Entrepreneurship',
-    'Finance & Investing',
-    'Data Science',
-    'Leadership & Management',
-    'Career Guidance',
-    'Other',
-  ]
 
   return (
     <div style={{ paddingTop: '68px', minHeight: '100vh' }}>
@@ -224,53 +204,50 @@ function MentorApplyPage() {
                 />
               </div>
 
-              {/* Areas of Expertise */}
+              {/* Areas of Expertise — free text */}
               <div style={fieldStyle}>
                 <label style={labelStyle}>Areas of Expertise *</label>
-                <p style={{ color: '#64748b', fontSize: '0.8125rem', marginBottom: '16px' }}>Select all that apply</p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px' }}>
-                  {expertiseAreas.map((area) => (
-                    <label
-                      key={area}
-                      style={{
-                        padding: '12px 16px',
-                        background: form.expertise.includes(area) ? 'rgba(124,58,237,0.2)' : 'rgba(255,255,255,0.04)',
-                        border: form.expertise.includes(area) ? '1px solid rgba(124,58,237,0.5)' : '1px solid rgba(255,255,255,0.1)',
-                        borderRadius: '8px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s ease',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        fontSize: '0.875rem',
-                        color: form.expertise.includes(area) ? '#a78bfa' : '#94a3b8',
-                      }}
-                      onMouseEnter={(e) => {
-                        if (!form.expertise.includes(area)) {
-                          (e.currentTarget as HTMLLabelElement).style.borderColor = 'rgba(255,255,255,0.15)'
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (!form.expertise.includes(area)) {
-                          (e.currentTarget as HTMLLabelElement).style.borderColor = 'rgba(255,255,255,0.1)'
-                        }
-                      }}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={form.expertise.includes(area)}
-                        onChange={() => toggleExpertise(area)}
-                        style={{
-                          accentColor: '#7c3aed',
-                          cursor: 'pointer',
-                          width: '16px',
-                          height: '16px',
-                        }}
-                      />
-                      {area}
-                    </label>
-                  ))}
-                </div>
+                <p style={{ color: '#64748b', fontSize: '0.8125rem', marginBottom: '12px' }}>
+                  Enter your areas of expertise separated by commas (e.g., Personal Coach, UI/UX Design, Digital Marketing, Career Guidance).
+                </p>
+                <textarea
+                  required
+                  value={form.expertise}
+                  onChange={(e) => update('expertise', e.target.value)}
+                  placeholder="Example: Personal Coach, UI/UX Design, Graphic Design, Product Management, Data Analytics, Digital Marketing, Public Speaking, Career Guidance"
+                  rows={3}
+                  style={{ ...inputStyle, resize: 'vertical', fontFamily: 'inherit', lineHeight: '1.6' }}
+                  onFocus={(e) => { (e.target as HTMLTextAreaElement).style.borderColor = 'rgba(124,58,237,0.5)'; (e.target as HTMLTextAreaElement).style.background = 'rgba(124,58,237,0.04)' }}
+                  onBlur={(e) => { (e.target as HTMLTextAreaElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.target as HTMLTextAreaElement).style.background = 'rgba(255,255,255,0.04)' }}
+                />
+              </div>
+
+              {/* LinkedIn */}
+              <div style={fieldStyle}>
+                <label style={labelStyle}>LinkedIn Profile (Optional)</label>
+                <input
+                  type="url"
+                  value={form.linkedin}
+                  onChange={(e) => update('linkedin', e.target.value)}
+                  placeholder="https://linkedin.com/in/yourname"
+                  style={inputStyle}
+                  onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(124,58,237,0.5)'; (e.target as HTMLInputElement).style.background = 'rgba(124,58,237,0.04)' }}
+                  onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.target as HTMLInputElement).style.background = 'rgba(255,255,255,0.04)' }}
+                />
+              </div>
+
+              {/* Instagram / Facebook */}
+              <div style={fieldStyle}>
+                <label style={labelStyle}>Instagram or Facebook (Optional)</label>
+                <input
+                  type="url"
+                  value={form.social}
+                  onChange={(e) => update('social', e.target.value)}
+                  placeholder="https://instagram.com/yourhandle or facebook.com/yourpage"
+                  style={inputStyle}
+                  onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(124,58,237,0.5)'; (e.target as HTMLInputElement).style.background = 'rgba(124,58,237,0.04)' }}
+                  onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.target as HTMLInputElement).style.background = 'rgba(255,255,255,0.04)' }}
+                />
               </div>
 
               {/* Portfolio Website */}
@@ -280,12 +257,12 @@ function MentorApplyPage() {
                   type="url"
                   value={form.portfolio}
                   onChange={(e) => update('portfolio', e.target.value)}
-                  placeholder="https://yourportfolio.com or LinkedIn/GitHub URL"
+                  placeholder="https://yourportfolio.com or GitHub URL"
                   style={inputStyle}
                   onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(124,58,237,0.5)'; (e.target as HTMLInputElement).style.background = 'rgba(124,58,237,0.04)' }}
                   onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.target as HTMLInputElement).style.background = 'rgba(255,255,255,0.04)' }}
                 />
-                <p style={{ color: '#475569', fontSize: '0.75rem', marginTop: '6px' }}>Portfolio, GitHub, Behance, or LinkedIn profile</p>
+                <p style={{ color: '#475569', fontSize: '0.75rem', marginTop: '6px' }}>Portfolio, GitHub, or Behance link</p>
               </div>
 
               {/* Resume Upload */}
@@ -335,19 +312,19 @@ function MentorApplyPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={loading || !form.fullName || !form.email || !form.phone || form.expertise.length === 0}
+                disabled={loading || !form.fullName || !form.email || !form.phone || !form.expertise.trim()}
                 style={{
                   width: '100%',
                   padding: '14px 24px',
-                  background: loading || !form.fullName || !form.email || !form.phone || form.expertise.length === 0 ? 'rgba(124,58,237,0.5)' : 'linear-gradient(135deg, #7c3aed, #4f46e5)',
+                  background: loading || !form.fullName || !form.email || !form.phone || !form.expertise.trim() ? 'rgba(124,58,237,0.5)' : 'linear-gradient(135deg, #7c3aed, #4f46e5)',
                   border: 'none',
                   borderRadius: '10px',
                   color: 'white',
                   fontWeight: '700',
                   fontSize: '1rem',
-                  cursor: loading || !form.fullName || !form.email || !form.phone || form.expertise.length === 0 ? 'not-allowed' : 'pointer',
+                  cursor: loading || !form.fullName || !form.email || !form.phone || !form.expertise.trim() ? 'not-allowed' : 'pointer',
                   transition: 'opacity 0.2s ease, transform 0.2s ease',
-                  opacity: loading || !form.fullName || !form.email || !form.phone || form.expertise.length === 0 ? 0.7 : 1,
+                  opacity: loading || !form.fullName || !form.email || !form.phone || !form.expertise.trim() ? 0.7 : 1,
                   marginTop: '12px',
                 }}
               >
