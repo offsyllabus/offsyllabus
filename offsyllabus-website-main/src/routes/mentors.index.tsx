@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect, useRef } from 'react'
 
-export const Route = createFileRoute('/mentors')({
+export const Route = createFileRoute('/mentors/')({
   head: () => ({
     meta: [
       { title: 'Mentors — OffSyllabus' },
