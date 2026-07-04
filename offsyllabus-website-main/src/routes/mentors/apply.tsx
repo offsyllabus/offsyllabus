@@ -57,21 +57,32 @@ function MentorApplyPage() {
     e.preventDefault()
     setLoading(true)
 
-    const formData = new FormData()
-    formData.append('fullName', form.fullName)
-    formData.append('email', form.email)
-    formData.append('phone', form.phone)
-    formData.append('expertise', form.expertise)
-    formData.append('linkedin', form.linkedin)
-    formData.append('social', form.social)
-    formData.append('portfolio', form.portfolio)
-    if (form.resume) {
-      formData.append('resume', form.resume)
-    }
-
     try {
+      let resumeData = ''
+      if (form.resume) {
+        const buffer = await form.resume.arrayBuffer()
+        const bytes = new Uint8Array(buffer)
+        let binary = ''
+        bytes.forEach((b) => (binary += String.fromCharCode(b)))
+        resumeData = btoa(binary)
+      }
+
+      const formData = new FormData()
+      formData.append('fullName', form.fullName)
+      formData.append('email', form.email)
+      formData.append('phone', form.phone)
+      formData.append('expertise', form.expertise)
+      formData.append('linkedin', form.linkedin)
+      formData.append('social', form.social)
+      formData.append('portfolio', form.portfolio)
+      if (form.resume) {
+        formData.append('resumeData', resumeData)
+        formData.append('resumeName', form.resume.name)
+        formData.append('resumeType', form.resume.type)
+      }
+
       await fetch(
-        'https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_ID/exec',
+        'https://script.google.com/macros/s/AKfycbwB4ZeP9MdF4JHnOvWzvjmjgvy9wKiQGJJIqQ4TXfDXIOlkfFJwWk5p--1KE62emR69Fw/exec',
         {
           method: 'POST',
           mode: 'no-cors',
