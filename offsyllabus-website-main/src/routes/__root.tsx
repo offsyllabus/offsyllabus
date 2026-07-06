@@ -14,6 +14,7 @@ export const Route = createRootRoute({
           'OffSyllabus is a growth ecosystem for students aged 15–21. Discover your strengths, build future-ready skills, and gain real-world experience through mentorship, projects, and community.',
       },
       { name: 'theme-color', content: '#07070f' },
+      { name: 'google-site-verification', content: '_8ZMDgpyeoUtBe9i4KP1yjHiuyEkmXJ_AucXbbPykwk' },
       { property: 'og:title', content: 'OffSyllabus — Education Beyond Marks' },
       {
         property: 'og:description',
