@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Search, Calendar, MapPin, DollarSign, Clock, GraduationCap, ExternalLink, Filter, X } from "lucide-react";
 import { PROGRAMS, CATEGORIES, MODES, COSTS, LEVELS } from "../data/events-workshops";
-import ListYourCourseCard from "../components/ListYourCourseCard";
+import ListYourCourseButton from "../components/ListYourCourseButton";
 
 export const Route = createFileRoute("/events-workshops")({
   component: EventsWorkshopsPage,
@@ -56,9 +56,12 @@ function EventsWorkshopsPage() {
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-400">
             Discover the best learning opportunities from leading institutions and platforms to build real-world skills and advance your career.
           </p>
-          <button onClick={() => document.getElementById("filters")?.scrollIntoView({ behavior: "smooth" })} className="inline-flex items-center gap-2 rounded-full bg-[#7c5cff] px-8 py-3.5 font-semibold text-white transition-all hover:bg-[#6b4fd9]">
-            Browse Events & Workshops
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button onClick={() => document.getElementById("filters")?.scrollIntoView({ behavior: "smooth" })} className="inline-flex items-center gap-2 rounded-full bg-[#7c5cff] px-8 py-3.5 font-semibold text-white transition-all hover:bg-[#6b4fd9]">
+              Browse Events & Workshops
+            </button>
+            <ListYourCourseButton />
+          </div>
         </div>
       </section>
 
@@ -129,7 +132,6 @@ function EventsWorkshopsPage() {
             </div>
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <ListYourCourseCard />
               {filteredPrograms.map((program) => (
                 <div key={program.id} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all hover:border-[#7c5cff]/30 hover:bg-white/[0.05]">
                   <div className="mb-4 flex items-start justify-between gap-2">
