@@ -11,7 +11,7 @@ function ListYourCourseButton() {
 
   return (
     <>
-      <button onClick={() => setOpen(true)} className="inline-flex items-center gap-2 rounded-full bg-[#1DB584] px-8 py-3.5 font-semibold text-white transition-all hover:bg-[#17966C]">
+      <button onClick={() => setOpen(true)} className="inline-flex items-center gap-2 rounded-full bg-[#7c5cff] px-8 py-3.5 font-semibold text-white transition-all hover:bg-[#6b4fd9]">
         List your own course
       </button>
 
