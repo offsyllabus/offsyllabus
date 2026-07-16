@@ -1,6 +1,7 @@
 import { HeadContent, Outlet, Scripts, createRootRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import '../styles.css'
+import logoImg from '../assets/logo.png'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -69,51 +70,12 @@ function useIsMobile() {
 }
 
 function OffSyllabusLogo({ height = 38 }: { height?: number }) {
-  const scale = height / 50
-  const w = Math.round(120 * scale)
-  const h = height
-
   return (
-    <svg
-      width={w}
-      height={h}
-      viewBox="0 0 120 50"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="OFF Syllabus"
-    >
-      <text
-        x="2"
-        y="20"
-        fontFamily="'Bricolage Grotesque', 'Inter', sans-serif"
-        fontWeight="800"
-        fontSize="22"
-        fill="white"
-        letterSpacing="2"
-      >
-        OFF
-      </text>
-      <line
-        x1="0"
-        y1="38"
-        x2="118"
-        y2="28"
-        stroke="#ca0c12"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-      <text
-        x="2"
-        y="38"
-        fontFamily="'Bricolage Grotesque', 'Inter', sans-serif"
-        fontWeight="700"
-        fontSize="15"
-        fill="white"
-        letterSpacing="1.5"
-      >
-        SYLLABUS
-      </text>
-    </svg>
+    <img
+      src={logoImg}
+      alt="OFF Syllabus"
+      style={{ height, width: 'auto', display: 'block' }}
+    />
   )
 }
 
