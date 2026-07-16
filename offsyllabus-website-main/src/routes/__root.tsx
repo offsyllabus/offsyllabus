@@ -315,6 +315,65 @@ function Footer() {
             </div>
           ))}
 
+          {/* Contact Info */}
+          <div>
+            <h4
+              style={{
+                color: '#f1f5f9',
+                fontWeight: '700',
+                fontSize: '0.8125rem',
+                marginBottom: '10px',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Phone Number
+            </h4>
+            <a
+              href="tel:+918530779006"
+              style={{
+                display: 'block',
+                color: '#e2e8f0',
+                textDecoration: 'none',
+                fontSize: '0.9375rem',
+                marginBottom: '24px',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#ca0c12')}
+              onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#e2e8f0')}
+            >
+              (+91) 85307 79006
+            </a>
+
+            <h4
+              style={{
+                color: '#f1f5f9',
+                fontWeight: '700',
+                fontSize: '0.8125rem',
+                marginBottom: '10px',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Email
+            </h4>
+            <a
+              href="mailto:offsyllabus.info@gmail.com"
+              style={{
+                display: 'block',
+                color: '#e2e8f0',
+                textDecoration: 'none',
+                fontSize: '0.9375rem',
+                wordBreak: 'break-word',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#ca0c12')}
+              onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#e2e8f0')}
+            >
+              offsyllabus.info@gmail.com
+            </a>
+          </div>
+
           {/* CTA */}
           <div>
             <h4
