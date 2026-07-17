@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
-import { Search, Calendar, MapPin, DollarSign, Clock, GraduationCap, ExternalLink, Filter, X } from "lucide-react";
+import { Search, Calendar, MapPin, Clock, GraduationCap, ExternalLink, Filter, X } from "lucide-react";
 import { PROGRAMS, CATEGORIES, MODES, COSTS, LEVELS } from "../data/events-workshops";
 import ListYourCourseButton from "../components/ListYourCourseButton";
 
@@ -162,7 +162,6 @@ function EventsWorkshopsPage() {
                       <span>{program.deadline}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <DollarSign className="h-3.5 w-3.5" />
                       <span>{program.fee}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
