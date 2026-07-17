@@ -467,6 +467,23 @@ export const PROGRAMS: Program[] = [
     url: "https://bodhbridge.iitmpravartak.org.in/Entrepreneurship.php",
   },
   {
+    id: "thethinkschool-communication-masterclass",
+    title: "Communication Masterclass 2.0",
+    institution: "Think School",
+    category: "Private Educator Programs",
+    mode: "Online",
+    cost: "Paid",
+    level: "Beginner",
+    eligibility: "Students & professionals (ages 16+)",
+    duration: "6 weeks + 1 year of live sessions",
+    location: "Online (global)",
+    deadline: "Always open",
+    fee: "Paid (see website)",
+    description:
+      "Ganeshprasad S's flagship public speaking course — storytelling, message structure, body language, and stage presence, with weekly live sessions for a year.",
+    url: "https://thethinkschool.com/sp/communication-masterclass/",
+  },
+  {
     id: "google-ai-essentials",
     title: "Google AI Essentials",
     institution: "Google",
