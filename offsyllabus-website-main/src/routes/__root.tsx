@@ -62,7 +62,7 @@ function RootComponent() {
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Programs', to: '/programs' },
-  { label: 'Events & Workshops', to: '/events-workshops' },
+  { label: 'Quests', to: '/events-workshops' },
   { label: 'Community', to: '/community' },
   { label: 'Mentors', to: '/mentors' },
   { label: 'About', to: '/about' },
