@@ -1,5 +1,6 @@
 import { HeadContent, Outlet, Scripts, createRootRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
+import { Linkedin, Instagram, Facebook } from 'lucide-react'
 import '../styles.css'
 import logoImg from '../assets/logo.png'
 
@@ -408,6 +409,57 @@ function Footer() {
             <Link to="/apply" className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.875rem' }}>
               <span>Apply Now →</span>
             </Link>
+          </div>
+
+          {/* Follow Us */}
+          <div>
+            <h4
+              style={{
+                color: '#f1f5f9',
+                fontWeight: '600',
+                fontSize: '0.875rem',
+                marginBottom: '16px',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Follow Us
+            </h4>
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <a
+                href="https://www.linkedin.com/company/off-syllabus/insights/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                style={{ color: '#64748b', transition: 'color 0.2s ease' }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#ca0c12')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#64748b')}
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/offsyllabus.club/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                style={{ color: '#64748b', transition: 'color 0.2s ease' }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#ca0c12')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#64748b')}
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61582265525588"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                style={{ color: '#64748b', transition: 'color 0.2s ease' }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#ca0c12')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#64748b')}
+              >
+                <Facebook size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
