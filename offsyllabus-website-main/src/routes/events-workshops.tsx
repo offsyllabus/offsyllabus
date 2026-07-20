@@ -51,14 +51,14 @@ function EventsWorkshopsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#7c5cff]/10 via-transparent to-transparent" />
         <div className="relative mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Explore Events & Workshops
+            Explore Quests
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-400">
-            Discover the best learning opportunities from leading institutions and platforms to build real-world skills and advance your career.
+            Experiences worth pursuing to build real-world skills and advance your career.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button onClick={() => document.getElementById("filters")?.scrollIntoView({ behavior: "smooth" })} className="inline-flex items-center gap-2 rounded-full bg-[#7c5cff] px-8 py-3.5 font-semibold text-white transition-all hover:bg-[#6b4fd9]">
-              Browse Events & Workshops
+              Browse Quests
             </button>
             <ListYourCourseButton />
           </div>
@@ -71,7 +71,7 @@ function EventsWorkshopsPage() {
           <div className="flex flex-col gap-4">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
-              <input type="text" placeholder="Search events, cohorts, workshops" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full rounded-xl border border-white/10 bg-white/5 py-3.5 pl-12 pr-4 text-white placeholder-gray-500 outline-none transition-all focus:border-[#7c5cff]/50 focus:ring-2 focus:ring-[#7c5cff]/20" />
+              <input type="text" placeholder="Search quests, cohorts, workshops" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full rounded-xl border border-white/10 bg-white/5 py-3.5 pl-12 pr-4 text-white placeholder-gray-500 outline-none transition-all focus:border-[#7c5cff]/50 focus:ring-2 focus:ring-[#7c5cff]/20" />
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-2">
@@ -118,13 +118,13 @@ function EventsWorkshopsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-6 flex items-center justify-between">
             <p className="text-gray-400">
-              Showing <span className="font-semibold text-white">{filteredPrograms.length}</span> events & workshops
+              Showing <span className="font-semibold text-white">{filteredPrograms.length}</span> quests
             </p>
           </div>
           {filteredPrograms.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
               <Search className="mb-4 h-12 w-12 text-gray-600" />
-              <h3 className="mb-2 text-xl font-semibold">No events found</h3>
+              <h3 className="mb-2 text-xl font-semibold">No quests found</h3>
               <p className="mb-6 text-gray-400">Try adjusting your filters or search query</p>
               <button onClick={clearFilters} className="rounded-full bg-[#7c5cff] px-6 py-2.5 font-semibold text-white transition-all hover:bg-[#6b4fd9]">
                 Clear all filters
