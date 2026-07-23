@@ -38,6 +38,7 @@ export type Program = {
   fee: string;
   description: string;
   url: string;
+  applicationUrl: string; // Added direct portal/form link
 };
 
 export const PROGRAMS: Program[] = [
@@ -58,6 +59,7 @@ export const PROGRAMS: Program[] = [
     description:
       "An IIM Ranchi flagship cohort building social impact, leadership, and entrepreneurial mindset in young changemakers.",
     url: "https://iimranchi.ac.in/",
+    applicationUrl: "https://iimranchi.ac.in/p/ycp",
   },
   {
     id: "iim-bangalore-young-entrepreneurship",
@@ -75,6 +77,7 @@ export const PROGRAMS: Program[] = [
     description:
       "NSRCEL-backed program covering ideation, business modelling, MVPs and pitching, taught by IIMB faculty and founders.",
     url: "https://www.nsrcel.org/",
+    applicationUrl: "https://www.nsrcel.org/young-entrepreneurship-program/",
   },
   {
     id: "iit-madras-summer-fellowship",
@@ -92,6 +95,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Paid research fellowship across engineering, sciences, and humanities under IIT Madras faculty mentorship.",
     url: "https://www.iitm.ac.in/",
+    applicationUrl: "https://srfp.iitm.ac.in/",
   },
   {
     id: "iit-bombay-eureka",
@@ -109,6 +113,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Asia's largest student-run business model competition with mentorship, workshops, and ₹1Cr+ in prizes.",
     url: "https://www.ecell.in/eureka/",
+    applicationUrl: "https://www.ecell.in/eureka/register",
   },
   {
     id: "isro-yuvika",
@@ -126,6 +131,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Two-week space science and satellite technology programme for school students, taught directly by ISRO scientists.",
     url: "https://www.isro.gov.in/",
+    applicationUrl: "https://jigyasa.iirs.gov.in/yuvika",
   },
   {
     id: "iimb-youth-udyami",
@@ -143,6 +149,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Year-long student-run mentorship program where school students build a startup idea from pitch to prototype, judged by IIMB faculty and industry leaders.",
     url: "https://www.iimb.ac.in/",
+    applicationUrl: "https://www.iimb.ac.in/prayaas/",
   },
   {
     id: "ashoka-young-scholars",
@@ -160,6 +167,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A liberal arts residential summer programme — academic exploration, debates, and creative writing on campus.",
     url: "https://www.ashoka.edu.in/ysp",
+    applicationUrl: "https://apply.ashoka.edu.in/",
   },
   {
     id: "isb-young-leaders",
@@ -177,6 +185,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Deferred admission to ISB's PGP with leadership workshops, mentorship and a head-start on a top MBA.",
     url: "https://www.isb.edu/en/study-isb/postgraduate-programmes/ylp.html",
+    applicationUrl: "https://pgpapp.isb.edu/user/default.aspx",
   },
   {
     id: "harvard-pre-college",
@@ -194,6 +203,7 @@ export const PROGRAMS: Program[] = [
     description:
       "On-campus Harvard summer experience — non-credit academic courses with Harvard faculty and global peers.",
     url: "https://precollege.summer.harvard.edu/",
+    applicationUrl: "https://precollege.summer.harvard.edu/apply",
   },
   {
     id: "stanford-spcs-summer",
@@ -211,6 +221,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Credit-bearing Stanford courses across CS, engineering, design, and humanities for ambitious students.",
     url: "https://summer.stanford.edu/",
+    applicationUrl: "https://summer.stanford.edu/apply",
   },
   {
     id: "mit-launch",
@@ -228,6 +239,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Launch a real startup over the summer — build a team, ship an MVP, and pitch to investors with MIT mentors.",
     url: "https://www.launchx.com/",
+    applicationUrl: "https://launchx.com/apply",
   },
   {
     id: "plaksha-yts",
@@ -245,6 +257,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Residential STEM immersion with tracks in engineering, biology, economics, and data science, taught by faculty from global universities.",
     url: "https://yts.plaksha.edu.in/",
+    applicationUrl: "https://apply.plaksha.edu.in/",
   },
   {
     id: "flame-summer-immersion",
@@ -262,6 +275,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Liberal arts exploration across psychology, economics, and communication, combined with a residential campus experience.",
     url: "https://www.flame.edu.in/academics/summer-immersion-program",
+    applicationUrl: "https://apply.flame.edu.in/",
   },
   {
     id: "krea-young-scholars",
@@ -279,6 +293,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Interdisciplinary summer sessions blending humanities, sciences, and design thinking with small-group, discussion-driven learning.",
     url: "https://krea.edu.in/young-scholars-programme",
+    applicationUrl: "https://krea.edu.in/apply/",
   },
   {
     id: "yc-startup-school",
@@ -296,6 +311,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free YC program with founder talks, weekly group sessions, and the playbook used by 4,000+ YC startups.",
     url: "https://www.startupschool.org/",
+    applicationUrl: "https://www.startupschool.org/register",
   },
   {
     id: "techstars-startup-weekend",
@@ -313,6 +329,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Pitch an idea Friday, build it with a team over the weekend, demo to local investors on Sunday.",
     url: "https://www.techstars.com/communities/startup-weekend",
+    applicationUrl: "https://www.techstars.com/events",
   },
   {
     id: "sequoia-spark",
@@ -330,6 +347,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Mentorship-driven fellowship for early-stage women founders with capital, network, and Peak XV partner access.",
     url: "https://www.peakxv.com/spark/",
+    applicationUrl: "https://www.peakxv.com/spark/#apply",
   },
   {
     id: "antler-residency",
@@ -347,6 +365,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Find a co-founder, validate an idea, and raise pre-seed capital from Antler in a structured residency.",
     url: "https://www.antler.co/",
+    applicationUrl: "https://www.antler.co/apply",
   },
   {
     id: "nsrcel-launchpad",
@@ -364,6 +383,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Structured incubation with IIMB mentors, investor connects, and grant funding for early-stage Indian startups.",
     url: "https://www.nsrcel.org/",
+    applicationUrl: "https://www.nsrcel.org/programs/",
   },
   {
     id: "iima-yep",
@@ -381,6 +401,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Executive programme for young founders on strategy formulation, leadership, and growing early-stage ventures, taught by IIMA faculty.",
     url: "https://exed.iima.ac.in/young-entrepreneurs-programme",
+    applicationUrl: "https://exed.iima.ac.in/apply/",
   },
   {
     id: "deeplearning-ai-ml",
@@ -398,6 +419,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Andrew Ng's foundational ML course — supervised learning, neural networks, and best practices.",
     url: "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+    applicationUrl: "https://www.coursera.org/specializations/machine-learning",
   },
   {
     id: "interaction-design-foundation",
@@ -415,6 +437,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Industry-recognised UX, design thinking, and product design courses with mentorship and a portfolio.",
     url: "https://www.interaction-design.org/",
+    applicationUrl: "https://www.interaction-design.org/join",
   },
   {
     id: "varsity-by-zerodha",
@@ -432,6 +455,7 @@ export const PROGRAMS: Program[] = [
     description:
       "India's most popular free financial markets curriculum — from basics to derivatives and personal finance.",
     url: "https://zerodha.com/varsity/",
+    applicationUrl: "https://zerodha.com/varsity/modules/",
   },
   {
     id: "iitm-pravartak-edp",
@@ -449,6 +473,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free entrepreneurship fundamentals course covering ideation, business modelling, and pitch decks, with an optional IIT Madras-certified exam.",
     url: "https://bodhbridge.iitmpravartak.org.in/development.php",
+    applicationUrl: "https://bodhbridge.iitmpravartak.org.in/login.php",
   },
   {
     id: "iitm-pravartak-school",
@@ -466,6 +491,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Introductory entrepreneurship training for school students focused on creativity, problem-solving, and leadership fundamentals.",
     url: "https://bodhbridge.iitmpravartak.org.in/Entrepreneurship.php",
+    applicationUrl: "https://bodhbridge.iitmpravartak.org.in/login.php",
   },
   {
     id: "thethinkschool-communication-masterclass",
@@ -483,6 +509,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Ganeshprasad S's flagship public speaking course — storytelling, message structure, body language, and stage presence, with weekly live sessions for a year.",
     url: "https://thethinkschool.com/sp/communication-masterclass/",
+    applicationUrl: "https://thethinkschool.com/sp/communication-masterclass/#pricing",
   },
   {
     id: "google-ai-essentials",
@@ -500,6 +527,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on AI workshop from Google — prompt engineering, productivity, and responsible AI fundamentals.",
     url: "https://grow.google/ai-essentials/",
+    applicationUrl: "https://www.coursera.org/learn/google-ai-essentials",
   },
   {
     id: "microsoft-future-ready",
@@ -517,6 +545,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Project-based virtual internship on Azure cloud with industry mentors and a Microsoft completion certificate.",
     url: "https://futurereadytalent.in/",
+    applicationUrl: "https://futurereadytalent.in/register",
   },
   {
     id: "google-step",
@@ -534,6 +563,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Google's flagship early-career internship — real engineering projects, mentorship, and a paid summer at Google.",
     url: "https://buildyourfuture.withgoogle.com/programs/step",
+    applicationUrl: "https://google.com/about/careers/applications/students/",
   },
   {
     id: "product-school-pm",
@@ -551,6 +581,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Live instruction on product strategy, roadmapping, metrics, and stakeholder management.",
     url: "https://productschool.com/",
+    applicationUrl: "https://productschool.com/product-management-certification",
   },
   {
     id: "adobe-digital-star",
@@ -568,6 +599,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Skilling programme on creative and digital design tools for students, with a completion certificate from Adobe.",
     url: "https://www.adobe.com/in/",
+    applicationUrl: "https://learning.adobe.com/",
   },
   {
     id: "flipkart-grid",
@@ -585,6 +617,7 @@ export const PROGRAMS: Program[] = [
     description:
       "National case-study and product challenge for engineering students that feeds directly into Flipkart's internship pipeline.",
     url: "https://unstop.com/",
+    applicationUrl: "https://unstop.com/hackathons",
   },
   {
     id: "on-deck-fellowship",
@@ -602,6 +635,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A high-signal founder community to find co-founders, validate ideas, and raise from 250+ partner funds.",
     url: "https://www.beondeck.com/",
+    applicationUrl: "https://www.beondeck.com/apply",
   },
   {
     id: "harvard-cs50",
@@ -619,6 +653,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Harvard's flagship intro to computer science — algorithms, data structures, and the web.",
     url: "https://cs50.harvard.edu/",
+    applicationUrl: "https://www.edx.org/course/introduction-computer-science-harvardx-cs50x",
   },
   {
     id: "mit-ocw-intro-cs",
@@ -636,6 +671,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Foundational programming and CS concepts using Python, taught by MIT faculty.",
     url: "https://ocw.mit.edu/",
+    applicationUrl: "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
   },
   {
     id: "ted-ed-student-talks",
@@ -653,6 +689,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Discover, develop, and share a big idea in the form of a short, TED-style talk — public speaking for students.",
     url: "https://ed.ted.com/student-talks",
+    applicationUrl: "https://ed.ted.com/student-talks/apply",
   },
   {
     id: "cfa-investment-foundations",
@@ -670,6 +707,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Globally recognised intro to investment industry — ethics, asset classes, and financial markets.",
     url: "https://www.cfainstitute.org/programs/investment-foundations",
+    applicationUrl: "https://www.cfainstitute.org/programs/investment-foundations/register",
   },
   {
     id: "unleash-changemaker-lab",
@@ -687,6 +725,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A global innovation lab where 1,000 young people prototype solutions to UN Sustainable Development Goals.",
     url: "https://unleash.org/",
+    applicationUrl: "https://unleash.org/programs/",
   },
   {
     id: "global-changemakers",
@@ -704,6 +743,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Youth-led social impact fellowship — training, grants, and a global network of changemakers.",
     url: "https://globalchangemakers.org/",
+    applicationUrl: "https://globalchangemakers.org/fellowship",
   },
   {
     id: "t-hub-youth",
@@ -721,6 +761,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Early-stage innovation bootcamp for young founders — idea validation, prototyping, and investor pitch days.",
     url: "https://t-hub.co/",
+    applicationUrl: "https://t-hub.co/programs/",
   },
   {
     id: "teach-for-india-fellowship",
@@ -738,6 +779,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A prestigious 2-year teaching fellowship placing graduates in under-resourced classrooms to bridge educational inequity.",
     url: "https://www.teachforindia.org/",
+    applicationUrl: "https://apply.teachforindia.org/",
   },
   {
     id: "insef",
@@ -755,6 +797,7 @@ export const PROGRAMS: Program[] = [
     description:
       "National science fair where students present original research projects to expert judges across multiple qualifying rounds.",
     url: "https://insef.in/",
+    applicationUrl: "https://insef.in/register",
   },
   {
     id: "zerodha-rainmatter-fellowship",
@@ -772,6 +815,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Fellowship-style grant program for young changemakers working on climate and finance-adjacent projects, backed by Zerodha's Rainmatter initiative.",
     url: "https://rainmatter.com/",
+    applicationUrl: "https://rainmatter.com/contact/",
   },
 
   // --- NEXT 10 PROGRAMS ---
@@ -791,6 +835,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A global, online program focused on bringing new contributors into open source software development under direct Google mentorship.",
     url: "https://summerofcode.withgoogle.com/",
+    applicationUrl: "https://summerofcode.withgoogle.com/get-started",
   },
   {
     id: "tks-global-accelerator",
@@ -808,6 +853,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A prestigious human accelerator program for teens to learn about exponential technologies like AI, quantum computing, and synthetic biology.",
     url: "https://tks.world/",
+    applicationUrl: "https://tks.world/apply",
   },
   {
     id: "mlh-fellowship",
@@ -825,6 +871,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A highly selective remote internship alternative where fellows contribute to open-source software used globally under expert engineering mentors.",
     url: "https://fellowship.mlh.io/",
+    applicationUrl: "https://fellowship.mlh.io/apply",
   },
   {
     id: "iit-delhi-srfp",
@@ -842,6 +889,7 @@ export const PROGRAMS: Program[] = [
     description:
       "An elite opportunity for external undergraduates to pursue high-impact scientific research projects under the direct guidance of IIT Delhi faculty.",
     url: "https://www.iitd.ac.in/",
+    applicationUrl: "https://academics.iitd.ac.in/srfp/",
   },
   {
     id: "wharton-global-youth-program",
@@ -859,6 +907,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Immersive pre-college courses in business economics, finance, leadership, and tech analytics taught directly by Wharton faculty.",
     url: "https://globalyouth.wharton.upenn.edu/",
+    applicationUrl: "https://globalyouth.wharton.upenn.edu/admissions/",
   },
   {
     id: "thiel-fellowship",
@@ -876,6 +925,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Founded by Peter Thiel, this legendary program awards $100k grants to visionary young builders who choose to drop out of college to build new things.",
     url: "https://thielfellowship.org/",
+    applicationUrl: "https://thielfellowship.org/apply",
   },
   {
     id: "apple-developer-academy",
@@ -893,6 +943,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A highly selective immersive academy providing deep-dive training in iOS programming, UI/UX design, entrepreneurship, and core tech skills.",
     url: "https://developer.apple.com/academy/",
+    applicationUrl: "https://developer.apple.com/academy/",
   },
   {
     id: "nextleap-pm-fellowship",
@@ -910,6 +961,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A cohort-based, hands-on learning program where aspiring PMs master product teardowns, metrics frameworks, and transition into product roles.",
     url: "https://nextleap.app/",
+    applicationUrl: "https://nextleap.app/product-manager-fellowship",
   },
   {
     id: "100xvc-venture-initiation",
@@ -927,6 +979,7 @@ export const PROGRAMS: Program[] = [
     description:
       "An investor-led masterclass series teaching the direct mechanics of pitching, fundraising math, cap tables, and legal scaling frameworks.",
     url: "https://www.100x.vc/",
+    applicationUrl: "https://www.100x.vc/vip",
   },
   {
     id: "ashoka-horizons-premium",
@@ -944,6 +997,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Rigorous, small-group live online modules crossing global relations, futuristic tech, and critical thinking mentored by university professors.",
     url: "https://www.ashoka.edu.in/",
+    applicationUrl: "https://apply.ashoka.edu.in/",
   },
 
   // --- NEXT 15 PROGRAMS ---
@@ -963,6 +1017,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free entrepreneurship education modules and startup toolkits from the Wadhwani National Entrepreneurship Network.",
     url: "https://wfglobal.org/",
+    applicationUrl: "https://nen.wfglobal.org/",
   },
   {
     id: "coursera-yale-wellbeing",
@@ -980,6 +1035,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Yale's most popular course ever — the psychology of happiness and evidence-based habits for well-being.",
     url: "https://www.coursera.org/learn/the-science-of-well-being",
+    applicationUrl: "https://www.coursera.org/learn/the-science-of-well-being",
   },
   {
     id: "edx-mit-intro-python",
@@ -997,6 +1053,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A companion to CS50 focused entirely on Python fundamentals, functions, and libraries.",
     url: "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python",
+    applicationUrl: "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python",
   },
   {
     id: "kaggle-learn",
@@ -1014,6 +1071,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Bite-sized, hands-on courses on Python, machine learning, SQL, and data visualization with in-browser notebooks.",
     url: "https://www.kaggle.com/learn",
+    applicationUrl: "https://www.kaggle.com/learn",
   },
   {
     id: "nvidia-deep-learning-institute",
@@ -1031,6 +1089,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on courses in AI, deep learning, and accelerated computing, several free with NVIDIA certification.",
     url: "https://www.nvidia.com/en-us/training/",
+    applicationUrl: "https://courses.nvidia.com/courses/",
   },
   {
     id: "hubspot-academy",
@@ -1048,6 +1107,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free certifications in marketing, sales, content strategy, and inbound growth with a recognized credential.",
     url: "https://academy.hubspot.com/",
+    applicationUrl: "https://academy.hubspot.com/certification-overview",
   },
   {
     id: "meta-blueprint",
@@ -1065,6 +1125,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Meta's official certification in digital marketing fundamentals across its ad platforms.",
     url: "https://www.facebookblueprint.com/",
+    applicationUrl: "https://www.facebookblueprint.com/student/catalog",
   },
   {
     id: "500-global-accelerator",
@@ -1082,6 +1143,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Seed accelerator offering mentorship, capital, and a global investor network to early-stage startups.",
     url: "https://500.co/accelerator",
+    applicationUrl: "https://500.co/accelerator",
   },
   {
     id: "villgro-incubation",
@@ -1099,6 +1161,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Incubation and seed funding for early-stage social enterprises across health, agriculture, and clean energy.",
     url: "https://villgro.org/",
+    applicationUrl: "https://villgro.org/for-enterprises/",
   },
   {
     id: "iisc-summer-fellowship",
@@ -1116,6 +1179,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on research fellowship in IISc labs across physics, biology, chemistry, and engineering disciplines.",
     url: "https://www.iisc.ac.in/",
+    applicationUrl: "https://fasal.ias.ac.in/",
   },
   {
     id: "du-nsp-innovation",
@@ -1133,6 +1197,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Campus innovation cell driving ideation bootcamps, mentorship, and seed grant access for student founders.",
     url: "https://innovation.du.ac.in/",
+    applicationUrl: "https://innovation.du.ac.in/",
   },
   {
     id: "isb-yli",
@@ -1150,6 +1215,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Short residential management immersion covering leadership, HR, and business strategy fundamentals.",
     url: "https://xlri.ac.in/",
+    applicationUrl: "https://xlri.ac.in/programs/yli",
   },
   {
     id: "duke-tip",
@@ -1167,6 +1233,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Precollege academic enrichment across STEM, writing, and leadership on Duke's campus.",
     url: "https://learnmore.duke.edu/youth/",
+    applicationUrl: "https://learnmore.duke.edu/youth/apply",
   },
   {
     id: "lse-summer-school",
@@ -1184,6 +1251,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Intensive economics, finance, law, and social science courses taught by LSE faculty, credit-transferable.",
     url: "https://www.lse.ac.uk/study-at-lse/summer-schools",
+    applicationUrl: "https://www.lse.ac.uk/study-at-lse/summer-schools/apply",
   },
   {
     id: "unstop-national-level-hackathons",
@@ -1201,6 +1269,7 @@ export const PROGRAMS: Program[] = [
     description:
       "India's largest student competition platform hosting hackathons, case challenges, and quizzes with corporate sponsors.",
     url: "https://unstop.com/",
+    applicationUrl: "https://unstop.com/hackathons",
   },
 
   // --- SPACE & AEROSPACE PROGRAMS ---
@@ -1220,6 +1289,7 @@ export const PROGRAMS: Program[] = [
     description:
       "ISRO's Indian Institute of Remote Sensing outreach course covering the fundamentals of Remote Sensing, GIS, and Global Navigation Satellite Systems, with certification for eligible participants.",
     url: "https://www.iirs.gov.in/",
+    applicationUrl: "https://elearning.iirs.gov.in/edusatregistration/student",
   },
   {
     id: "iist-young-talent-nurture",
@@ -1237,6 +1307,7 @@ export const PROGRAMS: Program[] = [
     description:
       "IIST's outreach initiative exposing school students to space science and technology through campus interaction, lectures, and hands-on activities at India's premier space research institute.",
     url: "https://www.iist.ac.in/outreach",
+    applicationUrl: "https://www.iist.ac.in/outreach",
   },
   {
     id: "nasa-ostem-internship",
@@ -1254,6 +1325,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Paid, hands-on NASA internships where college students work directly with NASA mentors on real agency projects across science, technology, aeronautics, and space exploration.",
     url: "https://www.nasa.gov/learning-resources/internship-programs/",
+    applicationUrl: "https://intern.nasa.gov/",
   },
   {
     id: "nasa-space-apps-challenge",
@@ -1271,6 +1343,7 @@ export const PROGRAMS: Program[] = [
     description:
       "The world's largest annual space hackathon, where teams use NASA's open data to build solutions to real challenges in space exploration and life on Earth, with a shot at global recognition.",
     url: "https://www.spaceappschallenge.org/",
+    applicationUrl: "https://www.spaceappschallenge.org/register/",
   },
   {
     id: "esa-academy-training",
@@ -1288,6 +1361,7 @@ export const PROGRAMS: Program[] = [
     description:
       "ESA's flagship education initiative offering university students hands-on training in spacecraft design, CubeSats, rocketry, and space science through workshops led by ESA experts.",
     url: "https://www.esa.int/Education/ESA_Academy",
+    applicationUrl: "https://www.esa.int/Education/ESA_Academy/Current_opportunities",
   },
   {
     id: "issi-space-studies-program",
@@ -1305,6 +1379,7 @@ export const PROGRAMS: Program[] = [
     description:
       "ISU's intensive interdisciplinary summer program bringing together participants worldwide to study space science, engineering, policy, business, and law alongside space industry professionals.",
     url: "https://www.isunet.edu/ssp",
+    applicationUrl: "https://www.isunet.edu/ssp-application/",
   },
   {
     id: "mit-edx-astrophysics",
@@ -1322,6 +1397,7 @@ export const PROGRAMS: Program[] = [
     description:
       "An introductory astrophysics course exploring how scientists detect and characterize planets beyond our solar system, taught by working astronomers.",
     url: "https://www.edx.org/learn/astrophysics",
+    applicationUrl: "https://www.edx.org/learn/astrophysics",
   },
   {
     id: "coursera-rocket-propulsion",
@@ -1339,6 +1415,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A foundational course in rocket propulsion, orbital mechanics, and spacecraft systems taught by aerospace engineering faculty, ideal for students exploring rocket science fundamentals.",
     url: "https://www.coursera.org/learn/how-things-fly",
+    applicationUrl: "https://www.coursera.org/learn/how-things-fly",
   },
   {
     id: "spacex-nasa-university-nanosat",
@@ -1356,6 +1433,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A competitive systems-engineering program where university teams design, build, and mature real small-satellite mission concepts, mentored through early-phase spacecraft development.",
     url: "https://floridaspacegrant.org/nasa-opportunities/",
+    applicationUrl: "https://universitynanosat.org/solicitation/",
   },
   {
     id: "isro-catch-scheme",
@@ -1373,11 +1451,10 @@ export const PROGRAMS: Program[] = [
     description:
       "ISRO's outreach program exposing school students to space technology, satellite applications, and rocketry through guided visits and interactive sessions at ISRO centers.",
     url: "https://www.isro.gov.in/",
+    applicationUrl: "https://www.isro.gov.in/CapacityBuilding.html",
   },
 
   // --- NEW ADDITIONS (2026-07-21) ---
-  // Skipped duplicates already in the list above: YUVIKA (isro-yuvika) and
-  // IIRS-ISRO Outreach Programme (iirs-isro-remote-sensing-gis).
   {
     id: "isro-start-awareness-training",
     title: "Space Science & Technology Awareness Training (START)",
@@ -1394,6 +1471,7 @@ export const PROGRAMS: Program[] = [
     description:
       "ISRO scientists deliver an introductory-level training across astronomy, astrophysics, heliophysics, sun-earth interaction, instrumentation, and aeronomy, opening a window into India's space programme and research pathways.",
     url: "https://www.iirs.gov.in/",
+    applicationUrl: "https://elearning.iirs.gov.in/edusatregistration/student",
   },
   {
     id: "iist-internship-opportunities",
@@ -1411,6 +1489,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Four tracks at India's premier space institute: a Summer Internship for cutting-edge research, a Year-Round Internship for Project work, Internships under national fellowship schemes, and a PhD Visiting Students Scheme.",
     url: "https://www.iist.ac.in/internships",
+    applicationUrl: "https://www.iist.ac.in/internships",
   },
   {
     id: "space-kidz-india",
@@ -1428,6 +1507,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Space technology education for students of all ages — expert-led online courses plus hands-on offline workshops and bootcamps, making space accessible beyond the classroom.",
     url: "https://spacekidzindia.in/",
+    applicationUrl: "https://spacekidzindia.in/courses/",
   },
   {
     id: "lit-school-cotf-summit-2026",
@@ -1445,6 +1525,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A 2-day challenge summit — pick one of 10 future career tracks, take a real brief, learn from mentors, build in the Innovate Arena, and pitch what you made to judges on the main stage.",
     url: "https://www.litschool.in/cotfsummit2026",
+    applicationUrl: "https://www.litschool.in/cotfsummit2026#register",
   },
 
   // --- NEW ADDITIONS (15 related programs) ---
@@ -1464,6 +1545,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Skilling and job-readiness program from the Wadhwani Foundation focused on employability training, soft skills, and placement support for young job-seekers.",
     url: "https://wfglobal.org/",
+    applicationUrl: "https://skill.wfglobal.org/",
   },
   {
     id: "coursera-google-data-analytics",
@@ -1481,6 +1563,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Google's flagship data analytics certificate covering spreadsheets, SQL, Tableau, and R, designed to prepare learners for entry-level analyst roles.",
     url: "https://www.coursera.org/professional-certificates/google-data-analytics",
+    applicationUrl: "https://www.coursera.org/professional-certificates/google-data-analytics",
   },
   {
     id: "coursera-google-ux-design",
@@ -1498,6 +1581,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on UX design training covering wireframing, prototyping, and user research, culminating in a portfolio-ready case study.",
     url: "https://www.coursera.org/professional-certificates/google-ux-design",
+    applicationUrl: "https://www.coursera.org/professional-certificates/google-ux-design",
   },
   {
     id: "ibm-skillsbuild",
@@ -1515,6 +1599,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free courses and credentials in AI, cybersecurity, data analytics, and professional skills, backed by IBM certification and mentorship options.",
     url: "https://skillsbuild.org/",
+    applicationUrl: "https://skillsbuild.org/students",
   },
   {
     id: "salesforce-trailhead",
@@ -1532,6 +1617,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Gamified, self-paced learning platform for CRM, admin, and developer skills on the Salesforce ecosystem, with badges and free certifications.",
     url: "https://trailhead.salesforce.com/",
+    applicationUrl: "https://trailhead.salesforce.com/signup",
   },
   {
     id: "aws-educate",
@@ -1549,6 +1635,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free cloud computing courses and hands-on labs from AWS, covering fundamentals of cloud infrastructure, AI/ML, and career pathways.",
     url: "https://aws.amazon.com/education/awseducate/",
+    applicationUrl: "https://www.awseducate.com/registration",
   },
   {
     id: "khan-academy",
@@ -1566,6 +1653,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free, comprehensive learning platform covering math, science, and test prep (including SAT), used by millions of students worldwide.",
     url: "https://www.khanacademy.org/",
+    applicationUrl: "https://www.khanacademy.org/signup",
   },
   {
     id: "freecodecamp",
@@ -1583,6 +1671,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A free, project-based curriculum covering web development, data science, and machine learning, with verified certifications on completion.",
     url: "https://www.freecodecamp.org/",
+    applicationUrl: "https://www.freecodecamp.org/learn",
   },
   {
     id: "uc-berkeley-precollege-scholars",
@@ -1600,6 +1689,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Credit-bearing UC Berkeley courses for high schoolers across STEM, business, and humanities, taught by UC Berkeley faculty on campus.",
     url: "https://precollege.berkeley.edu/",
+    applicationUrl: "https://precollege.berkeley.edu/application",
   },
   {
     id: "georgia-tech-precollege-summer",
@@ -1617,6 +1707,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on STEM and engineering immersion for high schoolers on Georgia Tech's campus, with tracks in robotics, coding, and design.",
     url: "https://pe.gatech.edu/programs/summer",
+    applicationUrl: "https://pe.gatech.edu/programs/summer/apply",
   },
   {
     id: "iit-kanpur-surge",
@@ -1634,6 +1725,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A selective research program placing external undergraduates in IIT Kanpur labs to work on hands-on projects under faculty mentorship.",
     url: "https://surge.iitk.ac.in/",
+    applicationUrl: "https://surge.iitk.ac.in/register",
   },
   {
     id: "aim-community-innovator-fellowship",
@@ -1651,6 +1743,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A government-backed fellowship supporting grassroots and community-level innovators with mentorship, funding access, and innovation training under India's Atal Innovation Mission.",
     url: "https://aim.gov.in/",
+    applicationUrl: "https://aim.gov.in/cif.php",
   },
   {
     id: "she-loves-data",
@@ -1668,6 +1761,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free data science and analytics workshops for women and underrepresented groups, covering Python, SQL, and machine learning fundamentals.",
     url: "https://shelovesdata.com/",
+    applicationUrl: "https://shelovesdata.com/events/",
   },
   {
     id: "girls-who-code-summer-immersion",
@@ -1685,6 +1779,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A free coding immersion program for girls and non-binary high schoolers, covering web development, cybersecurity, and data science with mentorship from women in tech.",
     url: "https://girlswhocode.com/programs/summer-immersion-program",
+    applicationUrl: "https://girlswhocode.com/programs/summer-immersion-program#apply",
   },
   {
     id: "ian-catalyst",
@@ -1702,6 +1797,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Early-stage founder support program from India's oldest angel network, offering mentorship, investor connects, and access to angel funding.",
     url: "https://indianangelnetwork.com/",
+    applicationUrl: "https://indianangelnetwork.com/startup-submission/",
   },
 
   // --- NEW ADDITIONS (20 Indian Programs) ---
@@ -1721,6 +1817,7 @@ export const PROGRAMS: Program[] = [
     description:
       "IIM Calcutta's foundational leadership and business fundamentals cohort for pre-university students, taught by faculty and alumni.",
     url: "https://www.iimcal.ac.in/",
+    applicationUrl: "https://www.iimcal.ac.in/programs/ylp",
   },
   {
     id: "nid-design-discovery",
@@ -1738,6 +1835,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Hands-on introduction to design thinking, product design, and visual communication on NID's campus, led by faculty and design practitioners.",
     url: "https://www.nid.edu/",
+    applicationUrl: "https://admissions.nid.edu/",
   },
   {
     id: "iitb-techfest-innovation",
@@ -1755,6 +1853,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Asia's largest science and technology festival's flagship innovation challenge, offering mentorship, prototyping support, and exposure to industry judges.",
     url: "https://www.techfest.org/",
+    applicationUrl: "https://www.techfest.org/competitions",
   },
   {
     id: "nseit-jnv-scholars",
@@ -1772,6 +1871,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Government-backed programme identifying and mentoring young grassroots innovators, with pathways to prototyping grants and national recognition.",
     url: "https://nif.org.in/",
+    applicationUrl: "https://nif.org.in/submitidea",
   },
   {
     id: "srcc-young-economist",
@@ -1789,6 +1889,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Intensive summer school on economics, public policy, and quantitative reasoning taught by SRCC faculty and visiting economists.",
     url: "https://www.srcc.edu/",
+    applicationUrl: "https://www.srcc.edu/admissions",
   },
   {
     id: "jio-genius-scholarship",
@@ -1806,6 +1907,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free STEM enrichment and scholarship pathway program for high-potential students, with mentorship and access to Reliance Foundation resources.",
     url: "https://www.reliancefoundation.org/",
+    applicationUrl: "https://www.reliancefoundation.org/scholarships",
   },
   {
     id: "tata-strive-skilling",
@@ -1823,6 +1925,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Skill-development and employability program run by the Tata Group, covering vocational training, soft skills, and direct placement support.",
     url: "https://www.tatastrive.com/",
+    applicationUrl: "https://tatastrive.com/ApplyNow.aspx",
   },
   {
     id: "infosys-springboard",
@@ -1840,6 +1943,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Free digital learning platform from Infosys offering courses in coding, AI, business, and life skills for students and early professionals.",
     url: "https://infyspringboard.onwingspan.com/",
+    applicationUrl: "https://infyspringboard.onwingspan.com/web/en/login",
   },
   {
     id: "wipro-talentnext",
@@ -1857,6 +1961,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Wipro's industry-readiness program bridging the gap between academic learning and corporate technology roles through structured training tracks.",
     url: "https://www.wipro.com/",
+    applicationUrl: "https://careers.wipro.com/talentnext",
   },
   {
     id: "mahindra-rise-prize",
@@ -1874,6 +1979,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Innovation challenge from the Mahindra Group awarding funding and mentorship to young entrepreneurs solving real-world mobility and sustainability problems.",
     url: "https://www.mahindrarise.com/",
+    applicationUrl: "https://www.mahindrarise.com/riseprize",
   },
   {
     id: "blume-ventures-indus-valley",
@@ -1891,6 +1997,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A curated founder-only summit connecting early-stage Indian startup founders with top investors, operators, and peer founders.",
     url: "https://blume.vc/",
+    applicationUrl: "https://blume.vc/contact",
   },
   {
     id: "matrix-partners-ignition",
@@ -1908,6 +2015,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Pre-seed founder program helping first-time entrepreneurs move from idea to fundable startup, with mentorship from Matrix partners.",
     url: "https://www.matrixpartners.in/",
+    applicationUrl: "https://www.matrixpartners.in/pitch",
   },
   {
     id: "accel-atoms",
@@ -1925,6 +2033,7 @@ export const PROGRAMS: Program[] = [
     description:
       "A fellowship for student and early-career founders to build startups with mentorship and pre-seed capital from Accel's India team.",
     url: "https://accel.com/atoms",
+    applicationUrl: "https://accel.com/atoms/apply",
   },
   {
     id: "goa-university-startup-yatra",
@@ -1942,6 +2051,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Government-backed grassroots outreach initiative bringing startup awareness, mentorship, and funding guidance to tier 2 and tier 3 Indian cities.",
     url: "https://www.startupindia.gov.in/",
+    applicationUrl: "https://www.startupindia.gov.in/content/sih/en/startup-yatra.html",
   },
   {
     id: "upgrad-young-professional",
@@ -1959,6 +2069,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Industry-aligned online certificate programs across data science, digital marketing, and product management with live mentorship and placement support.",
     url: "https://www.upgrad.com/",
+    applicationUrl: "https://www.upgrad.com/programs/",
   },
   {
     id: "scaler-academy",
@@ -1976,6 +2087,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Intensive software engineering upskilling program covering DSA, system design, and interview preparation, with live mentorship from industry engineers.",
     url: "https://www.scaler.com/",
+    applicationUrl: "https://www.scaler.com/academy/",
   },
   {
     id: "internshala-student-partner",
@@ -1993,6 +2105,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Campus ambassador and skill-building program from Internshala offering certifications, internship access, and leadership experience for students.",
     url: "https://internshala.com/",
+    applicationUrl: "https://internshala.com/isp",
   },
   {
     id: "atal-tinkering-lab-mentor",
@@ -2010,6 +2123,7 @@ export const PROGRAMS: Program[] = [
     description:
       "Government-funded innovation lab initiative giving school students hands-on access to robotics, 3D printing, and IoT tools to build real prototypes.",
     url: "https://aim.gov.in/atl.php",
+    applicationUrl: "https://aim.gov.in/atl.php",
   },
   {
     id: "cii-young-indians",
@@ -2027,6 +2141,7 @@ export const PROGRAMS: Program[] = [
     description:
       "CII's youth wing connecting young business leaders and entrepreneurs across India through leadership training, networking, and community projects.",
     url: "https://www.yi-india.org/",
+    applicationUrl: "https://www.yi-india.org/membership",
   },
   {
     id: "pratham-second-chance",
@@ -2044,5 +2159,512 @@ export const PROGRAMS: Program[] = [
     description:
       "Remedial education and vocational bridge program helping out-of-school youth re-enter learning pathways and build foundational and job-ready skills.",
     url: "https://www.pratham.org/",
+    applicationUrl: "https://www.pratham.org/contact-us/",
+  },
+
+  // --- NEW ADDITIONS FROM MERGE ---
+  {
+    id: "fitt-iitd-startup-accelerator",
+    title: "Startup Accelerator",
+    institution: "FITT, IIT Delhi",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Early-stage deep-tech startups and innovators",
+    duration: "Varies (typically 3-6 months)",
+    location: "Delhi, India + Online",
+    deadline: "Rolling applications",
+    fee: "Free (grants and support available)",
+    description:
+      "FITT (Foundation for Innovation and Technology Transfer) at IIT Delhi supports technology transfer, incubation, and deep-tech startup acceleration with mentorship, infrastructure, and funding pathways.",
+    url: "https://www.fitt-iitd.in/",
+    applicationUrl: "https://www.fitt-iitd.in/incubation",
+  },
+  {
+    id: "ecell-iitd-startup-bootcamp",
+    title: "Startup Bootcamp",
+    institution: "E-Cell IIT Delhi",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Students and aspiring founders (ages 18+)",
+    duration: "Varies (weeks to months)",
+    location: "Delhi, India + Online",
+    deadline: "Rolling / Cohort-based",
+    fee: "Free",
+    description:
+      "Student-driven entrepreneurship bootcamp and summit programs offering mentorship, workshops, pitching opportunities, and ecosystem building at IIT Delhi.",
+    url: "https://edc.iitd.ac.in/",
+    applicationUrl: "https://edc.iitd.ac.in/contact",
+  },
+  {
+    id: "ciie-co-startup-oasis",
+    title: "Startup Oasis Incubation",
+    institution: "CIIE.CO, IIM Ahmedabad",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Early-stage startups and innovators",
+    duration: "Varies (incubation support)",
+    location: "Ahmedabad / Regional centers, India",
+    deadline: "Rolling",
+    fee: "Free (equity-free in many cases)",
+    description:
+      "CIIE.CO's flagship incubation and acceleration programs including Startup Oasis, providing mentorship, funding access, and infrastructure for innovative startups.",
+    url: "https://ciie.co/",
+    applicationUrl: "https://ciie.co/apply",
+  },
+  {
+    id: "bhau-institute-incubation",
+    title: "Incubation & Innovation Programs",
+    institution: "Bhau Institute of Innovation, Entrepreneurship & Leadership",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Students and early-stage entrepreneurs",
+    duration: "Varies (pre-incubation to full incubation)",
+    location: "Pune, India",
+    deadline: "Rolling",
+    fee: "Free / Low-cost",
+    description:
+      "Incubation center at COEP Technological University Pune offering pre-incubation, physical incubation, mentorship, and support for tech and social startups.",
+    url: "https://bhau.org/",
+    applicationUrl: "https://bhau.org/apply-for-incubation/",
+  },
+  {
+    id: "t-hub-lab32-prototyping",
+    title: "Lab32 Prototyping & Market Readiness Program",
+    institution: "T-Hub",
+    category: "Investor & Venture Capitalist Programs",
+    mode: "Hybrid",
+    cost: "Paid",
+    level: "Intermediate",
+    eligibility: "MVP-ready startups",
+    duration: "100 days",
+    location: "Hyderabad, India",
+    deadline: "Cohort-based (rolling interest)",
+    fee: "₹90,000 + GST",
+    description:
+      "Flagship market-readiness program at T-Hub focusing on product-market fit, GTM strategy, prototyping, and growth through expert mentorship.",
+    url: "https://t-hub.co/programs/lab32-revamp-landing-page/",
+    applicationUrl: "https://t-hub.co/programs/lab32-revamp-landing-page/#apply",
+  },
+  {
+    id: "stpi-ngis-incubation",
+    title: "Next Generation Incubation Scheme (NGIS)",
+    institution: "STPI (Software Technology Parks of India)",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Software product startups in Tier-II cities",
+    duration: "Varies (up to 3 years support)",
+    location: "Pan-India (12 centers)",
+    deadline: "Periodic calls",
+    fee: "Free (seed funding up to ₹25 Lakh)",
+    description:
+      "MeitY-backed incubation scheme supporting software product startups with seed funding, infrastructure, mentorship, and security testing.",
+    url: "https://stpi.c4k.in/",
+    applicationUrl: "https://stpi.c4k.in/apply",
+  },
+  {
+    id: "venture-center-student-innovator",
+    title: "Student Innovator & Ignition Programs",
+    institution: "Venture Center Pune",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Students and young engineers",
+    duration: "Varies (project-based)",
+    location: "Pune, India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Technology incubation and student innovator fellowships at NCL Pune, including Ignition Program and tinkering labs for prototype development.",
+    url: "https://www.venturecenter.co.in/",
+    applicationUrl: "https://www.venturecenter.co.in/fellowships/",
+  },
+  {
+    id: "nasscom-10000-startups",
+    title: "10000 Startups Warehouse & Programs",
+    institution: "NASSCOM",
+    category: "Corporate Programs",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Tech startups and founders",
+    duration: "Varies",
+    location: "Pan-India (multiple warehouses)",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "NASSCOM's flagship initiative for incubating, accelerating, and supporting 10,000+ startups through mentorship, infrastructure, and market access.",
+    url: "https://10000startups.com/",
+    applicationUrl: "https://10000startups.com/apply",
+  },
+  {
+    id: "dst-nidhi-prayas",
+    title: "NIDHI PRAYAS Grant & Incubation",
+    institution: "DST (Department of Science & Technology)",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Innovators and early-stage startups",
+    duration: "Varies",
+    location: "Pan-India",
+    deadline: "Rolling / Periodic",
+    fee: "Free (grants available)",
+    description:
+      "DST's NIDHI PRAYAS program providing prototyping grants, mentorship, and incubation support for innovative hardware and deep-tech ideas.",
+    url: "https://dst.gov.in/",
+    applicationUrl: "https://www.nidhi-prayas.org/apply",
+  },
+  {
+    id: "birac-big-grant",
+    title: "Biotechnology Ignition Grant (BIG)",
+    institution: "BIRAC",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Biotech innovators and startups",
+    duration: "Varies",
+    location: "Pan-India",
+    deadline: "Periodic calls",
+    fee: "Free (grant up to ₹50 Lakh)",
+    description:
+      "BIRAC's flagship grant for early-stage biotech ideas, supporting proof-of-concept and entrepreneurship in life sciences.",
+    url: "https://birac.nic.in/",
+    applicationUrl: "https://birac.nic.in/big.php",
+  },
+  {
+    id: "startup-mahakumbh-youth",
+    title: "Startup Mahakumbh Youth Track",
+    institution: "Startup India",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Young founders and students",
+    duration: "Event-based",
+    location: "India-wide",
+    deadline: "Annual",
+    fee: "Free",
+    description:
+      "Youth-focused track at India's largest startup event offering networking, pitching, and government scheme awareness.",
+    url: "https://www.startupindia.gov.in/",
+    applicationUrl: "https://startupmahakumbh.org/",
+  },
+  {
+    id: "sristi-grassroots-innovator",
+    title: "Grassroots Innovator Program",
+    institution: "SRISTI Innovations",
+    category: "Other / Unorthodox Programs",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Grassroots innovators and students",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Support for grassroots innovations through scouting, mentoring, and commercialization pathways.",
+    url: "https://www.sristi.org/",
+    applicationUrl: "https://www.sristi.org/programs/",
+  },
+  {
+    id: "cbse-young-scientist",
+    title: "Young Scientist Innovation Program",
+    institution: "CBSE",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "School students (Grades 9-12)",
+    duration: "Project-based",
+    location: "India-wide",
+    deadline: "Annual",
+    fee: "Free",
+    description:
+      "CBSE initiative encouraging school students to undertake innovative science and technology projects.",
+    url: "https://cbseacademic.nic.in/",
+    applicationUrl: "https://cbseacademic.nic.in/",
+  },
+  {
+    id: "rashtriya-avishkar-abhiyan",
+    title: "Rashtriya Avishkar Abhiyan",
+    institution: "Ministry of Education",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "School and college students",
+    duration: "Ongoing",
+    location: "India-wide",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "National program to foster creativity, innovation, and scientific temper among students through hands-on activities.",
+    url: "https://www.education.gov.in/",
+    applicationUrl: "https://www.education.gov.in/rashtriya-avishkar-abhiyan",
+  },
+  {
+    id: "vigyan-pratibha-program",
+    title: "Vigyan Pratibha Program",
+    institution: "DAE / HBCSE",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "School students with science aptitude",
+    duration: "Multi-year",
+    location: "India-wide",
+    deadline: "Annual selection",
+    fee: "Free",
+    description:
+      "Science enrichment program for nurturing talented students in basic sciences through camps and projects.",
+    url: "https://www.hbcse.tifr.res.in/",
+    applicationUrl: "https://vigyanpratibha.in/",
+  },
+  {
+    id: "hbcse-olympiad-training",
+    title: "Science Olympiad Training Camps",
+    institution: "HBCSE",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Talented school students",
+    duration: "Camps (weeks)",
+    location: "Mumbai / Regional",
+    deadline: "Through Olympiad selection",
+    fee: "Free",
+    description:
+      "Rigorous training camps preparing students for International Science Olympiads in Physics, Chemistry, Biology, etc.",
+    url: "https://www.hbcse.tifr.res.in/",
+    applicationUrl: "https://olympiads.hbcse.tifr.res.in/",
+  },
+  {
+    id: "ncsc-childrens-science-congress",
+    title: "National Children's Science Congress",
+    institution: "NCSTC",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Children aged 10-17",
+    duration: "Project-based (annual)",
+    location: "India-wide",
+    deadline: "Annual",
+    fee: "Free",
+    description:
+      "Platform for children to undertake scientific projects on focal themes and present at district/state/national levels.",
+    url: "https://ncsc-india.org/",
+    applicationUrl: "https://ncsc-india.org/register",
+  },
+  {
+    id: "dst-spark-summer-research",
+    title: "SPARK Summer Research Program",
+    institution: "DST",
+    category: "Government Universities",
+    mode: "Offline",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Undergraduate students",
+    duration: "Summer (weeks)",
+    location: "Various institutions",
+    deadline: "Annual",
+    fee: "Free (stipend possible)",
+    description:
+      "DST-supported summer research opportunities for students in science and engineering.",
+    url: "https://dst.gov.in/",
+    applicationUrl: "https://dst.gov.in/call-for-proposals",
+  },
+  {
+    id: "bharatiya-vigyan-sammelan",
+    title: "Bharatiya Vigyan Sammelan Young Innovators Meet",
+    institution: "Bharatiya Vigyan Sammelan",
+    category: "Other / Unorthodox Programs",
+    mode: "Offline",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Young innovators and students",
+    duration: "Event-based",
+    location: "Various cities",
+    deadline: "Annual",
+    fee: "Free",
+    description:
+      "Platform showcasing young innovators and fostering science communication and innovation.",
+    url: "https://www.bvsm.org/",
+    applicationUrl: "https://www.bvsm.org/register",
+  },
+  {
+    id: "niti-aayog-arise",
+    title: "ARISE Program",
+    institution: "NITI Aayog",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Young researchers in MSMEs",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Support for innovation and research in MSMEs with focus on technology and entrepreneurship.",
+    url: "https://www.niti.gov.in/",
+    applicationUrl: "https://aim.gov.in/arise.php",
+  },
+  {
+    id: "startup-india-yuva-yojana",
+    title: "Startup India Yuva Yojana",
+    institution: "Startup India",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Young entrepreneurs",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Youth-focused startup support scheme under Startup India providing training, mentorship, and resources.",
+    url: "https://www.startupindia.gov.in/",
+    applicationUrl: "https://www.startupindia.gov.in/",
+  },
+  {
+    id: "dpiit-startup-internship",
+    title: "Startup Internship Program",
+    institution: "DPIIT",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Students and young professionals",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Internship opportunities in startups facilitated by DPIIT for hands-on entrepreneurship experience.",
+    url: "https://www.startupindia.gov.in/",
+    applicationUrl: "https://www.startupindia.gov.in/",
+  },
+  {
+    id: "mygov-innovate-india-fellowship",
+    title: "Innovate India Fellowship",
+    institution: "MyGov / Startup India",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Young innovators",
+    duration: "Fellowship term",
+    location: "India",
+    deadline: "Periodic",
+    fee: "Free",
+    description:
+      "Fellowship program for innovation challenges and policy-related projects under government initiatives.",
+    url: "https://www.mygov.in/",
+    applicationUrl: "https://innovateindia.mygov.in/",
+  },
+  {
+    id: "iim-udaipur-young-entrepreneur",
+    title: "Young Entrepreneur Bootcamp",
+    institution: "IIM Udaipur",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Paid",
+    level: "Beginner",
+    eligibility: "Young aspiring entrepreneurs",
+    duration: "Short bootcamp",
+    location: "Udaipur, India",
+    deadline: "Cohort-based",
+    fee: "Paid",
+    description:
+      "Bootcamp-style program on entrepreneurship fundamentals by IIM Udaipur faculty and experts.",
+    url: "https://www.iimu.ac.in/",
+    applicationUrl: "https://www.iimu.ac.in/programs/",
+  },
+  {
+    id: "iit-guwahati-tides-incubator",
+    title: "TIDES Business Incubator Student Track",
+    institution: "IIT Guwahati",
+    category: "Government Universities",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Students and early founders",
+    duration: "Varies",
+    location: "Guwahati, India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Incubation support at IIT Guwahati's TIDES for student-led startups with mentorship and resources.",
+    url: "https://www.iitg.ac.in/",
+    applicationUrl: "https://tides.iitg.ac.in/",
+  },
+  {
+    id: "sunhak-peace-prize-youth",
+    title: "Sunhak Peace Prize Youth Innovators India Chapter",
+    institution: "Sunhak Peace Prize",
+    category: "Other / Unorthodox Programs",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Intermediate",
+    eligibility: "Young peace and social innovators",
+    duration: "Varies",
+    location: "India",
+    deadline: "Annual",
+    fee: "Free",
+    description:
+      "Youth chapter recognizing and supporting innovators working on peace, sustainability, and social impact.",
+    url: "https://sunhakpeaceprize.org/",
+    applicationUrl: "https://sunhakpeaceprize.org/en/nominations/guidelines",
+  },
+  {
+    id: "cii-foundation-skill-saathi",
+    title: "Skill Saathi Program",
+    institution: "CII Foundation",
+    category: "Corporate Programs",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Youth seeking skilling",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Skilling and employability program by CII focusing on industry-relevant skills for youth.",
+    url: "https://ciifoundation.in/",
+    applicationUrl: "https://ciifoundation.in/initiatives/skill-development",
+  },
+  {
+    id: "nudge-foundation-youth-employability",
+    title: "Youth Employability Program",
+    institution: "Nudge Foundation",
+    category: "Private Educator Programs",
+    mode: "Hybrid",
+    cost: "Free",
+    level: "Beginner",
+    eligibility: "Young job-seekers",
+    duration: "Varies",
+    location: "India",
+    deadline: "Rolling",
+    fee: "Free",
+    description:
+      "Comprehensive youth employability and livelihood program with training, mentorship, and placement support.",
+    url: "https://nudge.foundation/",
+    applicationUrl: "https://nudge.foundation/youth-employability/",
   }
 ];
