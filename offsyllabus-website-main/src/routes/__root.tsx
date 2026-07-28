@@ -291,7 +291,7 @@ function Footer() {
                 { label: 'About', to: '/about' },
                 { label: 'Apply', to: '/apply' },
                 { label: 'Contact', to: '/about' },
-                { label: 'Privacy Policy', to: '/' },
+                { label: 'Privacy Policy', to: '/privacy-policy' },
               ],
             },
           ].map((col) => (
