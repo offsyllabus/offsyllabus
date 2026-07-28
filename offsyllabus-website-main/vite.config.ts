@@ -10,7 +10,7 @@ export default defineConfig({
     viteTsConfigPaths({ projects: ['./tsconfig.json'] }),
     tailwindcss(),
     tanstackStart(),
-    nitro(),
+    nitro({ config: { preset: 'vercel' } }),
     viteReact(),
   ],
 })
