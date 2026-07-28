@@ -13,6 +13,7 @@ import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as EventsWorkshopsRouteImport } from './routes/events-workshops'
 import { Route as CommunityRouteImport } from './routes/community'
 import { Route as ApplyRouteImport } from './routes/apply'
+import { Route as AdminProgramsRouteImport } from './routes/admin-programs'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MentorsIndexRouteImport } from './routes/mentors.index'
@@ -36,6 +37,11 @@ const CommunityRoute = CommunityRouteImport.update({
 const ApplyRoute = ApplyRouteImport.update({
   id: '/apply',
   path: '/apply',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProgramsRoute = AdminProgramsRouteImport.update({
+  id: '/admin-programs',
+  path: '/admin-programs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -62,6 +68,7 @@ const MentorsApplyRoute = MentorsApplyRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin-programs': typeof AdminProgramsRoute
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin-programs': typeof AdminProgramsRoute
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin-programs': typeof AdminProgramsRoute
   '/apply': typeof ApplyRoute
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/admin-programs'
     | '/apply'
     | '/community'
     | '/events-workshops'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/admin-programs'
     | '/apply'
     | '/community'
     | '/events-workshops'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/admin-programs'
     | '/apply'
     | '/community'
     | '/events-workshops'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AdminProgramsRoute: typeof AdminProgramsRoute
   ApplyRoute: typeof ApplyRoute
   CommunityRoute: typeof CommunityRoute
   EventsWorkshopsRoute: typeof EventsWorkshopsRoute
@@ -164,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin-programs': {
+      id: '/admin-programs'
+      path: '/admin-programs'
+      fullPath: '/admin-programs'
+      preLoaderRoute: typeof AdminProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AdminProgramsRoute: AdminProgramsRoute,
   ApplyRoute: ApplyRoute,
   CommunityRoute: CommunityRoute,
   EventsWorkshopsRoute: EventsWorkshopsRoute,

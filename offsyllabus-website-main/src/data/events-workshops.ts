@@ -3732,7 +3732,6 @@ export const PROGRAMS: Program[] = [
     url: "https://www.kalaari.com/",
     applicationUrl: "https://www.kalaari.com/contact-us/",
   },
-,
 {
     id: "raise-2026-startup-summit",
     title: "Startup India RAISE Founder Track",
