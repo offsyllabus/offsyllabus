@@ -160,7 +160,12 @@ function AdminPage() {
           </button>
         </form>
       </div>
-      <style>{`.input { border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 0.65rem 1rem; color: white; outline: none; } .input:focus { border-color: rgba(124,92,255,0.5); }`}</style>
+      <style>{`
+        .input { border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 0.65rem 1rem; color: white; outline: none; }
+        .input:focus { border-color: rgba(124,92,255,0.5); }
+        select.input { background-color: #1a1a1f; color: white; }
+        select.input option { background-color: #1a1a1f; color: white; }
+      `}</style>
     </div>
   );
 }
