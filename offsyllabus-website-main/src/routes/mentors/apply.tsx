@@ -303,12 +303,12 @@ function MentorApplyPage() {
                       transition: 'all 0.2s ease',
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(124,58,237,0.6)'
-                      (e.currentTarget as HTMLDivElement).style.background = 'rgba(124,58,237,0.08)'
+                      (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(124,58,237,0.6)';
+                      (e.currentTarget as HTMLDivElement).style.background = 'rgba(124,58,237,0.08)';
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(124,58,237,0.3)'
-                      (e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.04)'
+                      (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(124,58,237,0.3)';
+                      (e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.04)';
                     }}
                   >
                     <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>📄</div>

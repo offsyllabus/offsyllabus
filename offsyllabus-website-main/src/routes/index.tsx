@@ -1119,7 +1119,7 @@ function ApplicationSection() {
     },
     {
       num: '02',
-      title: 'Conversation',
+      title: 'Start a Conversation',
       desc: 'We schedule a short call to get to know you better — your aspirations, your mindset, and your readiness to grow.',
       icon: '💬',
     },
