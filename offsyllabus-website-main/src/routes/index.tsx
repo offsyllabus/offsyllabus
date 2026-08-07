@@ -2,6 +2,11 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect, useRef } from 'react'
 
 export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { name: 'msvalidate.01', content: '2411B536BBAAC39957B2B6591CA85836' },
+    ],
+  }),
   component: HomePage,
 })
 
