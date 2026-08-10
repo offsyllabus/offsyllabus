@@ -64,6 +64,7 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Programs', to: '/programs' },
   { label: 'Quests', to: '/events-workshops' },
+  { label: 'Scholarships', to: '/scholarships' },
   { label: 'Community', to: '/community' },
   { label: 'Mentors', to: '/mentors' },
   { label: 'About', to: '/about' },

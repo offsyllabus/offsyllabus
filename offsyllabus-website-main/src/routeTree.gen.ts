@@ -16,7 +16,9 @@ import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ScholarshipsIndexRouteImport } from './routes/scholarships/index'
 import { Route as MentorsIndexRouteImport } from './routes/mentors.index'
+import { Route as ScholarshipsSlugRouteImport } from './routes/scholarships/$slug'
 import { Route as MentorsApplyRouteImport } from './routes/mentors/apply'
 
 const ProgramsRoute = ProgramsRouteImport.update({
@@ -54,9 +56,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ScholarshipsIndexRoute = ScholarshipsIndexRouteImport.update({
+  id: '/scholarships/',
+  path: '/scholarships/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MentorsIndexRoute = MentorsIndexRouteImport.update({
   id: '/mentors/',
   path: '/mentors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScholarshipsSlugRoute = ScholarshipsSlugRouteImport.update({
+  id: '/scholarships/$slug',
+  path: '/scholarships/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MentorsApplyRoute = MentorsApplyRouteImport.update({
@@ -74,7 +86,9 @@ export interface FileRoutesByFullPath {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/mentors/apply': typeof MentorsApplyRoute
+  '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
+  '/scholarships/': typeof ScholarshipsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -85,7 +99,9 @@ export interface FileRoutesByTo {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/mentors/apply': typeof MentorsApplyRoute
+  '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors': typeof MentorsIndexRoute
+  '/scholarships': typeof ScholarshipsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -97,7 +113,9 @@ export interface FileRoutesById {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/mentors/apply': typeof MentorsApplyRoute
+  '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
+  '/scholarships/': typeof ScholarshipsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -110,7 +128,9 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/mentors/apply'
+    | '/scholarships/$slug'
     | '/mentors/'
+    | '/scholarships/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -121,7 +141,9 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/mentors/apply'
+    | '/scholarships/$slug'
     | '/mentors'
+    | '/scholarships'
   id:
     | '__root__'
     | '/'
@@ -132,7 +154,9 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/mentors/apply'
+    | '/scholarships/$slug'
     | '/mentors/'
+    | '/scholarships/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,7 +168,9 @@ export interface RootRouteChildren {
   EventsWorkshopsRoute: typeof EventsWorkshopsRoute
   ProgramsRoute: typeof ProgramsRoute
   MentorsApplyRoute: typeof MentorsApplyRoute
+  ScholarshipsSlugRoute: typeof ScholarshipsSlugRoute
   MentorsIndexRoute: typeof MentorsIndexRoute
+  ScholarshipsIndexRoute: typeof ScholarshipsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -198,11 +224,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/scholarships/': {
+      id: '/scholarships/'
+      path: '/scholarships'
+      fullPath: '/scholarships/'
+      preLoaderRoute: typeof ScholarshipsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mentors/': {
       id: '/mentors/'
       path: '/mentors'
       fullPath: '/mentors/'
       preLoaderRoute: typeof MentorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scholarships/$slug': {
+      id: '/scholarships/$slug'
+      path: '/scholarships/$slug'
+      fullPath: '/scholarships/$slug'
+      preLoaderRoute: typeof ScholarshipsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mentors/apply': {
@@ -224,7 +264,9 @@ const rootRouteChildren: RootRouteChildren = {
   EventsWorkshopsRoute: EventsWorkshopsRoute,
   ProgramsRoute: ProgramsRoute,
   MentorsApplyRoute: MentorsApplyRoute,
+  ScholarshipsSlugRoute: ScholarshipsSlugRoute,
   MentorsIndexRoute: MentorsIndexRoute,
+  ScholarshipsIndexRoute: ScholarshipsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
