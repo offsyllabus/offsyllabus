@@ -5098,3 +5098,4 @@ export const categories: Scholarship['category'][] = [
   'Entrepreneurship',
 ]
 export const fundingTypes: Scholarship['fundingType'][] = ['Fully Funded', 'Partially Funded']
+export const countries: string[] = Array.from(new Set(scholarships.map((s) => s.country))).sort()  
