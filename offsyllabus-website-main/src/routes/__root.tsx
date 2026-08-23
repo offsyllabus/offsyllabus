@@ -374,7 +374,7 @@ function Footer() {
               Email
             </h4>
             <a
-              href="mailto:offsyllabus.info@gmail.com"
+              href="mailto:info@offsyllabus.club"
               style={{
                 display: 'block',
                 color: '#e2e8f0',
