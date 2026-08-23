@@ -10623,5 +10623,24 @@ export const PROGRAMS: Program[] = [
     description: "Genomics-data course covering high-throughput assays, normalization, annotation, visualization, reproducible research, and Bioconductor workflows in R.",
     url: "https://harvardonline.harvard.edu/course/introduction-bioconductor",
     applicationUrl: "https://harvardonline.harvard.edu/course/introduction-bioconductor",
+  },  {
+    id: "jio-ai-classroom",
+    title: "AI Classroom Foundation Course",
+    institution: "Jio Institute × JioPC",
+    category: "Corporate Programs",
+    mode: "Online",
+    cost: "Free",
+    level: "Beginner",
+    eligibility:
+      "Open to everyone, including students, teachers, parents, employees and beginners interested in AI",
+    duration: "4 weeks",
+    location: "Online (India)",
+    deadline: "Rolling / No specific deadline stated",
+    fee: "Free",
+    description:
+      "A free beginner-friendly AI foundation course designed by Jio Institute and powered by JioPC. The programme covers AI foundations, prompt engineering, AI for learning and creativity, AI for building and communication, and a practical AI project.",
+    url: "https://www.jio.com/ai-classroom/",
+    applicationUrl:
+      "https://www.jio.com/selfcare/interest/ai-classroom/?utm_source=site&utm_medium=register&utm_campaign=aiclassregistration",
   },
 ];
