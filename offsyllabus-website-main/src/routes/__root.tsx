@@ -386,7 +386,7 @@ function Footer() {
               onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = '#ca0c12')}
               onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = '#e2e8f0')}
             >
-              offsyllabus.info@gmail.com
+              info@offsyllabus.club
             </a>
           </div>
 

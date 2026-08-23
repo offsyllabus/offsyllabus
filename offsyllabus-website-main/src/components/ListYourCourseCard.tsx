@@ -3,7 +3,7 @@ import { Mail, X } from "lucide-react";
 
 function ListYourCourseCard() {
   const [open, setOpen] = useState(false);
-  const email = "offsyllabus.info@gmail.com";
+  const email = "info@offsyllabus.club";
   const subject = encodeURIComponent("Course/Workshop Submission");
   const body = encodeURIComponent(
     `Course/Workshop name:\n\nAbout you (educator/organizer):\n\nCourse details (what it covers, format, duration):\n\nCreatives (attach or link banner/poster):\n\nRegistration/signup link:\n\nContact info:\n`
