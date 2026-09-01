@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RetailRealtimeRouteImport } from './routes/retail-realtime'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as EventsWorkshopsRouteImport } from './routes/events-workshops'
 import { Route as CommunityRouteImport } from './routes/community'
@@ -21,6 +22,11 @@ import { Route as MentorsIndexRouteImport } from './routes/mentors.index'
 import { Route as ScholarshipsSlugRouteImport } from './routes/scholarships/$slug'
 import { Route as MentorsApplyRouteImport } from './routes/mentors/apply'
 
+const RetailRealtimeRoute = RetailRealtimeRouteImport.update({
+  id: '/retail-realtime',
+  path: '/retail-realtime',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProgramsRoute = ProgramsRouteImport.update({
   id: '/programs',
   path: '/programs',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
+  '/retail-realtime': typeof RetailRealtimeRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
@@ -98,6 +105,7 @@ export interface FileRoutesByTo {
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
+  '/retail-realtime': typeof RetailRealtimeRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors': typeof MentorsIndexRoute
@@ -112,6 +120,7 @@ export interface FileRoutesById {
   '/community': typeof CommunityRoute
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
+  '/retail-realtime': typeof RetailRealtimeRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
@@ -127,6 +136,7 @@ export interface FileRouteTypes {
     | '/community'
     | '/events-workshops'
     | '/programs'
+    | '/retail-realtime'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors/'
@@ -140,6 +150,7 @@ export interface FileRouteTypes {
     | '/community'
     | '/events-workshops'
     | '/programs'
+    | '/retail-realtime'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors'
@@ -153,6 +164,7 @@ export interface FileRouteTypes {
     | '/community'
     | '/events-workshops'
     | '/programs'
+    | '/retail-realtime'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors/'
@@ -167,6 +179,7 @@ export interface RootRouteChildren {
   CommunityRoute: typeof CommunityRoute
   EventsWorkshopsRoute: typeof EventsWorkshopsRoute
   ProgramsRoute: typeof ProgramsRoute
+  RetailRealtimeRoute: typeof RetailRealtimeRoute
   MentorsApplyRoute: typeof MentorsApplyRoute
   ScholarshipsSlugRoute: typeof ScholarshipsSlugRoute
   MentorsIndexRoute: typeof MentorsIndexRoute
@@ -175,6 +188,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/retail-realtime': {
+      id: '/retail-realtime'
+      path: '/retail-realtime'
+      fullPath: '/retail-realtime'
+      preLoaderRoute: typeof RetailRealtimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/programs': {
       id: '/programs'
       path: '/programs'
@@ -263,6 +283,7 @@ const rootRouteChildren: RootRouteChildren = {
   CommunityRoute: CommunityRoute,
   EventsWorkshopsRoute: EventsWorkshopsRoute,
   ProgramsRoute: ProgramsRoute,
+  RetailRealtimeRoute: RetailRealtimeRoute,
   MentorsApplyRoute: MentorsApplyRoute,
   ScholarshipsSlugRoute: ScholarshipsSlugRoute,
   MentorsIndexRoute: MentorsIndexRoute,

@@ -59,7 +59,7 @@ export const PROGRAMS: Program[] = [
     description:
       "An IIM Ranchi flagship cohort building social impact, leadership, and entrepreneurial mindset in young changemakers.",
     url: "https://iimranchi.ac.in/",
-    applicationUrl: "https://iimranchi.ac.in/p/ycp",
+    applicationUrl: "https://ycp.iimranchi.ac.in/programe",
   },
   {
     id: "iim-bangalore-young-entrepreneurship",
