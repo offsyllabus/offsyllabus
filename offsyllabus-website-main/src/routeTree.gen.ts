@@ -21,6 +21,7 @@ import { Route as ScholarshipsIndexRouteImport } from './routes/scholarships/ind
 import { Route as MentorsIndexRouteImport } from './routes/mentors.index'
 import { Route as ScholarshipsSlugRouteImport } from './routes/scholarships/$slug'
 import { Route as MentorsApplyRouteImport } from './routes/mentors/apply'
+import { Route as ApiWebhookRouteImport } from './routes/api/webhook'
 import { Route as ApiRetailRealtimeSeatsRouteImport } from './routes/api/retail-realtime/seats'
 import { Route as ApiRetailRealtimeCreateOrderRouteImport } from './routes/api/retail-realtime/create-order'
 import { Route as ApiRetailRealtimeBookRouteImport } from './routes/api/retail-realtime/book'
@@ -85,6 +86,11 @@ const MentorsApplyRoute = MentorsApplyRouteImport.update({
   path: '/mentors/apply',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiWebhookRoute = ApiWebhookRouteImport.update({
+  id: '/api/webhook',
+  path: '/api/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiRetailRealtimeSeatsRoute = ApiRetailRealtimeSeatsRouteImport.update({
   id: '/api/retail-realtime/seats',
   path: '/api/retail-realtime/seats',
@@ -111,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/retail-realtime': typeof RetailRealtimeRoute
+  '/api/webhook': typeof ApiWebhookRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
@@ -128,6 +135,7 @@ export interface FileRoutesByTo {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/retail-realtime': typeof RetailRealtimeRoute
+  '/api/webhook': typeof ApiWebhookRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors': typeof MentorsIndexRoute
@@ -146,6 +154,7 @@ export interface FileRoutesById {
   '/events-workshops': typeof EventsWorkshopsRoute
   '/programs': typeof ProgramsRoute
   '/retail-realtime': typeof RetailRealtimeRoute
+  '/api/webhook': typeof ApiWebhookRoute
   '/mentors/apply': typeof MentorsApplyRoute
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
@@ -165,6 +174,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/retail-realtime'
+    | '/api/webhook'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors/'
@@ -182,6 +192,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/retail-realtime'
+    | '/api/webhook'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors'
@@ -199,6 +210,7 @@ export interface FileRouteTypes {
     | '/events-workshops'
     | '/programs'
     | '/retail-realtime'
+    | '/api/webhook'
     | '/mentors/apply'
     | '/scholarships/$slug'
     | '/mentors/'
@@ -217,6 +229,7 @@ export interface RootRouteChildren {
   EventsWorkshopsRoute: typeof EventsWorkshopsRoute
   ProgramsRoute: typeof ProgramsRoute
   RetailRealtimeRoute: typeof RetailRealtimeRoute
+  ApiWebhookRoute: typeof ApiWebhookRoute
   MentorsApplyRoute: typeof MentorsApplyRoute
   ScholarshipsSlugRoute: typeof ScholarshipsSlugRoute
   MentorsIndexRoute: typeof MentorsIndexRoute
@@ -312,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MentorsApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/webhook': {
+      id: '/api/webhook'
+      path: '/api/webhook'
+      fullPath: '/api/webhook'
+      preLoaderRoute: typeof ApiWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/retail-realtime/seats': {
       id: '/api/retail-realtime/seats'
       path: '/api/retail-realtime/seats'
@@ -345,6 +365,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsWorkshopsRoute: EventsWorkshopsRoute,
   ProgramsRoute: ProgramsRoute,
   RetailRealtimeRoute: RetailRealtimeRoute,
+  ApiWebhookRoute: ApiWebhookRoute,
   MentorsApplyRoute: MentorsApplyRoute,
   ScholarshipsSlugRoute: ScholarshipsSlugRoute,
   MentorsIndexRoute: MentorsIndexRoute,
