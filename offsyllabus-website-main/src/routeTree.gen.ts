@@ -21,6 +21,9 @@ import { Route as ScholarshipsIndexRouteImport } from './routes/scholarships/ind
 import { Route as MentorsIndexRouteImport } from './routes/mentors.index'
 import { Route as ScholarshipsSlugRouteImport } from './routes/scholarships/$slug'
 import { Route as MentorsApplyRouteImport } from './routes/mentors/apply'
+import { Route as ApiRetailRealtimeSeatsRouteImport } from './routes/api/retail-realtime/seats'
+import { Route as ApiRetailRealtimeCreateOrderRouteImport } from './routes/api/retail-realtime/create-order'
+import { Route as ApiRetailRealtimeBookRouteImport } from './routes/api/retail-realtime/book'
 
 const RetailRealtimeRoute = RetailRealtimeRouteImport.update({
   id: '/retail-realtime',
@@ -82,6 +85,22 @@ const MentorsApplyRoute = MentorsApplyRouteImport.update({
   path: '/mentors/apply',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiRetailRealtimeSeatsRoute = ApiRetailRealtimeSeatsRouteImport.update({
+  id: '/api/retail-realtime/seats',
+  path: '/api/retail-realtime/seats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiRetailRealtimeCreateOrderRoute =
+  ApiRetailRealtimeCreateOrderRouteImport.update({
+    id: '/api/retail-realtime/create-order',
+    path: '/api/retail-realtime/create-order',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiRetailRealtimeBookRoute = ApiRetailRealtimeBookRouteImport.update({
+  id: '/api/retail-realtime/book',
+  path: '/api/retail-realtime/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +115,9 @@ export interface FileRoutesByFullPath {
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
   '/scholarships/': typeof ScholarshipsIndexRoute
+  '/api/retail-realtime/book': typeof ApiRetailRealtimeBookRoute
+  '/api/retail-realtime/create-order': typeof ApiRetailRealtimeCreateOrderRoute
+  '/api/retail-realtime/seats': typeof ApiRetailRealtimeSeatsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +132,9 @@ export interface FileRoutesByTo {
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors': typeof MentorsIndexRoute
   '/scholarships': typeof ScholarshipsIndexRoute
+  '/api/retail-realtime/book': typeof ApiRetailRealtimeBookRoute
+  '/api/retail-realtime/create-order': typeof ApiRetailRealtimeCreateOrderRoute
+  '/api/retail-realtime/seats': typeof ApiRetailRealtimeSeatsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +150,9 @@ export interface FileRoutesById {
   '/scholarships/$slug': typeof ScholarshipsSlugRoute
   '/mentors/': typeof MentorsIndexRoute
   '/scholarships/': typeof ScholarshipsIndexRoute
+  '/api/retail-realtime/book': typeof ApiRetailRealtimeBookRoute
+  '/api/retail-realtime/create-order': typeof ApiRetailRealtimeCreateOrderRoute
+  '/api/retail-realtime/seats': typeof ApiRetailRealtimeSeatsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +169,9 @@ export interface FileRouteTypes {
     | '/scholarships/$slug'
     | '/mentors/'
     | '/scholarships/'
+    | '/api/retail-realtime/book'
+    | '/api/retail-realtime/create-order'
+    | '/api/retail-realtime/seats'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +186,9 @@ export interface FileRouteTypes {
     | '/scholarships/$slug'
     | '/mentors'
     | '/scholarships'
+    | '/api/retail-realtime/book'
+    | '/api/retail-realtime/create-order'
+    | '/api/retail-realtime/seats'
   id:
     | '__root__'
     | '/'
@@ -169,6 +203,9 @@ export interface FileRouteTypes {
     | '/scholarships/$slug'
     | '/mentors/'
     | '/scholarships/'
+    | '/api/retail-realtime/book'
+    | '/api/retail-realtime/create-order'
+    | '/api/retail-realtime/seats'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +221,9 @@ export interface RootRouteChildren {
   ScholarshipsSlugRoute: typeof ScholarshipsSlugRoute
   MentorsIndexRoute: typeof MentorsIndexRoute
   ScholarshipsIndexRoute: typeof ScholarshipsIndexRoute
+  ApiRetailRealtimeBookRoute: typeof ApiRetailRealtimeBookRoute
+  ApiRetailRealtimeCreateOrderRoute: typeof ApiRetailRealtimeCreateOrderRoute
+  ApiRetailRealtimeSeatsRoute: typeof ApiRetailRealtimeSeatsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +312,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MentorsApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/retail-realtime/seats': {
+      id: '/api/retail-realtime/seats'
+      path: '/api/retail-realtime/seats'
+      fullPath: '/api/retail-realtime/seats'
+      preLoaderRoute: typeof ApiRetailRealtimeSeatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/retail-realtime/create-order': {
+      id: '/api/retail-realtime/create-order'
+      path: '/api/retail-realtime/create-order'
+      fullPath: '/api/retail-realtime/create-order'
+      preLoaderRoute: typeof ApiRetailRealtimeCreateOrderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/retail-realtime/book': {
+      id: '/api/retail-realtime/book'
+      path: '/api/retail-realtime/book'
+      fullPath: '/api/retail-realtime/book'
+      preLoaderRoute: typeof ApiRetailRealtimeBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -288,6 +349,9 @@ const rootRouteChildren: RootRouteChildren = {
   ScholarshipsSlugRoute: ScholarshipsSlugRoute,
   MentorsIndexRoute: MentorsIndexRoute,
   ScholarshipsIndexRoute: ScholarshipsIndexRoute,
+  ApiRetailRealtimeBookRoute: ApiRetailRealtimeBookRoute,
+  ApiRetailRealtimeCreateOrderRoute: ApiRetailRealtimeCreateOrderRoute,
+  ApiRetailRealtimeSeatsRoute: ApiRetailRealtimeSeatsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

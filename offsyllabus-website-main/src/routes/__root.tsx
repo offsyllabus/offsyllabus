@@ -643,7 +643,7 @@ function Footer() {
                 fontSize: '0.875rem',
               }}
             >
-              <span>Apply Now →</span>
+              <span>Join the Waitlist →</span>
             </Link>
           </div>
 

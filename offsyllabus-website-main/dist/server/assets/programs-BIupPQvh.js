@@ -424,7 +424,7 @@ function ProgramsPage() {
           fontWeight: "600",
           fontSize: "1rem",
           textDecoration: "none"
-        }, children: "Apply Now →" })
+        }, children: "Join the Waitlist →" })
       ] })
     ] })
   ] });

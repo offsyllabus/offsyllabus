@@ -6,6 +6,9 @@ import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  server: {
+    allowedHosts: ['vanilla-sloppily-providing.ngrok-free.dev'],
+  },
   plugins: [
     viteTsConfigPaths({ projects: ['./tsconfig.json'] }),
     tailwindcss(),

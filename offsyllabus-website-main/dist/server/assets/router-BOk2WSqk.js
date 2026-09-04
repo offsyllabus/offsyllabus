@@ -3002,7 +3002,7 @@ function Footer() {
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("p", { style: { color: "#64748b", fontSize: "0.875rem", marginBottom: "16px" }, children: "Ready to go beyond the classroom?" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/apply", className: "btn-primary", style: { padding: "10px 20px", fontSize: "0.875rem" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Apply Now →" }) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/apply", className: "btn-primary", style: { padding: "10px 20px", fontSize: "0.875rem" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Join the Waitlist →" }) })
               ] })
             ]
           }

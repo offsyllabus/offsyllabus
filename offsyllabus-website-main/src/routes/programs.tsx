@@ -109,7 +109,7 @@ function ProgramsPage() {
                     <span style={{ color: '#64748b', fontSize: '0.8rem' }}>👤 {prog.forWho}</span>
                   </div>
                   <Link to="/apply" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '14px 24px', background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', border: 'none', borderRadius: '10px', color: 'white', fontWeight: '600', fontSize: '0.9375rem', textDecoration: 'none' }}>
-                    Apply for {prog.name} →
+                    Join the Waitlist →
                   </Link>
                 </div>
               </RevealSection>
@@ -155,7 +155,7 @@ function ProgramsPage() {
           <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '16px' }}>Not sure which program is right for you?</h2>
           <p style={{ color: '#64748b', fontSize: '1rem', lineHeight: '1.7', marginBottom: '32px' }}>Apply anyway — we'll help you find the right fit during your admission conversation.</p>
           <Link to="/apply" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '16px 36px', background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', color: 'white', borderRadius: '10px', fontWeight: '600', fontSize: '1rem', textDecoration: 'none' }}>
-            Apply Now →
+            Join the Waitlist →
           </Link>
         </div>
       </section>
