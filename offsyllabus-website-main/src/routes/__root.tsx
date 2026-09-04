@@ -298,7 +298,7 @@ function Navbar() {
                 fontSize: '0.875rem',
               }}
             >
-              <span>Apply Now</span>
+              <span>Join the Waitlist</span>
             </Link>
 
             <button
@@ -384,7 +384,7 @@ function Navbar() {
                 display: 'flex',
               }}
             >
-              <span>Apply Now</span>
+              <span>Join the Waitlist</span>
             </Link>
           </div>
         )}
