@@ -8435,6 +8435,1915 @@ export const scholarships: Scholarship[] = [
     featured: true,
     recentlyAdded: true,
   },
+
+  // --- 37 NEW SCHOLARSHIPS FOR INDIAN & INTERNATIONAL STUDENTS ---
+  {
+    slug: "ucl-global-masters-scholarship",
+    name: "UCL Global Master's Scholarship",
+    organization: "University College London (UCL)",
+    logoText: "UCL",
+    logoColor: "#2563eb",
+    fundingAmount: "£15,000 for one year",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Need-Based",
+    eligibility: "International students from lower-income backgrounds applying for a full-time taught Master's at UCL, including a ring-fenced allocation for India.",
+    shortDescription: "A need-based UCL award helping international students from lower-income backgrounds fund a full-time Master's degree.",
+    fullDescription: "The UCL Global Master's Scholarship supports international students with financial need who are applying for eligible full-time taught Master's programmes. For the 2026/27 cycle, UCL lists a dedicated allocation for students from India.",
+    tags: [
+      "UK",
+      "India",
+      "Master's",
+      "Need-Based",
+      "UCL"
+    ],
+    benefits: [
+      "£15,000 scholarship",
+      "Applied first to tuition fees",
+      "Any eligible postgraduate taught subject",
+      "Dedicated India allocation in the 2026/27 cycle"
+    ],
+    eligibilityCriteria: [
+      "Eligible overseas fee status",
+      "From a lower-income background under UCL's criteria",
+      "Submitted a complete eligible Master's application",
+      "Full-time, on-campus study"
+    ],
+    requiredDocuments: [
+      "UCL Master's application",
+      "Academic transcripts",
+      "References",
+      "Financial or household-income evidence where requested"
+    ],
+    applicationProcess: [
+      "Apply for an eligible UCL Master's programme",
+      "Complete the scholarship application by the published deadline",
+      "Provide supporting information",
+      "Await UCL selection decision"
+    ],
+    importantInfo: [
+      "For 2026/27, UCL listed five scholarships ring-fenced for India.",
+      "The 2026 deadline has passed; check UCL for the next application cycle."
+    ],
+    officialLink: "https://www.ucl.ac.uk/scholarships/ucl-global-masters-scholarship",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-presidents-international-scholarship-excellence",
+    name: "President's International Scholarship of Excellence",
+    organization: "York University",
+    logoText: "YU",
+    logoColor: "#b91c1c",
+    fundingAmount: "CAD 180,000 over 4 years",
+    fundingType: "Fully Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "Outstanding international high-school applicants entering an eligible undergraduate degree at York University.",
+    shortDescription: "A major undergraduate scholarship for exceptional international students demonstrating academic excellence, leadership and community involvement.",
+    fullDescription: "York University's President's International Scholarship of Excellence recognizes exceptional international high-school applicants with strong academic performance, leadership, extracurricular achievement and community involvement.",
+    tags: [
+      "Canada",
+      "Undergraduate",
+      "Leadership",
+      "Merit"
+    ],
+    benefits: [
+      "CAD 45,000 per year",
+      "Renewable for up to four years",
+      "Academic and leadership recognition",
+      "Access to York's international scholar community"
+    ],
+    eligibilityCriteria: [
+      "International student requiring a study permit",
+      "High-school applicant entering undergraduate study",
+      "Exceptional academic profile",
+      "Demonstrated leadership, volunteering or extracurricular achievement"
+    ],
+    requiredDocuments: [
+      "York undergraduate application",
+      "Academic records",
+      "Scholarship application",
+      "Leadership and extracurricular information"
+    ],
+    applicationProcess: [
+      "Apply to York University",
+      "Obtain a York reference number",
+      "Submit the international scholarship application",
+      "Complete nomination/reference requirements",
+      "Await selection"
+    ],
+    importantInfo: [
+      "York lists the award at CAD 180,000 over four years.",
+      "The scholarship has an annual application and nomination cycle."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/presidents-international-scholarship-excellence",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "waterloo-international-student-entrance-scholarship",
+    name: "University of Waterloo International Student Entrance Scholarship",
+    organization: "University of Waterloo",
+    logoText: "UW",
+    logoColor: "#f59e0b",
+    fundingAmount: "CAD 10,000 for first year",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International fee-paying students admitted to an eligible full-time first-year degree programme at the University of Waterloo.",
+    shortDescription: "Automatic first-year entrance funding for eligible international undergraduate students at Waterloo.",
+    fullDescription: "The University of Waterloo's International Student Entrance Scholarship provides a CAD 10,000 award to eligible international fee-paying students admitted to full-time first-year degree studies.",
+    tags: [
+      "Canada",
+      "Undergraduate",
+      "Waterloo",
+      "Merit"
+    ],
+    benefits: [
+      "CAD 10,000 first-year award",
+      "Automatic consideration for eligible students",
+      "Can be combined with selected additional Waterloo scholarships"
+    ],
+    eligibilityCriteria: [
+      "International fee-paying student",
+      "Admitted to an eligible full-time first-year degree",
+      "Meet Waterloo admission requirements",
+      "Not in an excluded programme or transfer category"
+    ],
+    requiredDocuments: [
+      "Waterloo admission application",
+      "Academic transcripts",
+      "Proof of international status",
+      "Programme-specific documents"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Waterloo undergraduate programme",
+      "Complete admission requirements",
+      "Receive admission decision",
+      "Scholarship is assessed automatically if eligible"
+    ],
+    importantInfo: [
+      "Waterloo states that no separate application is required for the new CAD 10,000 entrance scholarship.",
+      "Eligibility and excluded programmes should be checked for the intended intake."
+    ],
+    officialLink: "https://uwaterloo.ca/future-students/financing/international-scholarships",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "deakin-vice-chancellors-international-scholarship",
+    name: "Deakin Vice-Chancellor's International Scholarship",
+    organization: "Deakin University",
+    logoText: "DU",
+    logoColor: "#1d4ed8",
+    fundingAmount: "50% or 100% tuition fee reduction",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "High-achieving new international students commencing an eligible Deakin coursework degree.",
+    shortDescription: "A prestigious Deakin award offering a substantial tuition reduction to high-achieving international students.",
+    fullDescription: "The Deakin Vice-Chancellor's International Scholarship rewards outstanding international students with a 50% or 100% tuition fee reduction for the normal duration of an eligible coursework degree, together with participation in the university's professional excellence programme.",
+    tags: [
+      "Australia",
+      "International",
+      "Merit",
+      "Leadership"
+    ],
+    benefits: [
+      "50% or 100% tuition reduction",
+      "Available for normal programme duration",
+      "Professional Excellence Program participation",
+      "Priority accommodation access subject to availability"
+    ],
+    eligibilityCriteria: [
+      "New international student",
+      "Eligible Deakin coursework degree",
+      "Strong academic record",
+      "Meet English and admission requirements"
+    ],
+    requiredDocuments: [
+      "Deakin course application",
+      "Academic transcripts",
+      "Personal statement or scholarship application",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Deakin course",
+      "Submit the separate scholarship application",
+      "Provide supporting evidence",
+      "Complete selection process if shortlisted"
+    ],
+    importantInfo: [
+      "A separate scholarship application is required for the Vice-Chancellor's International Scholarship.",
+      "Check the current intake-specific deadline and eligible courses."
+    ],
+    officialLink: "https://www.deakin.edu.au/study/fees-and-scholarships/scholarships/find-a-scholarship/deakin-vice-chancellors-international-scholarship",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "sydney-international-undergraduate-academic-excellence-scholarship",
+    name: "Sydney International Undergraduate Academic Excellence Scholarship",
+    organization: "University of Sydney",
+    logoText: "USYD",
+    logoColor: "#e11d48",
+    fundingAmount: "100% tuition fees + SSAF",
+    fundingType: "Fully Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "Exceptional international students who have applied for an eligible new single undergraduate coursework degree at the University of Sydney.",
+    shortDescription: "A full-tuition undergraduate award for exceptional international students from priority markets.",
+    fullDescription: "The Sydney International Undergraduate Academic Excellence Scholarship supports academically exceptional international students entering eligible undergraduate coursework degrees. The award covers tuition fees and the Student Services Amenities Fee for the published full-time duration.",
+    tags: [
+      "Australia",
+      "Undergraduate",
+      "Merit",
+      "Sydney"
+    ],
+    benefits: [
+      "100% tuition fees",
+      "Student Services Amenities Fee",
+      "Up to four years for eligible degrees",
+      "Academic recognition"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Applied for an eligible single undergraduate coursework degree",
+      "Have not commenced the degree",
+      "Full-time enrolment",
+      "No prior tertiary study except eligible extension study"
+    ],
+    requiredDocuments: [
+      "University of Sydney admission application",
+      "Academic transcripts",
+      "Scholarship application",
+      "Secondary-school completion evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible undergraduate degree",
+      "Submit the scholarship application",
+      "Meet academic and admission conditions",
+      "Await scholarship decision"
+    ],
+    importantInfo: [
+      "The scholarship is currently listed as open for eligible applicants.",
+      "Living costs, accommodation, flights and OSHC are not covered by this award."
+    ],
+    officialLink: "https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "birmingham-future-skills-scholarship",
+    name: "Future Skills Scholarship",
+    organization: "University of Birmingham",
+    logoText: "UOB",
+    logoColor: "#1e3a8a",
+    fundingAmount: "£9,125–£12,500 tuition discount",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "STEM",
+    eligibility: "Eligible students domiciled in India applying for selected full-time taught Master's degrees at Birmingham.",
+    shortDescription: "An India-focused Birmingham scholarship supporting career-ready Master's study in selected future-facing subjects.",
+    fullDescription: "The University of Birmingham's Future Skills Scholarship provides automatic tuition discounts to eligible students domiciled in India studying selected future-focused taught Master's programmes.",
+    tags: [
+      "UK",
+      "India",
+      "Master's",
+      "Technology"
+    ],
+    benefits: [
+      "Up to £12,500 tuition discount",
+      "Automatic consideration for eligible applicants",
+      "Selected future-focused Master's programmes"
+    ],
+    eligibilityCriteria: [
+      "Domiciled in India",
+      "Eligible international fee status",
+      "Selected full-time Birmingham Master's programme",
+      "Meet offer and deposit conditions"
+    ],
+    requiredDocuments: [
+      "Birmingham course application",
+      "Academic records",
+      "Offer documentation",
+      "Required deposit and programme documents"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Birmingham Master's programme",
+      "Receive and accept the offer",
+      "Meet scholarship conditions by the stated deadline",
+      "Scholarship is applied as a tuition reduction"
+    ],
+    importantInfo: [
+      "The published 2026/27 cycle is closed; the university should be checked for the next cycle and eligible courses."
+    ],
+    officialLink: "https://www.birmingham.ac.uk/study/international/fees/scholarships/future-skills-terms-conditions",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "birmingham-postgraduate-chancellors-scholarship-india",
+    name: "Postgraduate Chancellor's Scholarship for India",
+    organization: "University of Birmingham",
+    logoText: "UOB",
+    logoColor: "#2563eb",
+    fundingAmount: "£10,000 tuition fee award",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Indian students applying for eligible full-time postgraduate Master's study at the University of Birmingham.",
+    shortDescription: "An India-specific Birmingham award reducing first-year tuition costs for high-achieving Master's applicants.",
+    fullDescription: "The University of Birmingham Postgraduate Chancellor's Scholarship for India provides a £10,000 tuition award for selected Indian students beginning eligible full-time postgraduate Master's study.",
+    tags: [
+      "UK",
+      "India",
+      "Master's",
+      "Merit"
+    ],
+    benefits: [
+      "£10,000 tuition reduction",
+      "India-specific award",
+      "Academic merit and application-based selection"
+    ],
+    eligibilityCriteria: [
+      "Indian student",
+      "Eligible international fee status",
+      "Eligible full-time Master's programme",
+      "Meet academic and offer conditions"
+    ],
+    requiredDocuments: [
+      "Birmingham Master's application",
+      "Academic transcripts",
+      "Statement of purpose",
+      "Offer documentation"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Birmingham Master's course",
+      "Receive an offer",
+      "Submit the scholarship application if required",
+      "Complete selection and acceptance requirements"
+    ],
+    importantInfo: [
+      "The 2026 entry application deadline is closed; verify the next intake's opening and deadline before applying."
+    ],
+    officialLink: "https://www.birmingham.ac.uk/study/scholarships-funding/india-postgraduate-chancellors-scholarship",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "sydney-scholars-india-scholarship-program",
+    name: "Sydney Scholars India Scholarship Program",
+    organization: "University of Sydney",
+    logoText: "SI",
+    logoColor: "#be123c",
+    fundingAmount: "Up to AUD 40,000",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "Indian citizens and residents with an unconditional offer for an eligible undergraduate or postgraduate coursework degree at the University of Sydney.",
+    shortDescription: "An India-specific University of Sydney programme supporting outstanding Indian students with multiple scholarship levels.",
+    fullDescription: "The Sydney Scholars India Scholarship Program supports commencing Indian students with several scholarship awards, including major undergraduate tuition scholarships and first-year awards for undergraduate and postgraduate coursework students.",
+    tags: [
+      "Australia",
+      "India",
+      "Undergraduate",
+      "Postgraduate",
+      "Leadership"
+    ],
+    benefits: [
+      "Up to AUD 40,000 under the current programme listing",
+      "Multiple scholarship awards each year",
+      "Major tuition support for selected undergraduate scholars",
+      "First-year awards for undergraduate and postgraduate students"
+    ],
+    eligibilityCriteria: [
+      "Indian citizen and current resident of India",
+      "International student",
+      "Unconditional offer for an eligible coursework degree",
+      "Meet University of Sydney admission requirements"
+    ],
+    requiredDocuments: [
+      "University of Sydney course application",
+      "Academic transcripts",
+      "Unconditional offer",
+      "Scholarship application materials"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Sydney undergraduate or postgraduate coursework degree",
+      "Receive an unconditional offer",
+      "Submit the scholarship application during the published window",
+      "Complete selection and accept the award"
+    ],
+    importantInfo: [
+      "The current published page lists 28 scholarships annually and a maximum listed value of AUD 40,000.",
+      "The scholarship is specifically designed for Indian students and has intake-specific application dates."
+    ],
+    officialLink: "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-scholarship-program.html",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "monash-graduate-scholarship",
+    name: "Monash Graduate Scholarship",
+    organization: "Monash University",
+    logoText: "MU",
+    logoColor: "#0f766e",
+    fundingAmount: "AUD 37,145 per year stipend (2026 rate)",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "PhD",
+    category: "STEM",
+    eligibility: "Domestic and international students undertaking eligible Research Doctorate or Research Master's degrees at a Monash campus in Australia.",
+    shortDescription: "A competitive graduate research stipend supporting international students undertaking research degrees at Monash.",
+    fullDescription: "The Monash Graduate Scholarship provides a living stipend to eligible high-performing research students. International applicants may combine the stipend with available tuition scholarships.",
+    tags: [
+      "Australia",
+      "PhD",
+      "Research",
+      "STEM"
+    ],
+    benefits: [
+      "Living stipend",
+      "Relocation allowance where eligible",
+      "Can be packaged with international tuition scholarships",
+      "Multiple application rounds"
+    ],
+    eligibilityCriteria: [
+      "International or eligible domestic student",
+      "Eligible research Master's or Doctorate",
+      "Meet Monash academic and English requirements",
+      "Competitive research profile"
+    ],
+    requiredDocuments: [
+      "Course and scholarship application",
+      "Academic transcripts",
+      "Research proposal where required",
+      "References",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for the eligible Monash research degree",
+      "Submit scholarship and admission materials through myApp",
+      "Enter the relevant scholarship round",
+      "Await academic selection"
+    ],
+    importantInfo: [
+      "Monash lists four scholarship rounds per year; international rounds include March and July deadlines in the 2026 schedule.",
+      "Rates and dates can change annually."
+    ],
+    officialLink: "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs?international=true",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "cambridge-trust-masters-studentship-international-fees",
+    name: "Cambridge Trust Masters Studentship (International Fees)",
+    organization: "Cambridge Trust, University of Cambridge",
+    logoText: "CT",
+    logoColor: "#2563eb",
+    fundingAmount: "International tuition fee support",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Applicants with international fee status applying for eligible one-year postgraduate study at Cambridge.",
+    shortDescription: "Cambridge Trust funding for international students pursuing eligible one-year Master's-level study.",
+    fullDescription: "The Cambridge Trust Masters Studentship supports international-fee-status applicants for eligible one-year postgraduate study. Selection can consider academic merit and financial need, and the award is tenable at any Cambridge College.",
+    tags: [
+      "UK",
+      "Cambridge",
+      "Master's",
+      "International"
+    ],
+    benefits: [
+      "International tuition fee support",
+      "Eligible across many postgraduate courses",
+      "Cambridge College support"
+    ],
+    eligibilityCriteria: [
+      "Overseas fee status",
+      "Prospective postgraduate applicant",
+      "Eligible one-year course",
+      "Strong academic profile and relevant funding need where applicable"
+    ],
+    requiredDocuments: [
+      "Cambridge postgraduate application",
+      "Academic transcripts",
+      "References",
+      "Funding section information"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Cambridge postgraduate course",
+      "Complete funding questions in the Applicant Portal",
+      "Meet the course funding deadline",
+      "Await Trust decision"
+    ],
+    importantInfo: [
+      "Cambridge lists this studentship for 2026/27 and notes approximately 10 awards.",
+      "Part-time MSt courses are excluded; always check the individual course listing."
+    ],
+    officialLink: "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2025",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "inlaks-cambridge-scholarship",
+    name: "Inlaks Cambridge Scholarship",
+    organization: "Inlaks Shivdasani Foundation and Cambridge Trust",
+    logoText: "IC",
+    logoColor: "#7c3aed",
+    fundingAmount: "Fees + maintenance + visa/health costs; value varies",
+    fundingType: "Fully Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Indian citizens and residents applying for eligible full-time Master's or PhD study at the University of Cambridge.",
+    shortDescription: "An India-specific Cambridge award offered in partnership with the Inlaks Shivdasani Foundation.",
+    fullDescription: "The Inlaks Cambridge Scholarship supports eligible applicants from India undertaking postgraduate study at Cambridge. The 2026/27 fund covers international fees and maintenance, with additional visa and health-related support.",
+    tags: [
+      "UK",
+      "India",
+      "Cambridge",
+      "Research"
+    ],
+    benefits: [
+      "International tuition fees",
+      "Maintenance support",
+      "Student visa-related support",
+      "Immigration health surcharge support"
+    ],
+    eligibilityCriteria: [
+      "Indian nationality and residence requirements",
+      "Eligible Cambridge Master's or PhD course",
+      "Strong academic profile",
+      "Meet Inlaks and Cambridge requirements"
+    ],
+    requiredDocuments: [
+      "Cambridge graduate application",
+      "Inlaks application",
+      "Academic transcripts",
+      "References",
+      "Personal or research statement"
+    ],
+    applicationProcess: [
+      "Apply for eligible Cambridge postgraduate study",
+      "Complete the Cambridge funding section",
+      "Apply separately to Inlaks when required",
+      "Await Cambridge Trust and partner selection"
+    ],
+    importantInfo: [
+      "Cambridge listed approximately five Inlaks Cambridge awards for 2026/27.",
+      "Both Cambridge and the external Inlaks process must be followed."
+    ],
+    officialLink: "https://www.student-funding.cam.ac.uk/fund/inlaks-cambridge-scholarship-2025",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "sydney-scholars-india-equity-scholarship",
+    name: "Sydney Scholars India Equity Scholarship",
+    organization: "University of Sydney and Asha Community Health and Development Society",
+    logoText: "SI",
+    logoColor: "#be123c",
+    fundingAmount: "Up to AUD 100,000",
+    fundingType: "Fully Funded",
+    country: "Australia",
+    studyLevel: "Postgraduate",
+    category: "Need-Based",
+    eligibility: "Indian citizens and residents from eligible low-income communities in India who apply for a new postgraduate coursework degree at the University of Sydney.",
+    shortDescription: "A high-value University of Sydney scholarship for an exceptional Indian postgraduate student from an eligible disadvantaged community.",
+    fullDescription: "The Sydney Scholars India Equity Scholarship supports one exceptional Indian student from an eligible low socio-economic background. The award can cover tuition, living expenses, flights, textbooks, health cover and accommodation.",
+    tags: [
+      "Australia",
+      "India",
+      "Master's",
+      "Need-Based"
+    ],
+    benefits: [
+      "Up to AUD 100,000 total support",
+      "Full tuition fees",
+      "Living allowance",
+      "Annual return flight and textbook support",
+      "Overseas Health Cover and accommodation"
+    ],
+    eligibilityCriteria: [
+      "Indian citizen and resident",
+      "Current resident of an eligible slum community in Delhi under the published criteria",
+      "New international student",
+      "Applied for an eligible postgraduate coursework degree",
+      "Meet ASHA selection requirements"
+    ],
+    requiredDocuments: [
+      "Sydney postgraduate application",
+      "Academic records",
+      "Proof of Indian citizenship and residence",
+      "Financial/background evidence",
+      "ASHA nomination materials"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Sydney postgraduate degree",
+      "Meet ASHA requirements",
+      "Be recommended by ASHA",
+      "University completes scholarship selection"
+    ],
+    importantInfo: [
+      "The scholarship is nomination-based rather than a standard open application.",
+      "Eligibility is geographically and socio-economically specific; check the current terms."
+    ],
+    officialLink: "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-equity-scholarship0.html",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "waterloo-faculty-mathematics-india-awards",
+    name: "Waterloo Faculty of Mathematics International Awards: India",
+    organization: "University of Waterloo",
+    logoText: "MATH",
+    logoColor: "#0f766e",
+    fundingAmount: "CAD 20,000–40,000",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "STEM",
+    eligibility: "International students with Indian citizenship applying to eligible Faculty of Mathematics undergraduate programmes at Waterloo.",
+    shortDescription: "India-specific Waterloo Mathematics awards for high-achieving students entering mathematics and computing-related degrees.",
+    fullDescription: "The University of Waterloo Faculty of Mathematics offers India-specific international awards to students entering eligible Mathematics faculty programmes. Waterloo lists International Elite Awards of CAD 40,000 and International Excellence Awards of CAD 20,000 for Indian students.",
+    tags: [
+      "Canada",
+      "India",
+      "STEM",
+      "Mathematics",
+      "Computer Science"
+    ],
+    benefits: [
+      "Up to CAD 40,000",
+      "India-specific awards",
+      "Eligible across Faculty of Mathematics programmes",
+      "Automatic consideration for eligible applicants in listed awards"
+    ],
+    eligibilityCriteria: [
+      "Indian citizenship",
+      "International student status",
+      "Eligible Faculty of Mathematics programme",
+      "Strong academic admission profile"
+    ],
+    requiredDocuments: [
+      "Waterloo undergraduate application",
+      "Academic transcripts",
+      "Admission Information Form",
+      "Citizenship information"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Faculty of Mathematics programme",
+      "Complete Waterloo admission requirements",
+      "Provide required application information",
+      "Be considered for eligible India awards"
+    ],
+    importantInfo: [
+      "Waterloo's current page lists separate International Elite and International Excellence Awards for India.",
+      "Award counts and values can change by intake."
+    ],
+    officialLink: "https://uwaterloo.ca/math/undergraduate-studies/applying/scholarships",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "waterloo-faculty-science-international-student-scholarships",
+    name: "Waterloo Faculty of Science International Student Scholarships",
+    organization: "University of Waterloo",
+    logoText: "SCI",
+    logoColor: "#0284c7",
+    fundingAmount: "CAD 25,000–80,000",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "STEM",
+    eligibility: "International fee-paying students entering eligible first-year undergraduate programmes in Waterloo's Faculty of Science.",
+    shortDescription: "High-value Waterloo Science scholarships for international students entering undergraduate science programmes.",
+    fullDescription: "The University of Waterloo Faculty of Science offers international student scholarships for eligible first-year undergraduate programmes. Current university information lists awards ranging from CAD 25,000 to CAD 80,000.",
+    tags: [
+      "Canada",
+      "STEM",
+      "Undergraduate",
+      "Science"
+    ],
+    benefits: [
+      "CAD 25,000–80,000 awards",
+      "Science faculty-specific funding",
+      "Some awards renewable over multiple terms"
+    ],
+    eligibilityCriteria: [
+      "International fee-paying student",
+      "Entering first year",
+      "Eligible Faculty of Science programme",
+      "Meet academic and application requirements"
+    ],
+    requiredDocuments: [
+      "Waterloo admission application",
+      "Academic transcripts",
+      "Scholarship application or required statements",
+      "Proof of international status"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Faculty of Science degree",
+      "Complete admission requirements",
+      "Submit scholarship application where required",
+      "Await faculty selection"
+    ],
+    importantInfo: [
+      "Waterloo lists separate international scholarships for Faculty of Science students.",
+      "Some awards require an application; check the current intake instructions."
+    ],
+    officialLink: "https://uwaterloo.ca/future-students/financing/scholarships",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-international-scholarship-distinction",
+    name: "York International Scholarship of Distinction",
+    organization: "York University",
+    logoText: "YU",
+    logoColor: "#2563eb",
+    fundingAmount: "CAD 37,500 over 4 years",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International high-school applicants with a qualifying admission average entering eligible York undergraduate programmes.",
+    shortDescription: "An automatic renewable entrance award for high-achieving international students at York University.",
+    fullDescription: "York University's International Scholarship of Distinction rewards international undergraduate applicants with a strong admission average. For the 2026 cycle, York lists up to CAD 37,500 over four years.",
+    tags: [
+      "Canada",
+      "Undergraduate",
+      "Merit",
+      "York"
+    ],
+    benefits: [
+      "Up to CAD 37,500 total",
+      "CAD 15,000 in year one under the 2026 structure",
+      "Renewable and regainable subject to conditions",
+      "Automatic consideration"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible high-school or advanced-standing applicant",
+      "Qualifying admission average",
+      "Meet York admission and enrolment conditions"
+    ],
+    requiredDocuments: [
+      "York admission application",
+      "Academic records",
+      "International student documentation"
+    ],
+    applicationProcess: [
+      "Apply to York University",
+      "Meet the published admission average",
+      "Complete admission process",
+      "Receive automatic scholarship consideration"
+    ],
+    importantInfo: [
+      "York's award structure and eligibility can change by intake.",
+      "Some programmes have exclusions; review the current York scholarship page."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/financing-your-degree/international-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-science-scholars-award",
+    name: "York Science Scholars Award",
+    organization: "York University",
+    logoText: "YSSA",
+    logoColor: "#0891b2",
+    fundingAmount: "CAD 10,000",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "STEM",
+    eligibility: "International applicants to eligible York Faculty of Science undergraduate programmes who meet the award's academic and application requirements.",
+    shortDescription: "A York Science award combining entrance funding with a guaranteed summer research opportunity.",
+    fullDescription: "The York Science Scholars Award supports selected students entering the Faculty of Science. The award combines an entrance scholarship with a guaranteed summer research position after first year, providing both financial support and research exposure.",
+    tags: [
+      "Canada",
+      "STEM",
+      "Research",
+      "Undergraduate"
+    ],
+    benefits: [
+      "CAD 5,000 entrance scholarship",
+      "CAD 5,000 associated summer research opportunity",
+      "Early research experience",
+      "Faculty of Science mentorship"
+    ],
+    eligibilityCriteria: [
+      "Applicant to an eligible Faculty of Science programme",
+      "Strong academic record",
+      "Complete the required scholarship application",
+      "Meet York admission requirements"
+    ],
+    requiredDocuments: [
+      "York undergraduate application",
+      "Academic transcripts",
+      "Scholarship application",
+      "Personal and academic statements"
+    ],
+    applicationProcess: [
+      "Apply to York Faculty of Science",
+      "Submit the scholarship application",
+      "Complete selection process",
+      "Participate in the summer research placement if selected"
+    ],
+    importantInfo: [
+      "York lists a CAD 10,000 combined value for the award.",
+      "Application deadlines are intake-specific and should be checked on York's current page."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/scholarships-incoming-students",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "deakin-international-scholarship-for-excellence",
+    name: "Deakin International Scholarship for Excellence",
+    organization: "Deakin University",
+    logoText: "DI",
+    logoColor: "#1d4ed8",
+    fundingAmount: "25% tuition fee reduction",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "High-achieving new international students commencing eligible undergraduate or postgraduate coursework study at Deakin.",
+    shortDescription: "A broad Deakin merit scholarship offering a 25% tuition reduction for eligible international students.",
+    fullDescription: "Deakin's International Scholarship for Excellence recognises strong academic performance among new international students and provides a 25% tuition fee reduction for the duration of an eligible degree.",
+    tags: [
+      "Australia",
+      "International",
+      "Merit"
+    ],
+    benefits: [
+      "25% tuition fee reduction",
+      "Available across eligible undergraduate and postgraduate coursework degrees",
+      "Automatic assessment for many applicants"
+    ],
+    eligibilityCriteria: [
+      "New international student",
+      "Eligible Deakin coursework degree",
+      "Meet academic and English requirements",
+      "Meet course-specific conditions"
+    ],
+    requiredDocuments: [
+      "Deakin course application",
+      "Academic transcripts",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Deakin course",
+      "Submit academic records",
+      "Deakin assesses eligibility",
+      "Accept scholarship with the course offer if awarded"
+    ],
+    importantInfo: [
+      "Deakin states that many international scholarships are assessed automatically through the course application.",
+      "Check the current scholarship finder for eligible courses and intakes."
+    ],
+    officialLink: "https://www.deakin.edu.au/international-students/international-student-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "uq-international-excellence-scholarship",
+    name: "UQ International Excellence Scholarship",
+    organization: "The University of Queensland",
+    logoText: "UQ",
+    logoColor: "#51247a",
+    fundingAmount: "25% tuition fee reduction per semester",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "High-achieving international students commencing eligible undergraduate or postgraduate coursework programmes at UQ.",
+    shortDescription: "A UQ merit scholarship providing a 25% tuition reduction to high-achieving international students.",
+    fullDescription: "The UQ International Excellence Scholarship supports high-achieving international students commencing eligible coursework programmes. UQ currently lists a 25% tuition fee reduction per semester for eligible 2027 entrants.",
+    tags: [
+      "Australia",
+      "UQ",
+      "Merit",
+      "International"
+    ],
+    benefits: [
+      "25% tuition fee reduction",
+      "Duration of eligible programme",
+      "Automatic assessment through UQ admission"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible undergraduate or postgraduate coursework programme",
+      "Meet programme entry rank and English requirements",
+      "Competitive academic result"
+    ],
+    requiredDocuments: [
+      "UQ programme application",
+      "Academic transcripts",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply to an eligible UQ programme",
+      "Meet all offer conditions",
+      "UQ automatically assesses eligible applicants",
+      "Accept the scholarship offer by the stated date"
+    ],
+    importantInfo: [
+      "UQ currently lists this scholarship for Semester 1 or 2 2027 entry.",
+      "Scholarship terms can change by intake."
+    ],
+    officialLink: "https://scholarships.uq.edu.au/scholarships",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "macquarie-vcis-postgraduate-indian-women",
+    name: "Macquarie Vice-Chancellor's International Scholarship – Postgraduate Indian Women's Scholarship",
+    organization: "Macquarie University",
+    logoText: "MQ",
+    logoColor: "#7c3aed",
+    fundingAmount: "Up to AUD 15,000 tuition fee reduction",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Female Indian citizens with a full offer for an eligible postgraduate programme at Macquarie University.",
+    shortDescription: "An India-specific postgraduate tuition scholarship for academically strong Indian women at Macquarie.",
+    fullDescription: "The Macquarie Vice-Chancellor's International Scholarship for Postgraduate Indian Women recognises academic excellence among female Indian students commencing eligible postgraduate study and provides a tuition fee reduction.",
+    tags: [
+      "Australia",
+      "India",
+      "Women",
+      "Postgraduate"
+    ],
+    benefits: [
+      "Up to AUD 15,000 tuition support",
+      "India-specific award",
+      "Eligible across several study areas"
+    ],
+    eligibilityCriteria: [
+      "Female Indian citizen",
+      "Full offer for an eligible Macquarie postgraduate programme",
+      "Minimum published academic result",
+      "Meet English requirements"
+    ],
+    requiredDocuments: [
+      "Macquarie course application",
+      "Academic transcripts",
+      "Proof of Indian citizenship",
+      "Scholarship application"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Macquarie postgraduate programme",
+      "Receive a full offer",
+      "Submit scholarship application using the specified scholarship name",
+      "Await assessment"
+    ],
+    importantInfo: [
+      "The scholarship is a one-time award and does not provide a living allowance, airfare or accommodation.",
+      "Check the current conditions before applying."
+    ],
+    officialLink: "https://students.mq.edu.au/study/course/overseas/staging/details/vcis-indian-women",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "leeds-masters-international-excellence-scholarship",
+    name: "Leeds Masters International Excellence Scholarship",
+    organization: "University of Leeds",
+    logoText: "LU",
+    logoColor: "#1d4ed8",
+    fundingAmount: "£3,000, £6,000 or £16,000 tuition discount",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "International students with an offer for an eligible full-time taught Master's degree at Leeds.",
+    shortDescription: "A competitive Leeds award for international Master's applicants with strong academic records.",
+    fullDescription: "The University of Leeds Masters International Excellence Scholarships reward high academic achievement among international students applying for eligible taught Master's degrees.",
+    tags: [
+      "UK",
+      "Master's",
+      "Merit",
+      "Leeds"
+    ],
+    benefits: [
+      "£3,000, £6,000 or £16,000 tuition discount",
+      "International eligibility",
+      "First-year tuition fee reduction"
+    ],
+    eligibilityCriteria: [
+      "International fee status",
+      "Offer for an eligible full-time taught Master's",
+      "Self-funded or partially funded",
+      "Strong academic record equivalent to at least a UK 2:1"
+    ],
+    requiredDocuments: [
+      "Leeds Master's application",
+      "Academic transcripts",
+      "Offer letter",
+      "Scholarship application"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Leeds Master's course",
+      "Receive an offer",
+      "Complete the scholarship application",
+      "Await selection"
+    ],
+    importantInfo: [
+      "Leeds lists two application rounds for the 2027 intake.",
+      "The award is a tuition reduction and cannot normally be deferred."
+    ],
+    officialLink: "https://www.leeds.ac.uk/scholarship/12/masters-international-excellence-scholarships",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "leeds-undergraduate-international-excellence-scholarship",
+    name: "Leeds Undergraduate International Excellence Scholarship",
+    organization: "University of Leeds",
+    logoText: "LU",
+    logoColor: "#2563eb",
+    fundingAmount: "£3,000, £6,000 or £16,000 tuition discount",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International students with an offer for an eligible undergraduate degree at Leeds.",
+    shortDescription: "A merit-based Leeds scholarship for high-achieving international undergraduate applicants.",
+    fullDescription: "The University of Leeds Undergraduate International Excellence Scholarships recognise strong academic and personal achievement among international students entering eligible undergraduate degrees.",
+    tags: [
+      "UK",
+      "Undergraduate",
+      "Merit",
+      "Leeds"
+    ],
+    benefits: [
+      "£3,000, £6,000 or £16,000 tuition discount",
+      "First-year tuition support",
+      "International student eligibility"
+    ],
+    eligibilityCriteria: [
+      "International fee status",
+      "Offer for eligible undergraduate course",
+      "Entering first year",
+      "Strong academic and extracurricular profile"
+    ],
+    requiredDocuments: [
+      "Leeds undergraduate application",
+      "Academic records",
+      "Offer letter",
+      "Scholarship application"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Leeds undergraduate course",
+      "Receive an offer",
+      "Complete scholarship application",
+      "Await scholarship outcome"
+    ],
+    importantInfo: [
+      "Leeds lists a final deadline of 11 April 2027 for the 2027 intake.",
+      "Medicine and dentistry are excluded under the current terms."
+    ],
+    officialLink: "https://www.leeds.ac.uk/scholarship/15/undergraduate-international-excellence-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "lady-meherbai-d-tata-education-trust-scholarship",
+    name: "Lady Meherbai D Tata Education Trust Scholarship",
+    organization: "Tata Trusts",
+    logoText: "TATA",
+    logoColor: "#0f766e",
+    fundingAmount: "Gift scholarship toward tuition; amount varies",
+    fundingType: "Partially Funded",
+    country: "Global",
+    studyLevel: "Postgraduate",
+    category: "Arts",
+    eligibility: "Indian women graduates from recognised Indian universities pursuing eligible overseas Master's study, particularly in social work, social welfare, education and related fields.",
+    shortDescription: "A Tata Trusts scholarship supporting Indian women pursuing selected Master's programmes abroad.",
+    fullDescription: "The Lady Meherbai D Tata Education Trust Scholarship supports talented Indian women graduates pursuing higher studies abroad in fields aligned with the Trust's focus, including social work, social welfare and education.",
+    tags: [
+      "India",
+      "Women",
+      "Overseas",
+      "Master's"
+    ],
+    benefits: [
+      "Gift scholarship toward tuition",
+      "Support for overseas Master's study",
+      "India-specific eligibility"
+    ],
+    eligibilityCriteria: [
+      "Indian woman graduate",
+      "Recognised Indian university qualification",
+      "Eligible overseas Master's programme",
+      "Field aligned with the Trust's current criteria"
+    ],
+    requiredDocuments: [
+      "Admission or offer letter",
+      "Academic records",
+      "CV",
+      "Course fee details",
+      "Proof of funds and other documents requested by Tata Trusts"
+    ],
+    applicationProcess: [
+      "Review the current Tata Trusts announcement",
+      "Request application access if required",
+      "Submit course and financial documents",
+      "Attend interview if shortlisted"
+    ],
+    importantInfo: [
+      "Tata Trusts states that the 2026/27 programme is closed.",
+      "Check the next annual announcement before applying."
+    ],
+    officialLink: "https://www.tatatrusts.org/our-work/education/education-grants",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "amansa-graduate-scholarship-oxford",
+    name: "Amansa Graduate Scholarship",
+    organization: "Somerville College and Oxford India Centre for Sustainable Development",
+    logoText: "A",
+    logoColor: "#7c3aed",
+    fundingAmount: "Course fees + living grant + visa/travel allowance",
+    fundingType: "Fully Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Need-Based",
+    eligibility: "Indian residents from marginalised or underrepresented backgrounds, including SC/ST/OBC students and first-generation learners, applying for specified Oxford graduate courses.",
+    shortDescription: "An Oxford scholarship for Indian students from marginalised or underrepresented backgrounds.",
+    fullDescription: "The Amansa Graduate Scholarship at Somerville College supports eligible Indian students from marginalised or underrepresented backgrounds in selected graduate courses aligned with the Oxford India Centre for Sustainable Development.",
+    tags: [
+      "UK",
+      "India",
+      "Oxford",
+      "Need-Based",
+      "Leadership"
+    ],
+    benefits: [
+      "Course fees",
+      "Living-cost grant",
+      "Visa and travel allowance",
+      "Oxford graduate study"
+    ],
+    eligibilityCriteria: [
+      "Ordinarily resident in India",
+      "SC/ST/OBC or first-generation learner under the published criteria",
+      "Eligible Oxford graduate course",
+      "Academic merit and relevant development focus",
+      "Financial need considered"
+    ],
+    requiredDocuments: [
+      "Oxford graduate application",
+      "Academic transcripts",
+      "Personal statement",
+      "Financial information",
+      "Course-specific documents"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Oxford graduate course",
+      "Meet the relevant funding deadline",
+      "Confirm interest when invited",
+      "Complete any additional scholarship form or interview"
+    ],
+    importantInfo: [
+      "The current Amansa page is for 2026 entry and says 2027 availability is not yet confirmed.",
+      "Verify the next cycle before treating it as open."
+    ],
+    officialLink: "https://www.some.ox.ac.uk/centres-research/the-oicsd/scholarships/amansa/",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "oxford-indira-gandhi-graduate-scholarship",
+    name: "Oxford Indira Gandhi Graduate Scholarship",
+    organization: "Somerville College and Oxford India Centre for Sustainable Development",
+    logoText: "IG",
+    logoColor: "#dc2626",
+    fundingAmount: "Course fees + living-cost grant",
+    fundingType: "Fully Funded",
+    country: "UK",
+    studyLevel: "PhD",
+    category: "Merit",
+    eligibility: "Indian DPhil applicants whose research is related to the Oxford India Centre for Sustainable Development's core research areas.",
+    shortDescription: "An Oxford DPhil scholarship specifically supporting Indian researchers working on India-related sustainable development themes.",
+    fullDescription: "The Oxford Indira Gandhi Graduate Scholarship at Somerville College supports Indian DPhil candidates whose research aligns with the Oxford India Centre for Sustainable Development.",
+    tags: [
+      "UK",
+      "India",
+      "Oxford",
+      "PhD",
+      "Research"
+    ],
+    benefits: [
+      "Course fees",
+      "Living-cost grant",
+      "Oxford DPhil research environment",
+      "India-focused research network"
+    ],
+    eligibilityCriteria: [
+      "Indian applicant",
+      "DPhil at Oxford",
+      "Research aligned with OICSD core areas",
+      "Meet Oxford academic requirements"
+    ],
+    requiredDocuments: [
+      "Oxford DPhil application",
+      "Research proposal",
+      "Academic transcripts",
+      "References",
+      "Personal statement"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Oxford DPhil",
+      "Meet the relevant funding deadline",
+      "Indicate funding interest through the Oxford application",
+      "Await college and OICSD selection"
+    ],
+    importantInfo: [
+      "Somerville lists one award for 2027 entry in its current scholarship table.",
+      "Availability is subject to the annual funding cycle."
+    ],
+    officialLink: "https://www.some.ox.ac.uk/funding-and-opportunities/graduate-scholarships/",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "uq-international-high-achievers-scholarship",
+    name: "UQ International High Achievers Scholarship",
+    organization: "The University of Queensland",
+    logoText: "UQ",
+    logoColor: "#51247a",
+    fundingAmount: "20% tuition fee reduction per semester",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "High-achieving international students applying to eligible UQ undergraduate or postgraduate coursework programmes.",
+    shortDescription: "A UQ merit award offering a 20% tuition reduction to competitive international applicants.",
+    fullDescription: "The UQ International High Achievers Scholarship supports high-achieving international students starting eligible coursework programmes. UQ currently lists a 20% tuition fee reduction per semester for eligible 2027 entrants.",
+    tags: [
+      "Australia",
+      "UQ",
+      "Merit",
+      "International"
+    ],
+    benefits: [
+      "20% tuition fee reduction",
+      "Duration of eligible programme",
+      "Automatic assessment with UQ admission"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible UQ programme",
+      "Meet programme entry rank and English requirements",
+      "Competitive academic score"
+    ],
+    requiredDocuments: [
+      "UQ programme application",
+      "Academic transcripts",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply to an eligible UQ programme",
+      "Meet all offer conditions",
+      "UQ automatically assesses eligible applicants",
+      "Accept the scholarship offer"
+    ],
+    importantInfo: [
+      "UQ currently lists the award for students commencing in 2027.",
+      "The scholarship is competitive and subject to programme-specific exclusions."
+    ],
+    officialLink: "https://scholarships.uq.edu.au/scholarship/uq-international-high-achievers-scholarship",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "uwa-international-student-award",
+    name: "UWA International Student Award",
+    organization: "The University of Western Australia",
+    logoText: "UWA",
+    logoColor: "#047857",
+    fundingAmount: "10% tuition fee reduction",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International students from selected countries, including India, applying for eligible full-time undergraduate or postgraduate study at UWA.",
+    shortDescription: "An India-eligible UWA tuition discount for international students from selected countries.",
+    fullDescription: "UWA's International Student Award provides a 10% tuition fee reduction for eligible international students from selected countries, including India, for the duration of an eligible course.",
+    tags: [
+      "Australia",
+      "India",
+      "Merit",
+      "UWA"
+    ],
+    benefits: [
+      "10% tuition fee reduction",
+      "Duration of eligible course",
+      "Automatic assessment for eligible applicants"
+    ],
+    eligibilityCriteria: [
+      "Citizen of an eligible country including India",
+      "International student on an Australian student visa",
+      "Eligible full-time UWA course",
+      "Meet admission requirements"
+    ],
+    requiredDocuments: [
+      "UWA admission application",
+      "Academic transcripts",
+      "Citizenship evidence"
+    ],
+    applicationProcess: [
+      "Apply to UWA for an eligible course",
+      "Meet international admission requirements",
+      "UWA assesses eligibility",
+      "Accept the award with the course offer"
+    ],
+    importantInfo: [
+      "UWA currently advertises the award for students starting in 2027.",
+      "The list of eligible countries and terms can change by intake."
+    ],
+    officialLink: "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/international-student-award",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "deakin-international-20-merit-scholarship",
+    name: "Deakin International 20% Merit Scholarship",
+    organization: "Deakin University",
+    logoText: "D20",
+    logoColor: "#0f766e",
+    fundingAmount: "20% tuition fee reduction",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "Eligible new international students commencing undergraduate or postgraduate coursework study at Deakin.",
+    shortDescription: "A straightforward merit-based tuition reduction for eligible international students at Deakin.",
+    fullDescription: "Deakin's International 20% Merit Scholarship provides a 20% tuition fee reduction for eligible new international students undertaking qualifying undergraduate or postgraduate coursework degrees.",
+    tags: [
+      "Australia",
+      "International",
+      "Merit"
+    ],
+    benefits: [
+      "20% tuition fee reduction",
+      "Applicable to eligible undergraduate and postgraduate coursework",
+      "Often assessed through course application"
+    ],
+    eligibilityCriteria: [
+      "New international student",
+      "Eligible Deakin degree",
+      "Meet academic requirements",
+      "Meet English and admission requirements"
+    ],
+    requiredDocuments: [
+      "Deakin course application",
+      "Academic transcripts",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Deakin degree",
+      "Submit academic records",
+      "Deakin assesses eligibility",
+      "Accept the scholarship if offered"
+    ],
+    importantInfo: [
+      "Deakin states that most international scholarships do not require a separate application.",
+      "Check the scholarship finder for current eligible courses."
+    ],
+    officialLink: "https://www.deakin.edu.au/international-students/international-student-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "birmingham-postgraduate-high-fliers-scholarship",
+    name: "Postgraduate High Fliers Scholarship",
+    organization: "University of Birmingham",
+    logoText: "HF",
+    logoColor: "#1e3a8a",
+    fundingAmount: "£5,000 tuition fee scholarship",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Eligible international students, including students from India, beginning selected full-time Master's study at Birmingham.",
+    shortDescription: "A £5,000 Birmingham tuition award for eligible international Master's applicants.",
+    fullDescription: "The University of Birmingham Postgraduate High Fliers Scholarship provides a £5,000 tuition award to eligible international students starting selected Master's programmes on the Birmingham campus.",
+    tags: [
+      "UK",
+      "India",
+      "Master's",
+      "Merit"
+    ],
+    benefits: [
+      "£5,000 tuition reduction",
+      "Open to students from India and other listed countries",
+      "Eligible for selected full-time Master's programmes"
+    ],
+    eligibilityCriteria: [
+      "International student from an eligible country",
+      "Eligible Birmingham Master's programme",
+      "Meet academic and offer requirements",
+      "Start in the specified intake"
+    ],
+    requiredDocuments: [
+      "Birmingham postgraduate application",
+      "Academic transcripts",
+      "Offer letter",
+      "Nationality evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Master's programme",
+      "Meet the scholarship conditions and deadline",
+      "Scholarship is assessed according to Birmingham's published process",
+      "Accept the award"
+    ],
+    importantInfo: [
+      "The current published 2026 deadline is closed.",
+      "Check Birmingham's scholarship directory for the next intake and updated country list."
+    ],
+    officialLink: "https://www.birmingham.ac.uk/study/international/fees/scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "sydney-international-student-award",
+    name: "Sydney International Student Award",
+    organization: "University of Sydney",
+    logoText: "SISA",
+    logoColor: "#be123c",
+    fundingAmount: "20% tuition fee contribution",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International students from selected countries, including India, admitted to eligible full-time undergraduate or postgraduate coursework degrees at the University of Sydney.",
+    shortDescription: "A broad University of Sydney tuition contribution for high-achieving international students from selected markets.",
+    fullDescription: "The Sydney International Student Award provides a 20% contribution toward tuition fees for the duration of an eligible coursework degree for international students from selected countries and regions.",
+    tags: [
+      "Australia",
+      "India",
+      "International",
+      "Merit"
+    ],
+    benefits: [
+      "20% tuition fee contribution",
+      "Duration of eligible course",
+      "Applicable to eligible undergraduate and postgraduate coursework"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible nationality including India",
+      "Full-time eligible coursework degree",
+      "Meet University of Sydney admission requirements"
+    ],
+    requiredDocuments: [
+      "Sydney course application",
+      "Academic records",
+      "Motivation statement",
+      "Offer documentation"
+    ],
+    applicationProcess: [
+      "Apply to an eligible Sydney course",
+      "Respond to the scholarship prompt during the application process",
+      "Receive and accept an eligible offer",
+      "Scholarship is applied to tuition"
+    ],
+    importantInfo: [
+      "The award is available only to selected nationalities and eligible courses.",
+      "Current conditions should be checked for the relevant intake."
+    ],
+    officialLink: "https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "deakin-college-foundation-pathways-scholarship",
+    name: "Deakin College Foundation Pathways Scholarship",
+    organization: "Deakin University",
+    logoText: "DCF",
+    logoColor: "#2563eb",
+    fundingAmount: "Up to AUD 2,000 one-off bursary",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "Eligible international students accepting an eligible Deakin College foundation pathway offer under the published scholarship conditions.",
+    shortDescription: "A pathway bursary helping eligible international students begin a Deakin College foundation programme.",
+    fullDescription: "The Deakin College Foundation Pathways Scholarship provides a one-off bursary of up to AUD 2,000 to eligible international students who accept qualifying foundation pathway offers.",
+    tags: [
+      "Australia",
+      "International",
+      "Foundation",
+      "Merit"
+    ],
+    benefits: [
+      "Up to AUD 2,000 one-off bursary",
+      "Support toward pathway study costs",
+      "Potential progression to Deakin University"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible Deakin College foundation pathway",
+      "Accept offer within the required period",
+      "Meet published scholarship conditions"
+    ],
+    requiredDocuments: [
+      "Deakin College application",
+      "Academic records",
+      "Offer letter",
+      "Identity documents"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Deakin College pathway",
+      "Accept the offer within the required period",
+      "Meet scholarship conditions",
+      "Receive the bursary if eligible"
+    ],
+    importantInfo: [
+      "The bursary amount and eligible pathways can vary by intake.",
+      "Check Deakin's current international scholarship page before applying."
+    ],
+    officialLink: "https://www.deakin.edu.au/international-students/international-student-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-international-merit-award",
+    name: "York International Merit Award",
+    organization: "York University",
+    logoText: "YM",
+    logoColor: "#1d4ed8",
+    fundingAmount: "CAD 25,000 over 4 years",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International high-school applicants entering eligible York undergraduate programmes with a qualifying 80–89.9% admission average or equivalent.",
+    shortDescription: "An automatic renewable York entrance award for international students with strong academic results.",
+    fullDescription: "York's International Merit Award supports international undergraduate applicants whose final admission average falls within the published merit range. The 2026/27 structure provides up to CAD 25,000 over four years.",
+    tags: [
+      "Canada",
+      "Undergraduate",
+      "Merit",
+      "York"
+    ],
+    benefits: [
+      "CAD 10,000 in year one under the current structure",
+      "CAD 5,000 in subsequent eligible years",
+      "Up to CAD 25,000 total",
+      "Automatic consideration"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible undergraduate applicant",
+      "80–89.9% equivalent admission average under current rules",
+      "Full-time study"
+    ],
+    requiredDocuments: [
+      "York undergraduate application",
+      "Academic records",
+      "International student documentation"
+    ],
+    applicationProcess: [
+      "Apply to York University",
+      "Meet the published admission average",
+      "Complete admission process",
+      "Receive automatic award consideration"
+    ],
+    importantInfo: [
+      "York lists this as a renewable and regainable entrance award subject to academic conditions.",
+      "Award rules vary by intake and programme."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/financing-your-degree/international-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-international-entrance-award",
+    name: "York International Entrance Award",
+    organization: "York University",
+    logoText: "YIA",
+    logoColor: "#0284c7",
+    fundingAmount: "CAD 5,000 one-time award",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International high-school applicants or eligible transfer applicants entering York with a 75–79.9% equivalent admission average under the current criteria.",
+    shortDescription: "A straightforward automatic entrance award for eligible international students at York.",
+    fullDescription: "York's International Entrance Award provides a one-time CAD 5,000 award to qualifying international undergraduate applicants with the published admission-average range.",
+    tags: [
+      "Canada",
+      "Undergraduate",
+      "Merit",
+      "York"
+    ],
+    benefits: [
+      "CAD 5,000 one-time award",
+      "Automatic consideration",
+      "Open to eligible international entrants"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible undergraduate admission",
+      "75–79.9% equivalent admission average under current rules",
+      "Meet York enrolment conditions"
+    ],
+    requiredDocuments: [
+      "York admission application",
+      "Academic records",
+      "International student documentation"
+    ],
+    applicationProcess: [
+      "Apply to York University",
+      "Complete admission requirements",
+      "Meet the qualifying admission average",
+      "Receive automatic award consideration"
+    ],
+    importantInfo: [
+      "York lists this award for applicants in the 75–79.9% admission-average range.",
+      "Check the current intake rules for programme exclusions."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/financing-your-degree/international-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "monash-international-tuition-scholarship",
+    name: "Monash International Tuition Scholarship (MITS)",
+    organization: "Monash University",
+    logoText: "MITS",
+    logoColor: "#b91c1c",
+    fundingAmount: "Full research tuition fees + single OSHC",
+    fundingType: "Fully Funded",
+    country: "Australia",
+    studyLevel: "PhD",
+    category: "STEM",
+    eligibility: "International students undertaking eligible Research Doctorate or Research Master's degrees at a Monash campus in Australia.",
+    shortDescription: "A full tuition scholarship for international graduate researchers at Monash.",
+    fullDescription: "The Monash International Tuition Scholarship covers course tuition fees and a single Overseas Student Health Cover policy for eligible international research students. It is generally paired with a stipend scholarship.",
+    tags: [
+      "Australia",
+      "International",
+      "PhD",
+      "Research",
+      "STEM"
+    ],
+    benefits: [
+      "Full course tuition fees",
+      "Single OSHC policy",
+      "Eligible for research Master's and Doctorate study",
+      "Can be combined with a stipend scholarship"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible research Master's or Doctorate",
+      "Meet Monash academic and English requirements",
+      "Competitive research profile"
+    ],
+    requiredDocuments: [
+      "Monash graduate research application",
+      "Academic transcripts",
+      "Research proposal",
+      "References",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Monash research degree",
+      "Submit the graduate research scholarship application",
+      "Meet the relevant scholarship round deadline",
+      "Await selection"
+    ],
+    importantInfo: [
+      "Monash lists international application rounds with March and August closing dates, with the 2026 third round brought forward.",
+      "Check the current round for exact dates."
+    ],
+    officialLink: "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-tuition-scholarship?international=true",
+    featured: true,
+    recentlyAdded: true,
+  },
+  {
+    slug: "uq-faculty-international-scholarship",
+    name: "UQ Faculty International Scholarship",
+    organization: "The University of Queensland",
+    logoText: "UQ",
+    logoColor: "#51247a",
+    fundingAmount: "10% tuition fee reduction per semester",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International students commencing eligible UQ programmes who are not selected for other applicable UQ merit awards.",
+    shortDescription: "A UQ faculty-level tuition reduction helping high-achieving international students begin study in Australia.",
+    fullDescription: "The UQ Faculty International Scholarship supports international students starting eligible programmes and provides a 10% tuition fee reduction per semester under the current 2027 scholarship listings.",
+    tags: [
+      "Australia",
+      "UQ",
+      "International",
+      "Merit"
+    ],
+    benefits: [
+      "10% tuition fee reduction per semester",
+      "Automatic consideration",
+      "Broad range of study areas"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible UQ programme",
+      "Meet programme entry and English requirements",
+      "Meet the scholarship's current selection rules"
+    ],
+    requiredDocuments: [
+      "UQ programme application",
+      "Academic transcripts",
+      "English-language evidence"
+    ],
+    applicationProcess: [
+      "Apply for an eligible UQ programme",
+      "Meet admission conditions",
+      "UQ assesses eligible applicants",
+      "Accept the scholarship with the offer"
+    ],
+    importantInfo: [
+      "UQ currently lists this scholarship for students starting in 2027.",
+      "It may be considered alongside other UQ scholarship categories according to current rules."
+    ],
+    officialLink: "https://scholarships.uq.edu.au/scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "uq-english-language-scholarship",
+    name: "UQ English Language Scholarship",
+    organization: "The University of Queensland",
+    logoText: "ELS",
+    logoColor: "#0f766e",
+    fundingAmount: "Up to 20 weeks of Bridging English",
+    fundingType: "Partially Funded",
+    country: "Australia",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International students commencing eligible UQ coursework programmes who need the approved English-language bridging support.",
+    shortDescription: "An English-language scholarship that can provide up to 20 weeks of Bridging English before eligible UQ study.",
+    fullDescription: "The UQ English Language Scholarship supports international students who need approved English-language preparation before commencing eligible coursework programmes at UQ.",
+    tags: [
+      "Australia",
+      "UQ",
+      "English",
+      "International"
+    ],
+    benefits: [
+      "Up to 20 weeks of Bridging English",
+      "Support toward English preparation",
+      "Pathway into eligible UQ coursework study"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "Eligible UQ coursework programme",
+      "Meet UQ academic conditions",
+      "Meet the current English-language scholarship criteria"
+    ],
+    requiredDocuments: [
+      "UQ programme application",
+      "Academic records",
+      "English-language assessment evidence"
+    ],
+    applicationProcess: [
+      "Apply to an eligible UQ coursework programme",
+      "Meet the conditions for the English pathway",
+      "Receive scholarship assessment with the UQ offer",
+      "Complete the approved Bridging English programme if required"
+    ],
+    importantInfo: [
+      "UQ currently lists this scholarship for commencing students in 2027 and 2028.",
+      "This is English-language support rather than a cash living-cost scholarship."
+    ],
+    officialLink: "https://scholarships.uq.edu.au/scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "york-international-transfer-award",
+    name: "York International Transfer Award",
+    organization: "York University",
+    logoText: "YTA",
+    logoColor: "#0e7490",
+    fundingAmount: "CAD 2,500 one-time award",
+    fundingType: "Partially Funded",
+    country: "Canada",
+    studyLevel: "Undergraduate",
+    category: "Merit",
+    eligibility: "International transfer applicants admitted to York University with at least 24 transfer credits and the required admission average.",
+    shortDescription: "An automatic entrance award for eligible international transfer students entering York University.",
+    fullDescription: "York University's International Transfer Award provides a one-time award to eligible international transfer applicants who meet the published transfer-credit and academic-average requirements.",
+    tags: [
+      "Canada",
+      "International",
+      "Transfer",
+      "Undergraduate"
+    ],
+    benefits: [
+      "CAD 2,500 one-time award",
+      "Automatic consideration",
+      "Designed specifically for international transfer applicants"
+    ],
+    eligibilityCriteria: [
+      "International student",
+      "24 or more transfer credits under current rules",
+      "Minimum published admission average",
+      "Eligible full-time undergraduate enrolment"
+    ],
+    requiredDocuments: [
+      "York transfer application",
+      "Academic transcripts",
+      "Transfer-credit documentation",
+      "International student documents"
+    ],
+    applicationProcess: [
+      "Apply to York as an international transfer student",
+      "Submit all transfer-credit records",
+      "Meet the published admission average",
+      "Receive automatic award consideration"
+    ],
+    importantInfo: [
+      "York currently lists a CAD 2,500 one-time International Transfer Award.",
+      "Eligibility and value should be checked for the relevant intake."
+    ],
+    officialLink: "https://futurestudents.yorku.ca/financing-your-degree/international-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+  {
+    slug: "leeds-masters-international-regional-scholarship",
+    name: "Leeds Masters International Regional Scholarship",
+    organization: "University of Leeds",
+    logoText: "LIR",
+    logoColor: "#1e40af",
+    fundingAmount: "International tuition fee reduction; value varies by region",
+    fundingType: "Partially Funded",
+    country: "UK",
+    studyLevel: "Postgraduate",
+    category: "Merit",
+    eligibility: "Eligible international students from specified regions applying for a taught Master's degree at the University of Leeds.",
+    shortDescription: "A regional Leeds tuition scholarship designed to reduce the cost of Master's study for eligible international students.",
+    fullDescription: "The University of Leeds offers International Regional Scholarships for eligible international students entering Master's study. The awards are designed as tuition fee reductions and eligibility depends on nationality or region and the relevant intake.",
+    tags: [
+      "UK",
+      "International",
+      "Master's",
+      "Merit"
+    ],
+    benefits: [
+      "Tuition fee reduction",
+      "Regional eligibility for selected countries",
+      "Support toward first-year tuition costs"
+    ],
+    eligibilityCriteria: [
+      "International fee status",
+      "Eligible nationality or region",
+      "Eligible taught Master's course",
+      "Self-funded or partially funded status where required"
+    ],
+    requiredDocuments: [
+      "Leeds Master's application",
+      "Academic transcripts",
+      "Nationality evidence",
+      "Offer letter"
+    ],
+    applicationProcess: [
+      "Apply for an eligible Leeds Master's course",
+      "Receive an offer",
+      "Check the regional scholarship conditions",
+      "Accept the scholarship if awarded"
+    ],
+    importantInfo: [
+      "Leeds publishes separate regional scholarships for international students and updates eligible countries and values by intake.",
+      "Indian students should verify that India is included for the target intake."
+    ],
+    officialLink: "https://www.leeds.ac.uk/undergraduate-funding-university/doc/international-scholarships",
+    featured: false,
+    recentlyAdded: true,
+  },
+
 ];
 
 export const studyLevels: Scholarship["studyLevel"][] = ["School", "Undergraduate", "Postgraduate", "PhD"]
