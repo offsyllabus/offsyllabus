@@ -18304,7 +18304,7 @@ export const PROGRAMS: Program[] = [
   fee: "Free; top performers may be considered for a stipend",
   description:
     "A hands-on student internship built around real challenges in content, campaigns, community, on-ground projects, AI tools, storytelling, pitching, and public-facing work. Interns are expected to learn quickly, take ownership, and build a practical portfolio through real project work.",
-  url: "https://www.offsyllabus.club/",
+  url: "https://docs.google.com/forms/d/e/1FAIpQLSdU2Cwwgs1VyV5NjGxuR8spBpRZrP2G4ynRaDYCQhpd317Dkg/viewform?usp=dialog",
   applicationUrl: "https://forms.gle/YU5fvGHdnT6LYgYP7",
 },
 ];
