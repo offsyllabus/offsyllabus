@@ -1,13 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useMemo, useState } from 'react'
-import {
-  categories,
-  countries,
-  fundingTypes,
-  scholarships,
-  studyLevels,
-  type Scholarship,
-} from '../../data/scholarships'
+import type { CSSProperties } from 'react'
+import { PROGRAMS, CATEGORIES, MODES, COSTS, LEVELS, type Program } from '../../data/scholarships'
 import { RevealSection, SectionLabel, useIsMobile } from '../../components/scholarship-ui'
 
 export const Route = createFileRoute('/scholarships/')({
@@ -15,6 +9,21 @@ export const Route = createFileRoute('/scholarships/')({
 })
 
 const BOOKMARK_KEY = 'offsyllabus_saved_scholarships'
+const PAGE_SIZE = 24
+
+function getInitials(name: string) {
+  return (
+    name
+      .replace(/[^A-Za-z0-9 ]/g, '')
+      .split(' ')
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0].toUpperCase())
+      .join('') || '?'
+  )
+}
+
+const LOGO_BG = 'linear-gradient(135deg, #7c3aed, #4f46e5)'
 
 function useBookmarks() {
   const [saved, setSaved] = useState<string[]>(() => {
@@ -27,10 +36,12 @@ function useBookmarks() {
     }
   })
 
-  const toggle = (slug: string) => {
+  const toggle = (id: string) => {
     setSaved((prev) => {
-      const next = prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
-      window.localStorage.setItem(BOOKMARK_KEY, JSON.stringify(next))
+      const next = prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]
+      try {
+        window.localStorage.setItem(BOOKMARK_KEY, JSON.stringify(next))
+      } catch {}
       return next
     })
   }
@@ -43,70 +54,87 @@ function ScholarshipsPage() {
   const { saved, toggle } = useBookmarks()
 
   const [query, setQuery] = useState('')
-  const [country, setCountry] = useState<string>('All')
-  const [studyLevel, setStudyLevel] = useState<string>('All')
+  const [mode, setMode] = useState<string>('All')
+  const [level, setLevel] = useState<string>('All')
   const [category, setCategory] = useState<string>('All')
-  const [fundingType, setFundingType] = useState<string>('All')
-  const [eligibilityOnly, setEligibilityOnly] = useState(false)
+  const [cost, setCost] = useState<string>('All')
+  const [savedOnly, setSavedOnly] = useState(false)
+  const [visible, setVisible] = useState(PAGE_SIZE)
 
   const filtered = useMemo(() => {
-    return scholarships.filter((s) => {
+    const q = query.trim().toLowerCase()
+    return PROGRAMS.filter((p) => {
       const matchesQuery =
-        query.trim() === '' ||
-        s.name.toLowerCase().includes(query.toLowerCase()) ||
-        s.organization.toLowerCase().includes(query.toLowerCase()) ||
-        s.country.toLowerCase().includes(query.toLowerCase()) ||
-        s.tags.some((t) => t.toLowerCase().includes(query.toLowerCase()))
-      const matchesCountry = country === 'All' || s.country === country
-      const matchesLevel = studyLevel === 'All' || s.studyLevel === studyLevel
-      const matchesCategory = category === 'All' || s.category === category
-      const matchesFunding = fundingType === 'All' || s.fundingType === fundingType
-      const matchesEligibility = !eligibilityOnly || saved.includes(s.slug)
-      return (
-        matchesQuery &&
-        matchesCountry &&
-        matchesLevel &&
-        matchesCategory &&
-        matchesFunding &&
-        matchesEligibility
-      )
+        q === '' ||
+        p.title.toLowerCase().includes(q) ||
+        p.institution.toLowerCase().includes(q) ||
+        p.location.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q)
+      const matchesMode = mode === 'All' || p.mode === mode
+      const matchesLevel = level === 'All' || p.level === level
+      const matchesCategory = category === 'All' || p.category === category
+      const matchesCost = cost === 'All' || p.cost === cost
+      const matchesSaved = !savedOnly || saved.includes(p.id)
+      return matchesQuery && matchesMode && matchesLevel && matchesCategory && matchesCost && matchesSaved
     })
-  }, [query, country, studyLevel, category, fundingType, eligibilityOnly, saved])
+  }, [query, mode, level, category, cost, savedOnly, saved])
 
-  const featured = scholarships.filter((s) => s.featured)
-  const recentlyAdded = scholarships.filter((s) => s.recentlyAdded)
-  const recommended = scholarships.slice(0, 3)
+  const featured = PROGRAMS.slice(0, 8)
+  const recommended = PROGRAMS.slice(8, 11)
+  const recentlyAdded = PROGRAMS.slice(-6).reverse()
+
+  const resetVisible = () => setVisible(PAGE_SIZE)
 
   return (
     <div style={{ paddingTop: '68px' }}>
       <HeroSearch
         query={query}
-        setQuery={setQuery}
-        country={country}
-        setCountry={setCountry}
-        studyLevel={studyLevel}
-        setStudyLevel={setStudyLevel}
+        setQuery={(v) => {
+          setQuery(v)
+          resetVisible()
+        }}
+        mode={mode}
+        setMode={(v) => {
+          setMode(v)
+          resetVisible()
+        }}
+        level={level}
+        setLevel={(v) => {
+          setLevel(v)
+          resetVisible()
+        }}
         category={category}
-        setCategory={setCategory}
-        fundingType={fundingType}
-        setFundingType={setFundingType}
-        eligibilityOnly={eligibilityOnly}
-        setEligibilityOnly={setEligibilityOnly}
+        setCategory={(v) => {
+          setCategory(v)
+          resetVisible()
+        }}
+        cost={cost}
+        setCost={(v) => {
+          setCost(v)
+          resetVisible()
+        }}
+        savedOnly={savedOnly}
+        setSavedOnly={(v) => {
+          setSavedOnly(v)
+          resetVisible()
+        }}
         isMobile={isMobile}
       />
 
       <div className="gradient-divider" />
 
-      <FeaturedRow scholarships={featured} isMobile={isMobile} />
+      <FeaturedRow items={featured} isMobile={isMobile} />
 
       <div className="gradient-divider" />
 
-      <RecommendedSection scholarships={recommended} isMobile={isMobile} />
+      <RecommendedSection items={recommended} isMobile={isMobile} />
 
       <div className="gradient-divider" />
 
       <MainGrid
-        scholarships={filtered}
+        items={filtered}
+        visible={visible}
+        onLoadMore={() => setVisible((v) => v + PAGE_SIZE)}
         isMobile={isMobile}
         saved={saved}
         toggle={toggle}
@@ -114,7 +142,7 @@ function ScholarshipsPage() {
 
       <div className="gradient-divider" />
 
-      <RecentlyAddedSection scholarships={recentlyAdded} isMobile={isMobile} />
+      <RecentlyAddedSection items={recentlyAdded} isMobile={isMobile} />
     </div>
   )
 }
@@ -124,35 +152,21 @@ function ScholarshipsPage() {
 function HeroSearch(props: {
   query: string
   setQuery: (v: string) => void
-  country: string
-  setCountry: (v: string) => void
-  studyLevel: string
-  setStudyLevel: (v: string) => void
+  mode: string
+  setMode: (v: string) => void
+  level: string
+  setLevel: (v: string) => void
   category: string
   setCategory: (v: string) => void
-  fundingType: string
-  setFundingType: (v: string) => void
-  eligibilityOnly: boolean
-  setEligibilityOnly: (v: boolean) => void
+  cost: string
+  setCost: (v: string) => void
+  savedOnly: boolean
+  setSavedOnly: (v: boolean) => void
   isMobile: boolean
 }) {
-  const {
-    query,
-    setQuery,
-    country,
-    setCountry,
-    studyLevel,
-    setStudyLevel,
-    category,
-    setCategory,
-    fundingType,
-    setFundingType,
-    eligibilityOnly,
-    setEligibilityOnly,
-    isMobile,
-  } = props
+  const { query, setQuery, mode, setMode, level, setLevel, category, setCategory, cost, setCost, savedOnly, setSavedOnly, isMobile } = props
 
-  const selectStyle: React.CSSProperties = {
+  const selectStyle: CSSProperties = {
     background: 'rgba(255,255,255,0.03)',
     border: '1px solid rgba(255,255,255,0.1)',
     borderRadius: '10px',
@@ -187,7 +201,7 @@ function HeroSearch(props: {
             }}
           >
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#a78bfa', display: 'inline-block' }} />
-            {scholarships.length}+ scholarships from India and around the world
+            {PROGRAMS.length}+ programs from India and around the world
           </div>
 
           <h1
@@ -199,7 +213,7 @@ function HeroSearch(props: {
               marginBottom: '20px',
             }}
           >
-            Scholarships
+            Scholarships &amp; Programs
           </h1>
           <p
             style={{
@@ -210,8 +224,7 @@ function HeroSearch(props: {
               margin: '0 auto 40px',
             }}
           >
-            Find scholarships that can help fund your education, research, competitions, and global
-            opportunities.
+            Find programs, internships, fellowships and scholarships that go beyond the syllabus.
           </p>
         </RevealSection>
 
@@ -230,7 +243,7 @@ function HeroSearch(props: {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search by organization, country, or keyword…"
+              placeholder="Search by name, institution, or keyword…"
               style={{
                 flex: 1,
                 background: 'transparent',
@@ -241,69 +254,57 @@ function HeroSearch(props: {
                 fontSize: '0.9375rem',
               }}
             />
-            <button
-              className="btn-primary"
-              style={{ padding: '0 24px', fontSize: '0.875rem' }}
-              onClick={() => {}}
-            >
+            <button className="btn-primary" style={{ padding: '0 24px', fontSize: '0.875rem' }} onClick={() => {}}>
               <span>Search</span>
             </button>
           </div>
         </RevealSection>
 
         <RevealSection delay={250}>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '10px',
-              justifyContent: 'center',
-              marginTop: '24px',
-            }}
-          >
-            <select style={selectStyle} value={country} onChange={(e) => setCountry(e.target.value)}>
-              <option value="All">Country: All</option>
-              {countries.map((c) => (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginTop: '24px' }}>
+            <select style={selectStyle} value={category} onChange={(e) => setCategory(e.target.value)}>
+              <option value="All">Category: All</option>
+              {CATEGORIES.map((c) => (
                 <option key={c} value={c}>
                   {c}
                 </option>
               ))}
             </select>
 
-            <select style={selectStyle} value={studyLevel} onChange={(e) => setStudyLevel(e.target.value)}>
-              <option value="All">Study Level: All</option>
-              {studyLevels.map((l) => (
+            <select style={selectStyle} value={mode} onChange={(e) => setMode(e.target.value)}>
+              <option value="All">Mode: All</option>
+              {MODES.map((m) => (
+                <option key={m} value={m}>
+                  {m}
+                </option>
+              ))}
+            </select>
+
+            <select style={selectStyle} value={cost} onChange={(e) => setCost(e.target.value)}>
+              <option value="All">Cost: All</option>
+              {COSTS.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+
+            <select style={selectStyle} value={level} onChange={(e) => setLevel(e.target.value)}>
+              <option value="All">Level: All</option>
+              {LEVELS.map((l) => (
                 <option key={l} value={l}>
                   {l}
                 </option>
               ))}
             </select>
 
-            <select style={selectStyle} value={category} onChange={(e) => setCategory(e.target.value)}>
-              <option value="All">Category: All</option>
-              {categories.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-
-            <select style={selectStyle} value={fundingType} onChange={(e) => setFundingType(e.target.value)}>
-              <option value="All">Funding Type: All</option>
-              {fundingTypes.map((f) => (
-                <option key={f} value={f}>
-                  {f}
-                </option>
-              ))}
-            </select>
-
             <button
-              onClick={() => setEligibilityOnly(!eligibilityOnly)}
+              onClick={() => setSavedOnly(!savedOnly)}
               style={{
                 ...selectStyle,
-                background: eligibilityOnly ? 'rgba(124,58,237,0.15)' : selectStyle.background,
-                borderColor: eligibilityOnly ? 'rgba(124,58,237,0.4)' : (selectStyle.border as string),
-                color: eligibilityOnly ? '#c4b5fd' : '#cbd5e1',
+                background: savedOnly ? 'rgba(124,58,237,0.15)' : selectStyle.background,
+                borderColor: savedOnly ? 'rgba(124,58,237,0.4)' : 'rgba(255,255,255,0.1)',
+                color: savedOnly ? '#c4b5fd' : '#cbd5e1',
               }}
             >
               ★ Saved Only
@@ -317,49 +318,31 @@ function HeroSearch(props: {
 
 // ─── Featured Row ─────────────────────────────────────────────────────────────
 
-function FeaturedRow({ scholarships: items, isMobile }: { scholarships: Scholarship[]; isMobile: boolean }) {
+function FeaturedRow({ items, isMobile }: { items: Program[]; isMobile: boolean }) {
   return (
     <section style={{ padding: isMobile ? '56px 20px' : '80px 24px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <RevealSection>
-          <SectionLabel>Featured Scholarships</SectionLabel>
+          <SectionLabel>Featured Programs</SectionLabel>
           <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.25rem)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '28px' }}>
             Top opportunities worth exploring
           </h2>
         </RevealSection>
 
         <RevealSection delay={150}>
-          <div
-            style={{
-              display: 'flex',
-              gap: '18px',
-              overflowX: 'auto',
-              paddingBottom: '12px',
-            }}
-          >
-            {items.map((s) => (
-              <Link
-                key={s.slug}
-                to="/scholarships/$slug"
-                params={{ slug: s.slug }}
-                style={{ minWidth: '230px', flexShrink: 0 }}
-              >
+          <div style={{ display: 'flex', gap: '18px', overflowX: 'auto', paddingBottom: '12px' }}>
+            {items.map((p) => (
+              <Link key={p.id} to="/scholarships/$slug" params={{ slug: p.id }} style={{ minWidth: '230px', maxWidth: '260px', flexShrink: 0 }}>
                 <div
                   className="glass-card"
-                  style={{
-                    borderRadius: '18px',
-                    padding: '24px',
-                    height: '100%',
-                    position: 'relative',
-                    overflow: 'hidden',
-                  }}
+                  style={{ borderRadius: '18px', padding: '24px', height: '100%', position: 'relative', overflow: 'hidden' }}
                 >
                   <div
                     style={{
                       width: '44px',
                       height: '44px',
                       borderRadius: '12px',
-                      background: s.logoColor,
+                      background: LOGO_BG,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -369,13 +352,11 @@ function FeaturedRow({ scholarships: items, isMobile }: { scholarships: Scholars
                       marginBottom: '16px',
                     }}
                   >
-                    {s.logoText}
+                    {getInitials(p.institution)}
                   </div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '6px' }}>
-                    {s.name}
-                  </h3>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '6px' }}>{p.title}</h3>
                   <div className="gradient-text" style={{ fontSize: '0.8125rem', fontWeight: 600 }}>
-                    {s.fundingType} · {s.country}
+                    {p.cost} · {p.mode}
                   </div>
                 </div>
               </Link>
@@ -389,33 +370,31 @@ function FeaturedRow({ scholarships: items, isMobile }: { scholarships: Scholars
 
 // ─── Recommended ──────────────────────────────────────────────────────────────
 
-function RecommendedSection({ scholarships: items, isMobile }: { scholarships: Scholarship[]; isMobile: boolean }) {
+function RecommendedSection({ items, isMobile }: { items: Program[]; isMobile: boolean }) {
   return (
     <section style={{ padding: isMobile ? '56px 20px' : '80px 24px', background: 'rgba(0,0,0,0.2)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <RevealSection>
           <SectionLabel>Recommended For You</SectionLabel>
           <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.25rem)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '10px' }}>
-            Picked using{' '}
-            <span className="gradient-text">AI-powered matching.</span>
+            Picked for <span className="gradient-text">curious students.</span>
           </h2>
           <p style={{ color: '#64748b', fontSize: '0.9375rem', maxWidth: '520px', marginBottom: '28px' }}>
-            Based on your interests and saved scholarships, here are opportunities you're likely to
-            qualify for.
+            Handpicked opportunities you can explore right now.
           </p>
         </RevealSection>
 
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-          {items.map((s, i) => (
-            <RevealSection key={s.slug} delay={i * 80}>
-              <Link to="/scholarships/$slug" params={{ slug: s.slug }}>
+          {items.map((p, i) => (
+            <RevealSection key={p.id} delay={i * 80}>
+              <Link to="/scholarships/$slug" params={{ slug: p.id }}>
                 <div className="glass-card" style={{ borderRadius: '18px', padding: '24px', display: 'flex', gap: '16px' }}>
                   <div
                     style={{
                       width: '48px',
                       height: '48px',
                       borderRadius: '12px',
-                      background: s.logoColor,
+                      background: LOGO_BG,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -424,14 +403,12 @@ function RecommendedSection({ scholarships: items, isMobile }: { scholarships: S
                       flexShrink: 0,
                     }}
                   >
-                    {s.logoText}
+                    {getInitials(p.institution)}
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '4px' }}>
-                      {s.name}
-                    </h3>
+                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '4px' }}>{p.title}</h3>
                     <p style={{ color: '#64748b', fontSize: '0.8125rem', margin: 0 }}>
-                      {s.studyLevel} · {s.category}
+                      {p.level} · {p.category}
                     </p>
                   </div>
                 </div>
@@ -447,23 +424,28 @@ function RecommendedSection({ scholarships: items, isMobile }: { scholarships: S
 // ─── Main Grid ─────────────────────────────────────────────────────────────────
 
 function MainGrid({
-  scholarships: items,
+  items,
+  visible,
+  onLoadMore,
   isMobile,
   saved,
   toggle,
 }: {
-  scholarships: Scholarship[]
+  items: Program[]
+  visible: number
+  onLoadMore: () => void
   isMobile: boolean
   saved: string[]
-  toggle: (slug: string) => void
+  toggle: (id: string) => void
 }) {
+  const shown = items.slice(0, visible)
   return (
     <section style={{ padding: isMobile ? '56px 20px' : '80px 24px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <RevealSection>
-          <SectionLabel>Browse Scholarships</SectionLabel>
+          <SectionLabel>Browse Programs</SectionLabel>
           <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.25rem)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '8px' }}>
-            Showing {items.length} scholarship{items.length !== 1 ? 's' : ''}
+            Showing {shown.length} of {items.length} program{items.length !== 1 ? 's' : ''}
           </h2>
           <p style={{ color: '#64748b', fontSize: '0.9375rem', marginBottom: '32px' }}>
             Adjust filters above to narrow down results.
@@ -472,16 +454,26 @@ function MainGrid({
 
         {items.length === 0 ? (
           <div className="glass-card" style={{ borderRadius: '18px', padding: '48px', textAlign: 'center' }}>
-            <p style={{ color: '#94a3b8', margin: 0 }}>No scholarships match your filters. Try broadening your search.</p>
+            <p style={{ color: '#94a3b8', margin: 0 }}>No programs match your filters. Try broadening your search.</p>
           </div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '22px' }}>
-            {items.map((s, i) => (
-              <RevealSection key={s.slug} delay={Math.min(i, 6) * 60}>
-                <ScholarshipCard scholarship={s} isSaved={saved.includes(s.slug)} onToggleSave={() => toggle(s.slug)} />
-              </RevealSection>
-            ))}
-          </div>
+          <>
+            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '22px' }}>
+              {shown.map((p, i) => (
+                <RevealSection key={p.id} delay={Math.min(i % PAGE_SIZE, 6) * 60}>
+                  <ScholarshipCard scholarship={p} isSaved={saved.includes(p.id)} onToggleSave={() => toggle(p.id)} />
+                </RevealSection>
+              ))}
+            </div>
+
+            {visible < items.length && (
+              <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                <button className="btn-secondary" style={{ padding: '14px 32px', fontSize: '0.9375rem', cursor: 'pointer' }} onClick={onLoadMore}>
+                  Load more
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </section>
@@ -493,23 +485,20 @@ export function ScholarshipCard({
   isSaved,
   onToggleSave,
 }: {
-  scholarship: Scholarship
+  scholarship: Program
   isSaved: boolean
   onToggleSave: () => void
 }) {
-  const s = scholarship
+  const p = scholarship
   return (
-    <div
-      className="glass-card"
-      style={{ borderRadius: '18px', padding: '22px', display: 'flex', flexDirection: 'column', height: '100%' }}
-    >
+    <div className="glass-card" style={{ borderRadius: '18px', padding: '22px', display: 'flex', flexDirection: 'column', height: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div
           style={{
             width: '46px',
             height: '46px',
             borderRadius: '10px',
-            background: s.logoColor,
+            background: LOGO_BG,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -518,7 +507,7 @@ export function ScholarshipCard({
             color: '#fff',
           }}
         >
-          {s.logoText}
+          {getInitials(p.institution)}
         </div>
         <button
           onClick={(e) => {
@@ -535,19 +524,17 @@ export function ScholarshipCard({
             cursor: 'pointer',
             fontSize: '0.9rem',
           }}
-          aria-label={isSaved ? 'Remove bookmark' : 'Save scholarship'}
+          aria-label={isSaved ? 'Remove bookmark' : 'Save program'}
         >
           {isSaved ? '★' : '☆'}
         </button>
       </div>
 
-      <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#e2e8f0', marginTop: '16px', marginBottom: '2px' }}>
-        {s.name}
-      </h3>
-      <div style={{ color: '#64748b', fontSize: '0.8125rem', marginBottom: '12px' }}>{s.organization}</div>
+      <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#e2e8f0', marginTop: '16px', marginBottom: '2px' }}>{p.title}</h3>
+      <div style={{ color: '#64748b', fontSize: '0.8125rem', marginBottom: '12px' }}>{p.institution}</div>
 
       <p style={{ color: '#94a3b8', fontSize: '0.8125rem', lineHeight: 1.6, margin: 0, flexGrow: 1 }}>
-        {s.shortDescription.length > 130 ? s.shortDescription.slice(0, 130) + '…' : s.shortDescription}
+        {p.description.length > 130 ? p.description.slice(0, 130) + '…' : p.description}
       </p>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '16px' }}>
@@ -556,37 +543,35 @@ export function ScholarshipCard({
             fontSize: '0.7rem',
             padding: '5px 10px',
             borderRadius: '7px',
-            background: 'rgba(34,197,94,0.12)',
-            color: '#4ade80',
+            background: p.cost === 'Free' ? 'rgba(34,197,94,0.12)' : 'rgba(251,191,36,0.12)',
+            color: p.cost === 'Free' ? '#4ade80' : '#fbbf24',
           }}
         >
-          {s.fundingType}
+          {p.cost}
         </span>
         <span style={{ fontSize: '0.7rem', padding: '5px 10px', borderRadius: '7px', background: 'rgba(255,255,255,0.05)', color: '#94a3b8' }}>
-          {s.country}
+          {p.mode}
         </span>
         <span style={{ fontSize: '0.7rem', padding: '5px 10px', borderRadius: '7px', background: 'rgba(255,255,255,0.05)', color: '#94a3b8' }}>
-          {s.studyLevel}
+          {p.level}
         </span>
       </div>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '10px' }}>
-        {s.tags.slice(0, 3).map((t) => (
-          <span key={t} style={{ fontSize: '0.6875rem', padding: '4px 9px', borderRadius: '999px', border: '1px solid rgba(255,255,255,0.1)', color: '#64748b' }}>
-            {t}
-          </span>
-        ))}
+        <span style={{ fontSize: '0.6875rem', padding: '4px 9px', borderRadius: '999px', border: '1px solid rgba(255,255,255,0.1)', color: '#64748b' }}>
+          {p.category}
+        </span>
       </div>
 
       <div style={{ display: 'flex', gap: '10px', marginTop: '18px' }}>
-        <Link to="/scholarships/$slug" params={{ slug: s.slug }} style={{ flex: 1 }}>
+        <Link to="/scholarships/$slug" params={{ slug: p.id }} style={{ flex: 1 }}>
           <div className="btn-primary" style={{ textAlign: 'center', width: '100%', fontSize: '0.8125rem', padding: '11px' }}>
             <span>View Details</span>
           </div>
         </Link>
-        <a href={s.officialLink} target="_blank" rel="noopener noreferrer" style={{ flex: 1 }}>
+        <a href={p.applicationUrl} target="_blank" rel="noopener noreferrer" style={{ flex: 1 }}>
           <div className="btn-secondary" style={{ textAlign: 'center', width: '100%', fontSize: '0.8125rem', padding: '11px' }}>
-            Official Website
+            Apply
           </div>
         </a>
       </div>
@@ -596,7 +581,7 @@ export function ScholarshipCard({
 
 // ─── Recently Added ────────────────────────────────────────────────────────────
 
-function RecentlyAddedSection({ scholarships: items, isMobile }: { scholarships: Scholarship[]; isMobile: boolean }) {
+function RecentlyAddedSection({ items, isMobile }: { items: Program[]; isMobile: boolean }) {
   return (
     <section style={{ padding: isMobile ? '56px 20px' : '80px 24px', background: 'rgba(0,0,0,0.2)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -608,9 +593,9 @@ function RecentlyAddedSection({ scholarships: items, isMobile }: { scholarships:
         </RevealSection>
 
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px' }}>
-          {items.map((s, i) => (
-            <RevealSection key={s.slug} delay={i * 70}>
-              <Link to="/scholarships/$slug" params={{ slug: s.slug }}>
+          {items.map((p, i) => (
+            <RevealSection key={p.id} delay={i * 70}>
+              <Link to="/scholarships/$slug" params={{ slug: p.id }}>
                 <div className="glass-card" style={{ borderRadius: '16px', padding: '20px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
                     <div
@@ -618,21 +603,22 @@ function RecentlyAddedSection({ scholarships: items, isMobile }: { scholarships:
                         width: '36px',
                         height: '36px',
                         borderRadius: '9px',
-                        background: s.logoColor,
+                        background: LOGO_BG,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontWeight: 800,
                         fontSize: '0.8rem',
                         color: '#fff',
+                        flexShrink: 0,
                       }}
                     >
-                      {s.logoText}
+                      {getInitials(p.institution)}
                     </div>
-                    <h3 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#e2e8f0', margin: 0 }}>{s.name}</h3>
+                    <h3 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#e2e8f0', margin: 0 }}>{p.title}</h3>
                   </div>
                   <p style={{ color: '#64748b', fontSize: '0.8rem', margin: 0 }}>
-                    {s.country} · {s.studyLevel}
+                    {p.mode} · {p.level}
                   </p>
                 </div>
               </Link>
