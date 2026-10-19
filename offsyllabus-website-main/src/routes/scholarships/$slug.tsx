@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { useState } from 'react'
-import { scholarships } from '../../data/scholarships'
+import type { ReactNode } from 'react'
+import { PROGRAMS as scholarships } from '../../data/scholarships'
 import { RevealSection, SectionLabel, useIsMobile } from '../../components/scholarship-ui'
 import { ScholarshipCard } from './index'
 
@@ -8,7 +9,7 @@ const BOOKMARK_KEY = 'offsyllabus_saved_scholarships'
 
 export const Route = createFileRoute('/scholarships/$slug')({
   loader: ({ params }) => {
-    const scholarship = scholarships.find((s) => s.slug === params.slug)
+    const scholarship = scholarships.find((s) => s.id === params.slug)
     if (!scholarship) throw notFound()
     return { scholarship }
   },
@@ -26,10 +27,12 @@ function useBookmarks() {
     }
   })
 
-  const toggle = (slug: string) => {
+  const toggle = (id: string) => {
     setSaved((prev) => {
-      const next = prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
-      window.localStorage.setItem(BOOKMARK_KEY, JSON.stringify(next))
+      const next = prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]
+      try {
+        window.localStorage.setItem(BOOKMARK_KEY, JSON.stringify(next))
+      } catch {}
       return next
     })
   }
@@ -37,13 +40,25 @@ function useBookmarks() {
   return { saved, toggle }
 }
 
+function getInitials(name: string) {
+  return name
+    .replace(/[^A-Za-z0-9 ]/g, '')
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0].toUpperCase())
+    .join('')
+}
+
 function ScholarshipDetailPage() {
   const { scholarship: s } = Route.useLoaderData()
   const isMobile = useIsMobile()
   const { saved, toggle } = useBookmarks()
-  const isSaved = saved.includes(s.slug)
+  const isSaved = saved.includes(s.id)
 
-  const related = scholarships.filter((x) => x.slug !== s.slug && (x.category === s.category || x.country === s.country)).slice(0, 3)
+  const related = scholarships
+    .filter((x) => x.id !== s.id && x.category === s.category)
+    .slice(0, 3)
 
   return (
     <div style={{ paddingTop: '68px' }}>
@@ -64,7 +79,7 @@ function ScholarshipDetailPage() {
                   width: '64px',
                   height: '64px',
                   borderRadius: '16px',
-                  background: s.logoColor,
+                  background: 'linear-gradient(135deg, #7c3aed, #4f46e5)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -74,25 +89,25 @@ function ScholarshipDetailPage() {
                   flexShrink: 0,
                 }}
               >
-                {s.logoText}
+                {getInitials(s.institution)}
               </div>
               <div>
                 <h1 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)', fontWeight: 800, letterSpacing: '-0.02em', lineHeight: 1.1, marginBottom: '6px' }}>
-                  {s.name}
+                  {s.title}
                 </h1>
-                <p style={{ color: '#94a3b8', fontSize: '0.9375rem', margin: 0 }}>{s.organization}</p>
+                <p style={{ color: '#94a3b8', fontSize: '0.9375rem', margin: 0 }}>{s.institution}</p>
               </div>
             </div>
 
             <p style={{ color: '#cbd5e1', fontSize: '1.0625rem', lineHeight: 1.75, maxWidth: '760px', marginBottom: '32px' }}>
-              {s.shortDescription}
+              {s.description}
             </p>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
               {[
-                { label: s.fundingType, bg: 'rgba(34,197,94,0.12)', color: '#4ade80' },
-                { label: s.country, bg: 'rgba(255,255,255,0.05)', color: '#94a3b8' },
-                { label: s.studyLevel, bg: 'rgba(255,255,255,0.05)', color: '#94a3b8' },
+                { label: s.cost, bg: s.cost === 'Free' ? 'rgba(34,197,94,0.12)' : 'rgba(251,191,36,0.12)', color: s.cost === 'Free' ? '#4ade80' : '#fbbf24' },
+                { label: s.mode, bg: 'rgba(255,255,255,0.05)', color: '#94a3b8' },
+                { label: s.level, bg: 'rgba(255,255,255,0.05)', color: '#94a3b8' },
                 { label: s.category, bg: 'rgba(124,58,237,0.12)', color: '#c4b5fd' },
               ].map((chip) => (
                 <span
@@ -105,17 +120,17 @@ function ScholarshipDetailPage() {
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
-              <a href={s.officialLink} target="_blank" rel="noopener noreferrer">
+              <a href={s.applicationUrl} target="_blank" rel="noopener noreferrer">
                 <div className="btn-primary" style={{ padding: '14px 28px', fontSize: '0.9375rem' }}>
-                  <span>Official Application Link →</span>
+                  <span>Apply Now →</span>
                 </div>
               </a>
               <button
-                onClick={() => toggle(s.slug)}
+                onClick={() => toggle(s.id)}
                 className="btn-secondary"
                 style={{ padding: '14px 28px', fontSize: '0.9375rem', cursor: 'pointer', color: isSaved ? '#c4b5fd' : undefined }}
               >
-                {isSaved ? '★ Saved' : '☆ Save Scholarship'}
+                {isSaved ? '★ Saved' : '☆ Save'}
               </button>
             </div>
           </RevealSection>
@@ -137,38 +152,38 @@ function ScholarshipDetailPage() {
         >
           <div>
             <RevealSection>
-              <DetailBlock title="Full Description">
-                <p style={{ color: '#94a3b8', fontSize: '0.9375rem', lineHeight: 1.8, margin: 0 }}>{s.fullDescription}</p>
+              <DetailBlock title="About this Program">
+                <p style={{ color: '#94a3b8', fontSize: '0.9375rem', lineHeight: 1.8, margin: 0 }}>{s.description}</p>
               </DetailBlock>
             </RevealSection>
 
             <RevealSection delay={100}>
-              <DetailBlock title="Benefits">
-                <ChecklistBlock items={s.benefits} />
+              <DetailBlock title="Eligibility">
+                <p style={{ color: '#cbd5e1', fontSize: '0.9375rem', lineHeight: 1.7, margin: 0 }}>{s.eligibility}</p>
               </DetailBlock>
             </RevealSection>
 
             <RevealSection delay={150}>
-              <DetailBlock title="Eligibility Criteria">
-                <ChecklistBlock items={s.eligibilityCriteria} />
+              <DetailBlock title="Program Details">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <InfoRow label="Duration" value={s.duration} />
+                  <InfoRow label="Location" value={s.location} />
+                  <InfoRow label="Deadline" value={s.deadline} />
+                  <InfoRow label="Fee" value={s.fee} />
+                </div>
               </DetailBlock>
             </RevealSection>
 
             <RevealSection delay={200}>
-              <DetailBlock title="Required Documents">
-                <ChecklistBlock items={s.requiredDocuments} />
-              </DetailBlock>
-            </RevealSection>
-
-            <RevealSection delay={250}>
-              <DetailBlock title="Application Process">
-                <ol style={{ margin: 0, paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {s.applicationProcess.map((step, i) => (
-                    <li key={i} style={{ color: '#cbd5e1', fontSize: '0.9375rem', lineHeight: 1.7 }}>
-                      {step}
-                    </li>
-                  ))}
-                </ol>
+              <DetailBlock title="Links">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a href={s.applicationUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#a78bfa', fontSize: '0.9375rem', fontWeight: 600 }}>
+                    Application page →
+                  </a>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ color: '#a78bfa', fontSize: '0.9375rem', fontWeight: 600 }}>
+                    Official website →
+                  </a>
+                </div>
               </DetailBlock>
             </RevealSection>
           </div>
@@ -176,25 +191,18 @@ function ScholarshipDetailPage() {
           <div>
             <RevealSection delay={150}>
               <div className="glass-card" style={{ borderRadius: '18px', padding: '28px', position: 'sticky', top: '90px' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '18px' }}>Important Information</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '20px' }}>
-                  {s.importantInfo.map((info, i) => (
-                    <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#a78bfa', fontSize: '0.9rem', marginTop: '2px' }}>•</span>
-                      <span style={{ color: '#94a3b8', fontSize: '0.8375rem', lineHeight: 1.6 }}>{info}</span>
-                    </div>
-                  ))}
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '18px' }}>Quick Info</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <InfoRow label="Fee" value={s.fee} />
+                  <InfoRow label="Mode" value={s.mode} />
+                  <InfoRow label="Level" value={s.level} />
+                  <InfoRow label="Duration" value={s.duration} />
+                  <InfoRow label="Location" value={s.location} />
+                  <InfoRow label="Deadline" value={s.deadline} />
                 </div>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '18px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <InfoRow label="Funding" value={s.fundingAmount} />
-                  <InfoRow label="Country" value={s.country} />
-                  <InfoRow label="Study Level" value={s.studyLevel} />
-                  <InfoRow label="Category" value={s.category} />
-                  <InfoRow label="Eligibility" value={s.eligibility} />
-                </div>
-                <a href={s.officialLink} target="_blank" rel="noopener noreferrer">
+                <a href={s.applicationUrl} target="_blank" rel="noopener noreferrer">
                   <div className="btn-primary" style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.875rem' }}>
-                    <span>Apply on Official Site →</span>
+                    <span>Apply Now →</span>
                   </div>
                 </a>
               </div>
@@ -209,15 +217,15 @@ function ScholarshipDetailPage() {
           <section style={{ padding: isMobile ? '56px 20px' : '80px 24px', background: 'rgba(0,0,0,0.2)' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
               <RevealSection>
-                <SectionLabel>Related Scholarships</SectionLabel>
+                <SectionLabel>Related Programs</SectionLabel>
                 <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.25rem)', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '28px' }}>
                   You might also like
                 </h2>
               </RevealSection>
               <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '22px' }}>
                 {related.map((r, i) => (
-                  <RevealSection key={r.slug} delay={i * 80}>
-                    <ScholarshipCard scholarship={r} isSaved={saved.includes(r.slug)} onToggleSave={() => toggle(r.slug)} />
+                  <RevealSection key={r.id} delay={i * 80}>
+                    <ScholarshipCard scholarship={r} isSaved={saved.includes(r.id)} onToggleSave={() => toggle(r.id)} />
                   </RevealSection>
                 ))}
               </div>
@@ -229,41 +237,11 @@ function ScholarshipDetailPage() {
   )
 }
 
-function DetailBlock({ title, children }: { title: string; children: React.ReactNode }) {
+function DetailBlock({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div style={{ marginBottom: '40px' }}>
       <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '16px' }}>{title}</h2>
       {children}
-    </div>
-  )
-}
-
-function ChecklistBlock({ items }: { items: string[] }) {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-      {items.map((item, i) => (
-        <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-          <div
-            style={{
-              width: '22px',
-              height: '22px',
-              borderRadius: '50%',
-              background: 'linear-gradient(135deg, #7c3aed, #4f46e5)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '0.65rem',
-              color: '#fff',
-              fontWeight: 700,
-              flexShrink: 0,
-              marginTop: '2px',
-            }}
-          >
-            ✓
-          </div>
-          <span style={{ color: '#cbd5e1', fontSize: '0.9375rem', lineHeight: 1.6 }}>{item}</span>
-        </div>
-      ))}
     </div>
   )
 }

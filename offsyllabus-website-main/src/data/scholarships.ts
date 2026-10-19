@@ -19372,7 +19372,7 @@ export const PROGRAMS: Program[] = [
       "Practical course on writing effective prompts, improving AI outputs and applying prompting techniques to everyday and professional workflows.",
     url: "https://www.coursera.org/specializations/prompting-essentials-google",
     applicationUrl: "https://www.coursera.org/specializations/prompting-essentials-google",
-  },,
+  },
 
   // --- NEW 36 INTERNSHIPS ---
   {
