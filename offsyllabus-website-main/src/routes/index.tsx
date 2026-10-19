@@ -4,7 +4,26 @@ import { useState, useEffect, useRef } from 'react'
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
-      { name: 'msvalidate.01', content: '2411B536BBAAC39957B2B6591CA85836' },
+      { title: 'OffSyllabus | Real-World Learning & Mentorship' },
+      {
+        name: 'description',
+        content:
+          'Explore real-world projects, mentor-led programs, practical skills and career-building experiences with OffSyllabus.',
+      },
+      {
+        name: 'robots',
+        content: 'index, follow',
+      },
+      {
+        name: 'msvalidate.01',
+        content: '2411B536BBAAC39957B2B6591CA85836',
+      },
+    ],
+    links: [
+      {
+        rel: 'canonical',
+        href: 'https://www.offsyllabus.club/',
+      },
     ],
   }),
   component: HomePage,
